@@ -82,31 +82,31 @@ export const homeLocale = {
           id: "commerce",
           label: "Handel & Ecommerce",
           value: "140+ Mrd.",
-          percentage: 100,
+          percentage: "100%",
         },
         {
           id: "finance",
           label: "Finanzen & Versicherung",
           value: "110+ Mrd.",
-          percentage: 78,
+          percentage: "78%",
         },
         {
           id: "tech",
           label: "Tech, Software, Saas",
           value: "105+ Mrd.",
-          percentage: 75,
+          percentage: "75%",
         },
         {
           id: "automotive",
           label: "Automotive",
           value: "85+ Mrd.",
-          percentage: 61,
+          percentage: "61%",
         },
         {
           id: "fmcg",
           label: "FMCG & Drogerie/Kosmetik",
           value: "80+ Mrd.",
-          percentage: 57,
+          percentage: "57%",
         },
       ],
     },
@@ -119,13 +119,14 @@ export const homeLocale = {
 
     tools: {
       title: "Unsere Tools",
+      cta: "Mehr erfahren",
       cards: [
         {
           id: "tool_01",
           question:
             "Wie erstelle ich in react ein bedienbaren dashboard für z.b. blogs die auf meiner seite angezeigt werden?",
           text: "Lorem ipsum dolor sit amet, consetetur sadipscing elit, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
-          cta: "Premiere Brands",
+          cta: "Mehr erfahren",
         },
       ],
     },
@@ -212,31 +213,31 @@ export const homeLocale = {
           id: "commerce",
           label: "Retail & Ecommerce",
           value: "140+ bn.",
-          percentage: 100,
+          percentage: "100%",
         },
         {
           id: "finance",
           label: "Finance & Insurance",
           value: "110+ bn.",
-          percentage: 78,
+          percentage: "78%",
         },
         {
           id: "tech",
           label: "Tech, Software, SaaS",
           value: "105+ bn.",
-          percentage: 75,
+          percentage: "75%",
         },
         {
           id: "automotive",
           label: "Automotive",
           value: "85+ bn.",
-          percentage: 61,
+          percentage: "61%",
         },
         {
           id: "fmcg",
           label: "FMCG & Beauty/Cosmetics",
           value: "80+ bn.",
-          percentage: 57,
+          percentage: "57%",
         },
       ],
     },
@@ -249,13 +250,14 @@ export const homeLocale = {
 
     tools: {
       title: "Our Tools",
+      cta: "Explore",
       cards: [
         {
           id: "tool_01",
           question:
             "How do I create an interactive dashboard in React, for example for blogs displayed on my website?",
           text: "Lorem ipsum dolor sit amet, consetetur sadipscing elit, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
-          cta: "Premier Brands",
+          cta: "Explore",
         },
       ],
     },

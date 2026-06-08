@@ -17,5 +17,7 @@
 }
 
 .blue {
-  background-image: url(/public/bg-blue.png);
+  background-image: url(bg-blue.png);
+  background-position: center center;
+  background-size: cover;
 }

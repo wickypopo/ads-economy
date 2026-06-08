@@ -1,0 +1,36 @@
+export const pricingData = {
+  de: {
+    locale: "de",
+    plan: "premiere",
+    label: "Premiere Brands",
+    badge: "Für ambitionierte Marken",
+    price: "3.500 €",
+    period: "monatlich",
+    description:
+      "Für Brands, die Performance Marketing als Wachstumssystem nutzen und konstant neue Winning Ads entwickeln wollen.",
+    feature_1: "Meta, TikTok & Google Ads",
+    feature_2: "Fortlaufendes Creative Testing",
+    feature_3: "Weekly Performance Review",
+    feature_4: "Advanced Reporting",
+    feature_5: "Conversion & Funnel Optimierung",
+    cta: "Strategiegespräch buchen",
+    highlighted: true,
+  },
+  en: {
+    locale: "en",
+    plan: "premiere",
+    label: "Premiere Brands",
+    badge: "For ambitious brands",
+    price: "€3,500",
+    period: "monthly",
+    description:
+      "For brands that use performance marketing as a growth system and want to develop winning ads consistently.",
+    feature_1: "Meta, TikTok & Google Ads",
+    feature_2: "Ongoing creative testing",
+    feature_3: "Weekly performance review",
+    feature_4: "Advanced reporting",
+    feature_5: "Conversion & funnel optimization",
+    cta: "Book strategy call",
+    highlighted: true,
+  },
+};
