@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { homeLocale } from "../data/HomeLocale";
+import { homeLocale } from "../data/homeLocale";
 import { useLocale } from "../utils/useLocale";
 import { supabase } from "../lib/supabase";
 import Button from "../components/Button";
