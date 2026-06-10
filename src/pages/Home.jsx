@@ -4,6 +4,7 @@ import { useLocale } from "../utils/useLocale";
 import { supabase } from "../lib/supabase";
 import Button from "../components/Button";
 import { Globe } from "lucide-react";
+import AnimatedGlobe from "../components/AnimatedGlobe";
 
 export default function Home() {
   const { locale, setLocale, t } = useLocale();
@@ -56,7 +57,7 @@ export default function Home() {
     <main className="overflow-y-hidden">
       {/* HERO */}
       <section className="h-[80vh] flex flex-col items-center justify-center text-center gap-4 px-4">
-        <Globe className="size-60 text-blue-500" />
+        <AnimatedGlobe />
         <h1 className="text-center text-6xl instrument">
           {homeLocale[locale].hero.title}
         </h1>
