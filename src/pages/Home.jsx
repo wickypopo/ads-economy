@@ -56,7 +56,7 @@ export default function Home() {
   return (
     <main className="overflow-y-hidden">
       {/* HERO */}
-      <section className="h-[80vh] flex flex-col items-center justify-center text-center gap-4 px-4">
+      <section className="h-[80vh] flex flex-col items-center justify-center text-center gap-4 p-8">
         <AnimatedGlobe />
         <h1 className="text-center text-6xl instrument">
           {homeLocale[locale].hero.title}
