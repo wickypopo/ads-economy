@@ -12,14 +12,15 @@ export default function RisingBrands() {
 
   return (
     <>
-      <section className="flex flex-col items-center gap-4">
-        <div className="flex flex-col h-full w-full px-4 py-40 gap-10 items-center text-center">
+      <section className="flex flex-col items-center gap-4 max-w-[1200px] w-full">
+        <div className="flex flex-col h-full w-full px-4 py-40 gap-10 items-center justify-center text-center">
           <div className="flex flex-col gap-2">
             <h2 className="instrument text-6xl">
               {risingBrands[locale].hero.title}
             </h2>
             <span className="text-slate-600">
               <p
+                className="max-w-[400px]"
                 dangerouslySetInnerHTML={{
                   __html: risingBrands[locale].hero.text,
                 }}
@@ -27,8 +28,8 @@ export default function RisingBrands() {
             </span>
             <Button text={risingBrands[locale].hero.cta} />
           </div>
-          <div className="flex w-full gap-4">
-            <div className="flex flex-col items-center w-1/3">
+          <div className="flex justify-center w-full gap-8">
+            <div className="flex flex-col items-center">
               <img
                 src={risingBrands[locale].hero.items.item1.img}
                 className="size-30 bg-blue-600 mb-2 object-cover rounded"
@@ -40,7 +41,7 @@ export default function RisingBrands() {
                 {risingBrands[locale].hero.items.item1.text}
               </span>
             </div>
-            <div className="flex flex-col items-center w-1/3">
+            <div className="flex flex-col items-center">
               <img
                 src={risingBrands[locale].hero.items.item2.img}
                 className="size-30 bg-blue-600 mb-2 object-cover rounded"
@@ -52,7 +53,7 @@ export default function RisingBrands() {
                 {risingBrands[locale].hero.items.item2.text}
               </span>
             </div>
-            <div className="flex flex-col items-center w-1/3">
+            <div className="flex flex-col items-center">
               <img
                 src={risingBrands[locale].hero.items.item3.img}
                 className="size-30 bg-blue-600 mb-2 object-cover rounded"
@@ -67,7 +68,7 @@ export default function RisingBrands() {
           </div>
         </div>
       </section>
-      <section className="flex flex-col items-center gap-4 border-y border-slate-300">
+      <section className="flex flex-col items-center gap-4 border-y border-slate-300 max-w-[1200px] w-full">
         <div className="flex flex-col h-full w-full px-4 py-40 gap-4">
           <h2 className="instrument text-4xl">
             {risingBrands[locale].program.title}
@@ -79,7 +80,7 @@ export default function RisingBrands() {
           <Button text={risingBrands[locale].hero.cta} />
         </div>
       </section>
-      <section className="flex flex-col items-center gap-4 blue -ml-4 -mr-4 p-4 text-white">
+      <section className="flex flex-col items-center gap-4 blue -ml-4 -mr-4 p-4 text-white max-w-[1200px] w-full">
         <div className="flex flex-col h-full w-full px-4 py-40 gap-4">
           <h2 className="instrument text-4xl">
             {risingBrands[locale].partnership.title}
@@ -160,7 +161,7 @@ export default function RisingBrands() {
           <Button variant="white" text={risingBrands[locale].hero.cta} />
         </div>
       </section>
-      <section className="flex flex-col items-center gap-4 border-b border-slate-300">
+      <section className="flex flex-col items-center gap-4 border-b border-slate-300 max-w-[1200px] w-full">
         <div className="flex flex-col h-full w-full px-4 py-40 gap-4">
           <h2 className="instrument text-4xl">
             {risingBrands[locale].qualification.title}
@@ -186,7 +187,7 @@ export default function RisingBrands() {
           </div>
         </div>
       </section>
-      <section className="flex flex-col items-center gap-4 border-b border-slate-300">
+      <section className="flex flex-col items-center gap-4 border-b border-slate-300 max-w-[1200px] w-full">
         <div className="flex flex-col h-full w-full px-4 py-40 gap-4">
           <h2 className="instrument text-4xl">
             {risingBrands[locale].applicationProcess.title}
@@ -204,7 +205,7 @@ export default function RisingBrands() {
           <Button text={risingBrands[locale].hero.cta} />
         </div>
       </section>
-      <section className="flex flex-col items-center justify-center text-center gap-4 border-b border-slate-300 py-20 blue text-white -ml-4 -mr-4">
+      <section className="flex flex-col items-center justify-center text-center gap-4 border-b border-slate-300 py-20 blue text-white -ml-4 -mr-4 max-w-[1200px] w-full">
         <h2 className="text-center text-6xl instrument">
           {risingBrands[locale].footerCta.title}
         </h2>
