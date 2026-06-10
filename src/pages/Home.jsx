@@ -78,7 +78,7 @@ export default function Home() {
         </div>
       </section>
       {/* DISCOVER */}
-      <section className="max-w-[1200px] w-full min-h-[60vh] flex flex-col items-center justify-center text-center gap-4 border-y border-slate-300 px-4">
+      <section className="max-w-[1200px] w-full min-h-[60vh] flex flex-col items-center justify-center text-center gap-4 border-y border-slate-300 py-8 px-4">
         <h2 className="text-center text-4xl instrument">
           {homeLocale[locale].discover.title}
         </h2>
@@ -86,20 +86,27 @@ export default function Home() {
         <span className="text-zinc-500 w-[300px]">
           {homeLocale[locale].discover.subtitle}
         </span>
-        <div className="flex gap-2 font-medium w-full h-30">
-          <div className="size-full bg-slate-200 flex items-center justify-center">
-            <span>{homeLocale[locale].discover.tabs.news}</span>
+        <div className="flex flex-col lg:flex-row gap-2 font-medium w-full">
+          <div className="size-full bg-slate-100 flex flex-col items-start justify-start gap-2 px-4 pt-4 rounded-xl h-80">
+            <span className="text-xl font-medium">
+              {homeLocale[locale].discover.tabs.news}
+            </span>
+            <div className="bg-slate-200 h-full w-full rounded-t-lg"></div>
           </div>
-          <div className="size-full bg-slate-200 flex items-center justify-center">
-            <span>{homeLocale[locale].discover.tabs.learn}</span>
+          <div className="size-full bg-slate-100 flex flex-col items-start justify-start gap-2 px-4 pt-4 rounded-xl  h-80">
+            <span className="text-xl font-medium">
+              {homeLocale[locale].discover.tabs.learn}
+            </span>
+            <div className="bg-slate-200 h-full w-full rounded-t-lg"></div>
           </div>
-          <div className="size-full bg-slate-200 flex items-center justify-center">
-            <span>{homeLocale[locale].discover.tabs.tools}</span>
+          <div className="size-full bg-slate-100 flex flex-col items-start justify-start gap-2 px-4 pt-4 rounded-xl  h-80">
+            <span className="text-xl font-medium">
+              {homeLocale[locale].discover.tabs.tools}
+            </span>
+            <div className="bg-slate-200 h-full w-full rounded-t-lg"></div>
           </div>
         </div>
-        <div className="h-30 w-full bg-blue-500 flex items-center justify-center text-white -mt-2">
-          <span>{homeLocale[locale].discover.cta}</span>
-        </div>
+        <Button variant="primary" text={homeLocale[locale].discover.cta} />
       </section>
       {/* NEWS */}
       <section className="max-w-[1200px] w-full flex flex-col items-center justify-center text-center gap-4 border-b border-slate-300 py-20 px-4">

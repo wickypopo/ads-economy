@@ -8,7 +8,7 @@ import { risingBrands } from "../data/risingBrands";
 
 export default function RisingBrands() {
   const { locale, setLocale, t } = useLocale();
-  console.log(risingBrands.de);
+  console.log(risingBrands[locale]);
 
   return (
     <>
@@ -28,8 +28,11 @@ export default function RisingBrands() {
             <Button text={risingBrands[locale].hero.cta} />
           </div>
           <div className="flex w-full gap-4">
-            <div className="flex flex-col w-1/3">
-              <img className="h-30 bg-blue-600 mb-2" />
+            <div className="flex flex-col items-center w-1/3">
+              <img
+                src={risingBrands[locale].hero.items.item1.img}
+                className="size-30 bg-blue-600 mb-2 object-cover rounded"
+              />
               <span className="text-slate-600 text-sm">
                 {risingBrands[locale].hero.items.item1.title}
               </span>
@@ -37,8 +40,11 @@ export default function RisingBrands() {
                 {risingBrands[locale].hero.items.item1.text}
               </span>
             </div>
-            <div className="flex flex-col w-1/3">
-              <img className="h-30 bg-blue-600 mb-2" />
+            <div className="flex flex-col items-center w-1/3">
+              <img
+                src={risingBrands[locale].hero.items.item2.img}
+                className="size-30 bg-blue-600 mb-2 object-cover rounded"
+              />
               <span className="text-slate-600 text-sm">
                 {risingBrands[locale].hero.items.item2.title}
               </span>
@@ -46,8 +52,11 @@ export default function RisingBrands() {
                 {risingBrands[locale].hero.items.item2.text}
               </span>
             </div>
-            <div className="flex flex-col w-1/3">
-              <img className="h-30 bg-blue-600 mb-2" />
+            <div className="flex flex-col items-center w-1/3">
+              <img
+                src={risingBrands[locale].hero.items.item3.img}
+                className="size-30 bg-blue-600 mb-2 object-cover rounded"
+              />
               <span className="text-slate-600 text-sm">
                 {risingBrands[locale].hero.items.item3.title}
               </span>

@@ -8,17 +8,17 @@ export const risingBrands = {
         item1: {
           title: "Clothing Brand",
           text: "Increased ROAS to 20x",
-          img: "/image.png",
+          img: "/clothing.jpeg",
         },
         item2: {
           title: "Solar Company",
           text: "500k Revenue in a month",
-          img: "/image.png",
+          img: "/solar.jpg",
         },
         item3: {
           title: "Music Label",
           text: "Increases ROAS to 20x",
-          img: "/image.png",
+          img: "/music.jpg",
         },
       },
     },
