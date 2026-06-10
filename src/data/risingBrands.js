@@ -131,6 +131,23 @@ export const risingBrands = {
       title: "Rising Brands",
       text: "Economic ads optimization based on the ‘Leading instead of catching up’ philosophy. Full Premier Partnership for Rising Brands.",
       cta: "Apply Now",
+      items: {
+        item1: {
+          title: "Clothing Brand",
+          text: "Increased ROAS to 20x",
+          img: "/clothing.jpeg",
+        },
+        item2: {
+          title: "Solar Company",
+          text: "500k Revenue in a month",
+          img: "/solar.jpg",
+        },
+        item3: {
+          title: "Music Label",
+          text: "Increases ROAS to 20x",
+          img: "/music.jpg",
+        },
+      },
     },
 
     program: {
