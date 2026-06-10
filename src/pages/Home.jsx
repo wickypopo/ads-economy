@@ -54,9 +54,9 @@ export default function Home() {
   ));
 
   return (
-    <main className="overflow-y-hidden">
+    <main className="overflow-y-hidden flex flex-col items-center">
       {/* HERO */}
-      <section className="h-[80vh] flex flex-col items-center justify-center text-center gap-4 p-8">
+      <section className="max-w-[1200px] w-full h-[80vh] flex flex-col items-center justify-center text-center gap-4 p-8">
         <AnimatedGlobe />
         <h1 className="text-center text-6xl instrument">
           {homeLocale[locale].hero.title}
@@ -78,7 +78,7 @@ export default function Home() {
         </div>
       </section>
       {/* DISCOVER */}
-      <section className="min-h-[60vh] flex flex-col items-center justify-center text-center gap-4 border-y border-slate-300 px-4">
+      <section className="max-w-[1200px] w-full min-h-[60vh] flex flex-col items-center justify-center text-center gap-4 border-y border-slate-300 px-4">
         <h2 className="text-center text-4xl instrument">
           {homeLocale[locale].discover.title}
         </h2>
@@ -102,7 +102,7 @@ export default function Home() {
         </div>
       </section>
       {/* NEWS */}
-      <section className="flex flex-col items-center justify-center text-center gap-4 border-b border-slate-300 py-20 px-4">
+      <section className="max-w-[1200px] w-full flex flex-col items-center justify-center text-center gap-4 border-b border-slate-300 py-20 px-4">
         <h2 className="text-center text-4xl instrument">
           {" "}
           {homeLocale[locale].news.title}
@@ -116,7 +116,7 @@ export default function Home() {
         )}
       </section>
       {/* CTA */}
-      <section className="flex flex-col items-center justify-center text-center gap-4 border-b border-slate-300 py-20 blue text-white">
+      <section className="max-w-[1200px] w-full flex flex-col items-center justify-center text-center gap-4 border-b border-slate-300 py-20 blue text-white">
         <h2 className="text-center text-6xl instrument">
           {homeLocale[locale].risingBrands.title}
         </h2>
@@ -138,7 +138,7 @@ export default function Home() {
         </div>
       </section>
       {/* STATS */}
-      <section className="flex flex-col items-center justify-center text-center gap-4 border-b border-slate-300 py-20 px-4">
+      <section className="max-w-[1200px] w-full flex flex-col items-center justify-center text-center gap-4 border-b border-slate-300 py-20 px-4">
         <h2 className="text-center text-4xl instrument">
           {" "}
           {homeLocale[locale].adSpend.title}
@@ -150,7 +150,7 @@ export default function Home() {
         <div className="w-full flex flex-col gap-2">{adSpentMap}</div>
       </section>
       {/* WERBEKONTO */}
-      <section className="min-h-[60vh] flex flex-col items-center justify-center text-center gap-4 border-b border-slate-300 px-4">
+      <section className="max-w-[1200px] w-full min-h-[60vh] flex flex-col items-center justify-center text-center gap-4 border-b border-slate-300 px-4">
         <h2 className="text-center text-4xl instrument">
           {homeLocale[locale].adAccountAnalysis.title}
         </h2>
@@ -165,7 +165,7 @@ export default function Home() {
         />
       </section>
       {/* TOOLS */}
-      <section className="min-h-[60vh] flex flex-col items-center justify-center text-center gap-4 border-b border-slate-300 px-4 py-20">
+      <section className="max-w-[1200px] w-full min-h-[60vh] flex flex-col items-center justify-center text-center gap-4 border-b border-slate-300 px-4 py-20">
         <h2 className="text-center text-4xl instrument">
           {homeLocale[locale].tools.title}
         </h2>
