@@ -5,6 +5,7 @@ import { supabase } from "../lib/supabase";
 import Button from "../components/Button";
 import { Globe } from "lucide-react";
 import AnimatedGlobe from "../components/AnimatedGlobe";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const { locale, setLocale, t } = useLocale();
@@ -29,12 +30,17 @@ export default function Home() {
       return;
     }
     return (
-      <div key={item.id} className="flex flex-col gap-2 w-full">
-        <div className="flex gap-4 w-full">
-          <img src={item.image} className="w-1/3" />
-          <div className="flex flex-col text-start w-2/3">
-            <span className="font-bold">{item.title}</span>
-            <span>{item.excerpt}</span>
+      <div key={item.id} className="flex flex-col gap-2 w-full mt-4">
+        <div className="flex gap-4 w-full items-center">
+          <img src={item.image} className="size-1/2 h-80 object-cover" />
+          <div className="flex flex-col text-start w-1/2">
+            <span className="font-bold text-2xl max-w-[600px]">
+              {item.title}
+            </span>
+            <span className="text-slate-700 max-w-[600px]">{item.excerpt}</span>
+            <Link className="font-bold underline mt-8">
+              <Button text="zum Artikel" variant="black"></Button>
+            </Link>
           </div>
         </div>
       </div>
