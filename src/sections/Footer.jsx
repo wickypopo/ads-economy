@@ -8,6 +8,6 @@ export default function Footer() {
   const [modal, setModal] = useState(false);
 
   return (
-    <footer className="flex w-full justify-between p-4 bg-blue-900 h-140"></footer>
+    <footer className="flex w-full justify-between p-4 bg-slate-950 h-140"></footer>
   );
 }
