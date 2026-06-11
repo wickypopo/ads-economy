@@ -3,6 +3,7 @@ import { pricingData } from "../data/pricingData";
 import { useLocale } from "../utils/useLocale";
 import { Square } from "lucide-react";
 import Button from "../components/Button";
+import { Link } from "react-router-dom";
 
 import { premierBrands } from "../data/premierBrands";
 
@@ -80,7 +81,35 @@ export default function PremiereBrands() {
           <Button text={premierBrands[locale].hero.cta} />
         </div>
       </section>
-      <section className="flex flex-col items-center gap-4 blue -ml-4 -mr-4 p-4 text-white max-w-[1200px] w-full">
+      <section className="flex flex-col gap-4 border-b border-slate-300 max-w-[1200px] w-full">
+        <div className="flex flex-col items-center justify-center h-full w-full px-4 py-40 gap-4">
+          <h2 className="instrument text-4xl">
+            {premierBrands[locale].qualification.title}
+          </h2>
+          <div className="border-b border-slate-300 border-zinc-500 w-2/5" />
+
+          <ul className="flex flex-col gap-2 mt-1">
+            {premierBrands[locale].qualification.items.map((item) => (
+              <li className="flex items-center gap-1 font-medium">
+                <Square className="size-2 fill-blue-500 stroke-none" />
+                {item}
+              </li>
+            ))}
+          </ul>
+          <Button text={premierBrands[locale].hero.cta} />
+          <div className="flex flex-col text-center">
+            <span className="text-sm text-slate-600">
+              {premierBrands[locale].qualification.fallbackText}
+            </span>
+            <Link to="/rising-brands">
+              <span className="underline font-medium">
+                {premierBrands[locale].qualification.fallbackLink}
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+      <section className="flex flex-col items-center gap-4 blue -ml-4 -mr-4 p-4 text-white lg:max-w-[1200px] lg:w-full">
         <div className="flex flex-col h-full w-full px-4 py-40 gap-4">
           <h2 className="instrument text-4xl">
             {premierBrands[locale].partnership.title}
@@ -161,32 +190,7 @@ export default function PremiereBrands() {
           <Button variant="white" text={premierBrands[locale].hero.cta} />
         </div>
       </section>
-      <section className="flex flex-col items-center gap-4 border-b border-slate-300 max-w-[1200px] w-full">
-        <div className="flex flex-col h-full w-full px-4 py-40 gap-4">
-          <h2 className="instrument text-4xl">
-            {premierBrands[locale].qualification.title}
-          </h2>
-          <div className="border-b border-slate-300 border-zinc-500 w-2/5" />
 
-          <ul className="flex flex-col gap-2 mt-1">
-            {premierBrands[locale].qualification.items.map((item) => (
-              <li className="flex items-center gap-1 font-medium">
-                <Square className="size-2 fill-blue-500 stroke-none" />
-                {item}
-              </li>
-            ))}
-          </ul>
-          <Button text={premierBrands[locale].hero.cta} />
-          <div className="flex flex-col">
-            <span className="text-sm text-slate-600">
-              {premierBrands[locale].qualification.fallbackText}
-            </span>
-            <span className="underline font-medium">
-              {premierBrands[locale].qualification.fallbackLink}
-            </span>
-          </div>
-        </div>
-      </section>
       <section className="flex flex-col items-center gap-4 border-b border-slate-300 max-w-[1200px] w-full">
         <div className="flex flex-col h-full w-full px-4 py-40 gap-4">
           <h2 className="instrument text-4xl">
@@ -205,20 +209,23 @@ export default function PremiereBrands() {
           <Button text={premierBrands[locale].hero.cta} />
         </div>
       </section>
-      <section className="flex flex-col items-center justify-center text-center gap-4 border-b border-slate-300 py-20 blue text-white -ml-4 -mr-4 max-w-[1200px] w-full">
-        <h2 className="text-center text-6xl instrument">
-          {premierBrands[locale].footerCta.title}
-        </h2>
-        <div className="border-b border-slate-300 border-zinc-300 w-2/5" />
-        <span className="w-[300px]">
-          {premierBrands[locale].footerCta.text}
-        </span>
-        <div className="flex gap-2">
-          <Button
-            text={premierBrands[locale].footerCta.cta}
-            link="/rising-brands"
-            variant={"white"}
-          />
+
+      <section className="flex flex-col items-center gap-4 blue p-4 text-white lg:max-w-[1200px] md:w-full">
+        <div className="flex flex-col items-center h-full w-screen md:w-full px-4 py-40 gap-4">
+          <h2 className="text-center text-6xl instrument">
+            {premierBrands[locale].footerCta.title}
+          </h2>
+          <div className="border-b border-slate-300 border-zinc-300 w-2/5" />
+          <span className="w-[300px]">
+            {premierBrands[locale].footerCta.text}
+          </span>
+          <div className="flex gap-2">
+            <Button
+              text={premierBrands[locale].footerCta.cta}
+              link="/"
+              variant={"white"}
+            />
+          </div>
         </div>
       </section>
     </>

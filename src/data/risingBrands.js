@@ -7,7 +7,7 @@ export const risingBrands = {
       items: {
         item1: {
           title: "Clothing Brand",
-          text: "Increased ROAS to 20x",
+          text: "Increases ROAS to 20x",
           img: "/clothing.jpeg",
         },
         item2: {
@@ -17,7 +17,7 @@ export const risingBrands = {
         },
         item3: {
           title: "Music Label",
-          text: "Increases ROAS to 20x",
+          text: "10x ROAS in B2B Ads on Meta",
           img: "/music.jpg",
         },
       },
@@ -134,7 +134,7 @@ export const risingBrands = {
       items: {
         item1: {
           title: "Clothing Brand",
-          text: "Increased ROAS to 20x",
+          text: "Increases ROAS to 20x",
           img: "/clothing.jpeg",
         },
         item2: {
@@ -144,7 +144,7 @@ export const risingBrands = {
         },
         item3: {
           title: "Music Label",
-          text: "Increases ROAS to 20x",
+          text: "10x ROAS in B2B Ads on Meta",
           img: "/music.jpg",
         },
       },

@@ -28,7 +28,7 @@ function App() {
           }
         />
         <Route
-          path="/premiere-brands"
+          path="/premier-brands"
           element={
             <PageLayout>
               <PremiereBrands />

@@ -3,6 +3,8 @@ import { pricingData } from "../data/pricingData";
 import { useLocale } from "../utils/useLocale";
 import { Square } from "lucide-react";
 import Button from "../components/Button";
+import { Link } from "react-router-dom";
+import Funnel from "../components/Funnel";
 
 import { risingBrands } from "../data/risingBrands";
 
@@ -13,8 +15,9 @@ export default function RisingBrands() {
   return (
     <>
       <section className="flex flex-col items-center gap-4 max-w-[1200px] w-full">
-        <div className="flex flex-col h-full w-full px-4 py-40 gap-10 items-center justify-center text-center">
-          <div className="flex flex-col gap-2">
+        <div className="flex flex-col h-full w-full px-4 pb-8 gap-10 items-center justify-center text-center">
+          <div className="flex flex-col items-center gap-2">
+            <Funnel />
             <h2 className="instrument text-6xl">
               {risingBrands[locale].hero.title}
             </h2>
@@ -28,43 +31,45 @@ export default function RisingBrands() {
             </span>
             <Button text={risingBrands[locale].hero.cta} />
           </div>
-          <div className="flex justify-center w-full gap-8">
-            <div className="flex flex-col items-center">
-              <img
-                src={risingBrands[locale].hero.items.item1.img}
-                className="size-30 bg-blue-600 mb-2 object-cover rounded"
-              />
-              <span className="text-slate-600 text-sm">
-                {risingBrands[locale].hero.items.item1.title}
-              </span>
-              <span className="font-medium">
-                {risingBrands[locale].hero.items.item1.text}
-              </span>
-            </div>
-            <div className="flex flex-col items-center">
-              <img
-                src={risingBrands[locale].hero.items.item2.img}
-                className="size-30 bg-blue-600 mb-2 object-cover rounded"
-              />
-              <span className="text-slate-600 text-sm">
-                {risingBrands[locale].hero.items.item2.title}
-              </span>
-              <span className="font-medium">
-                {risingBrands[locale].hero.items.item2.text}
-              </span>
-            </div>
-            <div className="flex flex-col items-center">
-              <img
-                src={risingBrands[locale].hero.items.item3.img}
-                className="size-30 bg-blue-600 mb-2 object-cover rounded"
-              />
-              <span className="text-slate-600 text-sm">
-                {risingBrands[locale].hero.items.item3.title}
-              </span>
-              <span className="font-medium">
-                {risingBrands[locale].hero.items.item3.text}
-              </span>
-            </div>
+        </div>
+      </section>
+      <section className="py-10">
+        <div className="flex justify-center w-full gap-8">
+          <div className="flex flex-col items-center">
+            <img
+              src={risingBrands[locale].hero.items.item1.img}
+              className="size-30 bg-blue-600 mb-2 object-cover rounded"
+            />
+            <span className="text-slate-600 text-sm">
+              {risingBrands[locale].hero.items.item1.title}
+            </span>
+            <span className="font-medium">
+              {risingBrands[locale].hero.items.item1.text}
+            </span>
+          </div>
+          <div className="flex flex-col items-center">
+            <img
+              src={risingBrands[locale].hero.items.item2.img}
+              className="size-30 bg-blue-600 mb-2 object-cover rounded"
+            />
+            <span className="text-slate-600 text-sm">
+              {risingBrands[locale].hero.items.item2.title}
+            </span>
+            <span className="font-medium">
+              {risingBrands[locale].hero.items.item2.text}
+            </span>
+          </div>
+          <div className="flex flex-col items-center">
+            <img
+              src={risingBrands[locale].hero.items.item3.img}
+              className="size-30 bg-blue-600 mb-2 object-cover rounded"
+            />
+            <span className="text-slate-600 text-sm">
+              {risingBrands[locale].hero.items.item3.title}
+            </span>
+            <span className="font-medium">
+              {risingBrands[locale].hero.items.item3.text}
+            </span>
           </div>
         </div>
       </section>
@@ -80,7 +85,35 @@ export default function RisingBrands() {
           <Button text={risingBrands[locale].hero.cta} />
         </div>
       </section>
-      <section className="flex flex-col items-center gap-4 blue -ml-4 -mr-4 p-4 text-white max-w-[1200px] w-full">
+      <section className="flex flex-col items-center gap-4 border-b border-slate-300 max-w-[1200px] w-full">
+        <div className="flex flex-col h-full w-full px-4 py-40 gap-4">
+          <h2 className="instrument text-4xl">
+            {risingBrands[locale].qualification.title}
+          </h2>
+          <div className="border-b border-slate-300 border-zinc-500 w-2/5" />
+
+          <ul className="flex flex-col gap-2 mt-1">
+            {risingBrands[locale].qualification.items.map((item) => (
+              <li className="flex items-center gap-1 font-medium">
+                <Square className="size-2 fill-blue-500 stroke-none" />
+                {item}
+              </li>
+            ))}
+          </ul>
+          <Button text={risingBrands[locale].hero.cta} />
+          <div className="flex flex-col">
+            <span className="text-sm text-slate-600">
+              {risingBrands[locale].qualification.fallbackText}
+            </span>
+            <Link to="/premier-brands">
+              <span className="underline font-medium">
+                {risingBrands[locale].qualification.fallbackLink}
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+      <section className="flex flex-col items-center gap-4 blue -ml-4 -mr-4 p-4 text-white lg:max-w-[1200px] lg:w-full">
         <div className="flex flex-col h-full w-full px-4 py-40 gap-4">
           <h2 className="instrument text-4xl">
             {risingBrands[locale].partnership.title}
@@ -161,32 +194,7 @@ export default function RisingBrands() {
           <Button variant="white" text={risingBrands[locale].hero.cta} />
         </div>
       </section>
-      <section className="flex flex-col items-center gap-4 border-b border-slate-300 max-w-[1200px] w-full">
-        <div className="flex flex-col h-full w-full px-4 py-40 gap-4">
-          <h2 className="instrument text-4xl">
-            {risingBrands[locale].qualification.title}
-          </h2>
-          <div className="border-b border-slate-300 border-zinc-500 w-2/5" />
 
-          <ul className="flex flex-col gap-2 mt-1">
-            {risingBrands[locale].qualification.items.map((item) => (
-              <li className="flex items-center gap-1 font-medium">
-                <Square className="size-2 fill-blue-500 stroke-none" />
-                {item}
-              </li>
-            ))}
-          </ul>
-          <Button text={risingBrands[locale].hero.cta} />
-          <div className="flex flex-col">
-            <span className="text-sm text-slate-600">
-              {risingBrands[locale].qualification.fallbackText}
-            </span>
-            <span className="underline font-medium">
-              {risingBrands[locale].qualification.fallbackLink}
-            </span>
-          </div>
-        </div>
-      </section>
       <section className="flex flex-col items-center gap-4 border-b border-slate-300 max-w-[1200px] w-full">
         <div className="flex flex-col h-full w-full px-4 py-40 gap-4">
           <h2 className="instrument text-4xl">
@@ -205,18 +213,22 @@ export default function RisingBrands() {
           <Button text={risingBrands[locale].hero.cta} />
         </div>
       </section>
-      <section className="flex flex-col items-center justify-center text-center gap-4 border-b border-slate-300 py-20 blue text-white -ml-4 -mr-4 max-w-[1200px] w-full">
-        <h2 className="text-center text-6xl instrument">
-          {risingBrands[locale].footerCta.title}
-        </h2>
-        <div className="border-b border-slate-300 border-zinc-300 w-2/5" />
-        <span className="w-[300px]">{risingBrands[locale].footerCta.text}</span>
-        <div className="flex gap-2">
-          <Button
-            text={risingBrands[locale].footerCta.cta}
-            link="/rising-brands"
-            variant={"white"}
-          />
+      <section className="flex flex-col items-center gap-4 blue p-4 text-white lg:max-w-[1200px] md:w-full">
+        <div className="flex flex-col items-center h-full w-screen md:w-full px-4 py-40 gap-4">
+          <h2 className="text-center text-6xl instrument">
+            {risingBrands[locale].footerCta.title}
+          </h2>
+          <div className="border-b border-slate-300 border-zinc-300 w-2/5" />
+          <span className="w-[300px]">
+            {risingBrands[locale].footerCta.text}
+          </span>
+          <div className="flex gap-2">
+            <Button
+              text={risingBrands[locale].footerCta.cta}
+              link="/"
+              variant={"white"}
+            />
+          </div>
         </div>
       </section>
     </>

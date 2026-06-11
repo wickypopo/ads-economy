@@ -54,7 +54,7 @@ export default function Home() {
   ));
 
   return (
-    <main className="overflow-y-hidden flex flex-col items-center">
+    <main className="overflow-y-hidden flex flex-col items-center overflow-hidden">
       {/* HERO */}
       <section className="max-w-[1200px] w-full h-[80vh] flex flex-col items-center justify-center text-center gap-4 p-8">
         <AnimatedGlobe />
