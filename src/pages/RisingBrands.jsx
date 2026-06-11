@@ -10,7 +10,6 @@ import { risingBrands } from "../data/risingBrands";
 
 export default function RisingBrands() {
   const { locale, setLocale, t } = useLocale();
-  console.log(risingBrands[locale]);
 
   return (
     <>
@@ -27,7 +26,7 @@ export default function RisingBrands() {
             }}
           />
         </span>
-        <Button text={risingBrands[locale].hero.cta} />
+        <Button link="/contact" text={risingBrands[locale].hero.cta} />
       </section>
       <section className="py-10">
         <div className="flex justify-center w-full gap-8">
@@ -78,17 +77,17 @@ export default function RisingBrands() {
           <span className="text-slate-600 max-w-[600px]">
             {risingBrands[locale].program.text}
           </span>
-          <Button text={risingBrands[locale].hero.cta} />
+          <Button link="/contact" text={risingBrands[locale].hero.cta} />
         </div>
       </section>
       <section className="flex flex-col items-center gap-4 border-b border-slate-300 max-w-[1200px] w-full">
-        <div className="flex flex-col h-full w-full px-4 py-40 gap-4">
+        <div className="flex flex-col lg:items-center h-full w-full px-4 py-40 gap-4">
           <h2 className="instrument text-4xl">
             {risingBrands[locale].qualification.title}
           </h2>
-          <div className="border-b border-slate-300 border-zinc-500 w-2/5" />
+          <div className="border-b border-slate-300 border-zinc-500 w-2/5 lg:items-center" />
 
-          <ul className="flex flex-col gap-2 mt-1">
+          <ul className="flex flex-col gap-2 mt-1 lg:items-center">
             {risingBrands[locale].qualification.items.map((item) => (
               <li className="flex items-center gap-1 font-medium">
                 <Square className="size-2 fill-blue-500 stroke-none" />
@@ -96,8 +95,8 @@ export default function RisingBrands() {
               </li>
             ))}
           </ul>
-          <Button text={risingBrands[locale].hero.cta} />
-          <div className="flex flex-col">
+          <Button link="/contact" text={risingBrands[locale].hero.cta} />
+          <div className="flex flex-col  lg:text-center">
             <span className="text-sm text-slate-600">
               {risingBrands[locale].qualification.fallbackText}
             </span>
@@ -187,10 +186,13 @@ export default function RisingBrands() {
           <span className="text-sm text-slate-200 leading-none">
             {risingBrands[locale].partnership.feeTaxInfo}
           </span>
-          <Button variant="white" text={risingBrands[locale].hero.cta} />
+          <Button
+            link="/contact"
+            variant="white"
+            text={risingBrands[locale].hero.cta}
+          />
         </div>
       </section>
-
       <section className="flex flex-col items-center gap-4 border-b border-slate-300 max-w-[1200px] w-full">
         <div className="flex flex-col h-full w-full px-4 py-40 gap-4">
           <h2 className="instrument text-4xl">
@@ -206,7 +208,7 @@ export default function RisingBrands() {
               </li>
             ))}
           </ul>
-          <Button text={risingBrands[locale].hero.cta} />
+          <Button link="/contact" text={risingBrands[locale].hero.cta} />
         </div>
       </section>
       <section className="flex flex-col items-center gap-4 blue p-4 text-white lg:max-w-[1200px] md:w-full">
@@ -220,8 +222,8 @@ export default function RisingBrands() {
           </span>
           <div className="flex gap-2">
             <Button
+              link="/contact"
               text={risingBrands[locale].footerCta.cta}
-              link="/"
               variant={"white"}
             />
           </div>

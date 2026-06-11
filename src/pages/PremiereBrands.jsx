@@ -2,9 +2,10 @@ import { useState } from "react";
 import { pricingData } from "../data/pricingData";
 import { useLocale } from "../utils/useLocale";
 import { Square } from "lucide-react";
-import Button from "../components/Button";
-import { Link } from "react-router-dom";
 
+import { Link } from "react-router-dom";
+import Funnel from "../components/Funnel";
+import Button from "../components/Button";
 import { premierBrands } from "../data/premierBrands";
 
 export default function PremiereBrands() {
@@ -13,59 +14,62 @@ export default function PremiereBrands() {
 
   return (
     <>
-      <section className="flex flex-col items-center gap-4 max-w-[1200px] w-full">
-        <div className="flex flex-col h-full w-full px-4 py-40 gap-10 items-center justify-center text-center">
-          <div className="flex flex-col gap-2">
-            <h2 className="instrument text-6xl">
-              {premierBrands[locale].hero.title}
-            </h2>
-            <span className="text-slate-600">
-              <p
-                className="max-w-[400px]"
-                dangerouslySetInnerHTML={{
-                  __html: premierBrands[locale].hero.text,
-                }}
-              />
+      <section className="max-w-[1200px] w-full h-[80vh] flex flex-col items-center justify-center text-center gap-4 p-8">
+        <Funnel />
+        <h2 className="instrument text-6xl">
+          {premierBrands[locale].hero.title}
+        </h2>
+        <span className="text-slate-600">
+          <p
+            className="max-w-[400px]"
+            dangerouslySetInnerHTML={{
+              __html: premierBrands[locale].hero.text,
+            }}
+          />
+        </span>
+        <Button
+          variant="primary-blue"
+          link="/contact"
+          text={premierBrands[locale].hero.cta}
+        />
+      </section>
+      <section className="py-10">
+        <div className="flex justify-center w-full gap-8">
+          <div className="flex flex-col items-center">
+            <img
+              src={premierBrands[locale].hero.items.item1.img}
+              className="size-30 bg-blue-600 mb-2 object-cover rounded"
+            />
+            <span className="text-slate-600 text-sm">
+              {premierBrands[locale].hero.items.item1.title}
             </span>
-            <Button text={premierBrands[locale].hero.cta} />
+            <span className="font-medium">
+              {premierBrands[locale].hero.items.item1.text}
+            </span>
           </div>
-          <div className="flex justify-center w-full gap-8">
-            <div className="flex flex-col items-center">
-              <img
-                src={premierBrands[locale].hero.items.item1.img}
-                className="size-30 bg-blue-600 mb-2 object-cover rounded"
-              />
-              <span className="text-slate-600 text-sm">
-                {premierBrands[locale].hero.items.item1.title}
-              </span>
-              <span className="font-medium">
-                {premierBrands[locale].hero.items.item1.text}
-              </span>
-            </div>
-            <div className="flex flex-col items-center">
-              <img
-                src={premierBrands[locale].hero.items.item2.img}
-                className="size-30 bg-blue-600 mb-2 object-cover rounded"
-              />
-              <span className="text-slate-600 text-sm">
-                {premierBrands[locale].hero.items.item2.title}
-              </span>
-              <span className="font-medium">
-                {premierBrands[locale].hero.items.item2.text}
-              </span>
-            </div>
-            <div className="flex flex-col items-center">
-              <img
-                src={premierBrands[locale].hero.items.item3.img}
-                className="size-30 bg-blue-600 mb-2 object-cover rounded"
-              />
-              <span className="text-slate-600 text-sm">
-                {premierBrands[locale].hero.items.item3.title}
-              </span>
-              <span className="font-medium">
-                {premierBrands[locale].hero.items.item3.text}
-              </span>
-            </div>
+          <div className="flex flex-col items-center">
+            <img
+              src={premierBrands[locale].hero.items.item2.img}
+              className="size-30 bg-blue-600 mb-2 object-cover rounded"
+            />
+            <span className="text-slate-600 text-sm">
+              {premierBrands[locale].hero.items.item2.title}
+            </span>
+            <span className="font-medium">
+              {premierBrands[locale].hero.items.item2.text}
+            </span>
+          </div>
+          <div className="flex flex-col items-center">
+            <img
+              src={premierBrands[locale].hero.items.item3.img}
+              className="size-30 bg-blue-600 mb-2 object-cover rounded"
+            />
+            <span className="text-slate-600 text-sm">
+              {premierBrands[locale].hero.items.item3.title}
+            </span>
+            <span className="font-medium">
+              {premierBrands[locale].hero.items.item3.text}
+            </span>
           </div>
         </div>
       </section>
@@ -78,7 +82,10 @@ export default function PremiereBrands() {
           <span className="text-slate-600 max-w-[600px]">
             {premierBrands[locale].program.text}
           </span>
-          <Button text={premierBrands[locale].hero.cta} />
+          <Button
+            variant="primary-blue"
+            text={premierBrands[locale].hero.cta}
+          />
         </div>
       </section>
       <section className="flex flex-col gap-4 border-b border-slate-300 max-w-[1200px] w-full">
@@ -96,7 +103,10 @@ export default function PremiereBrands() {
               </li>
             ))}
           </ul>
-          <Button text={premierBrands[locale].hero.cta} />
+          <Button
+            variant="primary-blue"
+            text={premierBrands[locale].hero.cta}
+          />
           <div className="flex flex-col text-center">
             <span className="text-sm text-slate-600">
               {premierBrands[locale].qualification.fallbackText}
@@ -187,7 +197,11 @@ export default function PremiereBrands() {
           <span className="text-sm text-slate-200 leading-none">
             {premierBrands[locale].partnership.feeTaxInfo}
           </span>
-          <Button variant="white" text={premierBrands[locale].hero.cta} />
+          <Button
+            variant="primary-blue"
+            variant="white"
+            text={premierBrands[locale].hero.cta}
+          />
         </div>
       </section>
 
@@ -206,7 +220,10 @@ export default function PremiereBrands() {
               </li>
             ))}
           </ul>
-          <Button text={premierBrands[locale].hero.cta} />
+          <Button
+            variant="primary-blue"
+            text={premierBrands[locale].hero.cta}
+          />
         </div>
       </section>
 
@@ -221,6 +238,7 @@ export default function PremiereBrands() {
           </span>
           <div className="flex gap-2">
             <Button
+              variant="primary-blue"
               text={premierBrands[locale].footerCta.cta}
               link="/"
               variant={"white"}

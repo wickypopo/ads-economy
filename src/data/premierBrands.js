@@ -1,7 +1,7 @@
 export const premierBrands = {
   de: {
     hero: {
-      title: "Premier Brands",
+      title: "Ads für Premier Brands",
       text: "Maximale Ads-Effizienz basierend auf unserer <b>„Leading instead of catching up“-Philosophie.</b> Die ultimative Premier Partnerschaft für etablierte Brands.",
       cta: "Jetzt anfragen",
       items: {

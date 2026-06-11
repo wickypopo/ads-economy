@@ -25,8 +25,11 @@ export default function Home() {
   }, []);
 
   const newsMap = newsData.map((item) => {
+    if (item.published === false) {
+      return;
+    }
     return (
-      <div className="flex flex-col gap-2 w-full">
+      <div key={item.id} className="flex flex-col gap-2 w-full">
         <div className="flex gap-4 w-full">
           <img src={item.image} className="w-1/3" />
           <div className="flex flex-col text-start w-2/3">

@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 
 import Home from "./pages/Home";
@@ -11,12 +11,16 @@ import Tools from "./pages/Tools";
 import Header from "./sections/Header";
 import PageLayout from "./components/PageLayout";
 import Footer from "./sections/Footer";
+import RisingContact from "./pages/RisingContact";
 
 function App() {
+  const location = useLocation();
+
   return (
     <>
       <Toaster />
-      <Header />
+      {location.pathname === "/contact" ? null : <Header />}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
@@ -59,8 +63,9 @@ function App() {
             </PageLayout>
           }
         />
+        <Route path="/contact" element={<RisingContact />} />
       </Routes>
-      <Footer />
+      {location.pathname === "/contact" ? null : <Footer />}
     </>
   );
 }

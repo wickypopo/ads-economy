@@ -7,6 +7,7 @@ export default function Button({
 }) {
   const variants = {
     primary: "p-2 px-6 text-white font-medium blue",
+    "primary-blue": "p-2 px-6 text-white font-medium bg-blue-600",
     secondary:
       "ring-2 ring-inset ring-blue-600 p-2 px-6 font-medium text-black",
     white: "bg-white p-2 px-6 text-black font-medium",

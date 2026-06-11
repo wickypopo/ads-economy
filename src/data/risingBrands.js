@@ -1,7 +1,7 @@
 export const risingBrands = {
   de: {
     hero: {
-      title: "Rising Brands",
+      title: "Ads für Rising Brands",
       text: "Wirtschaftliche Ads-Optimierung basierend auf dem <b> ‚Leading instead of catching up‘- Philosophie.  </b> Vollwertige Premier Partnerschaft für Rising Brands.",
       cta: "Jetzt Bewerben",
       items: {

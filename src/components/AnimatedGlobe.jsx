@@ -1,4 +1,3 @@
-// src/components/WireframeGlobe.jsx
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useMemo, useRef } from "react";
 import * as THREE from "three";
@@ -197,7 +196,7 @@ function Globe() {
           speed={0.08 + index * 0.04}
           trailSize={34}
           offset={index * 0.18}
-          dotSize={0.04}
+          dotSize={0}
         />
       ))}
     </group>
