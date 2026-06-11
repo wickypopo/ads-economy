@@ -86,6 +86,9 @@ export default function Header() {
                 <Link onClick={() => setMenu(false)} to="/premier-brands">
                   Premier Brands
                 </Link>
+                <Link onClick={() => setMenu(false)} to="/experts">
+                  Experts
+                </Link>
               </nav>
             </div>
           ) : null}
@@ -111,6 +114,9 @@ export default function Header() {
             </Link>
             <Link onClick={() => setMenu(false)} to="/premier-brands">
               Premier Brands
+            </Link>
+            <Link onClick={() => setMenu(false)} to="/experts">
+              Experts
             </Link>
           </nav>
         </div>

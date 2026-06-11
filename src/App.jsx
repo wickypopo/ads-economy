@@ -12,6 +12,7 @@ import Header from "./sections/Header";
 import PageLayout from "./components/PageLayout";
 import Footer from "./sections/Footer";
 import RisingContact from "./pages/RisingContact";
+import Professionals from "./pages/Professionals";
 
 function App() {
   const location = useLocation();
@@ -60,6 +61,14 @@ function App() {
           element={
             <PageLayout>
               <Tools />
+            </PageLayout>
+          }
+        />
+        <Route
+          path="/experts"
+          element={
+            <PageLayout>
+              <Professionals />
             </PageLayout>
           }
         />
