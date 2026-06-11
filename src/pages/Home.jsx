@@ -25,22 +25,31 @@ export default function Home() {
     getNews();
   }, []);
 
+  let length = 0;
   const newsMap = newsData.map((item) => {
-    if (item.published === false) {
+    length++;
+    if (item.published === false || length > 3) {
       return;
     }
+
     return (
       <div key={item.id} className="flex flex-col gap-2 w-full mt-4">
         <div className="flex gap-4 w-full items-center">
           <img src={item.image} className="size-1/2 h-80 object-cover" />
           <div className="flex flex-col text-start w-1/2">
+            <span className="font-medium text-sm text-blue-600 max-w-[600px]">
+              {item.category}
+            </span>
             <span className="font-bold text-2xl max-w-[600px]">
               {item.title}
             </span>
             <span className="text-slate-700 max-w-[600px]">{item.excerpt}</span>
-            <Link className="font-bold underline mt-8">
-              <Button text="zum Artikel" variant="black"></Button>
-            </Link>
+
+            <Button
+              text="zum Artikel"
+              variant="black"
+              link={`news/${item.slug}`}
+            ></Button>
           </div>
         </div>
       </div>
