@@ -27,8 +27,8 @@ export default function News() {
     return (
       <div key={item.id} className="flex flex-col gap-2 w-full mt-4">
         <div className="flex gap-4 w-full items-center">
-          <img src={item.image} className="size-1/3 h-80 object-cover" />
-          <div className="flex flex-col text-start w-2/3">
+          <img src={item.image} className="size-1/2 h-80 object-cover" />
+          <div className="flex flex-col text-start w-1/2">
             <span className="font-bold text-2xl max-w-[600px]">
               {item.title}
             </span>
