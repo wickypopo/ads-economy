@@ -14,24 +14,20 @@ export default function RisingBrands() {
 
   return (
     <>
-      <section className="flex flex-col items-center gap-4 max-w-[1200px] w-full">
-        <div className="flex flex-col h-full w-full px-4 pb-8 gap-10 items-center justify-center text-center">
-          <div className="flex flex-col items-center gap-2">
-            <Funnel />
-            <h2 className="instrument text-6xl">
-              {risingBrands[locale].hero.title}
-            </h2>
-            <span className="text-slate-600">
-              <p
-                className="max-w-[400px]"
-                dangerouslySetInnerHTML={{
-                  __html: risingBrands[locale].hero.text,
-                }}
-              />
-            </span>
-            <Button text={risingBrands[locale].hero.cta} />
-          </div>
-        </div>
+      <section className="max-w-[1200px] w-full h-[80vh] flex flex-col items-center justify-center text-center gap-4 p-8">
+        <Funnel />
+        <h2 className="instrument text-6xl">
+          {risingBrands[locale].hero.title}
+        </h2>
+        <span className="text-slate-600">
+          <p
+            className="max-w-[400px]"
+            dangerouslySetInnerHTML={{
+              __html: risingBrands[locale].hero.text,
+            }}
+          />
+        </span>
+        <Button text={risingBrands[locale].hero.cta} />
       </section>
       <section className="py-10">
         <div className="flex justify-center w-full gap-8">
