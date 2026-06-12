@@ -14,7 +14,7 @@ export default function PremiereBrands() {
 
   return (
     <>
-      <section className="max-w-[1200px] w-full h-[80vh] flex flex-col items-center justify-center text-center gap-4 p-8">
+      <section className="max-w-[1200px] w-full min-h-[80vh] flex flex-col items-center justify-center text-center gap-4 p-8">
         <Funnel />
         <h2 className="instrument text-6xl">
           {premierBrands[locale].hero.title}

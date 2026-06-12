@@ -34,22 +34,28 @@ export default function Home() {
 
     return (
       <div key={item.id} className="flex flex-col gap-2 w-full mt-4">
-        <div className="flex gap-4 w-full items-center">
-          <img src={item.image} className="size-1/2 h-80 object-cover" />
-          <div className="flex flex-col text-start w-1/2">
+        <div className="flex flex-col md:flex-row gap-4 w-full items-center">
+          <img
+            src={item.image}
+            className="md:w-1/2 w-full h-[250px] object-cover"
+          />
+          <div className="flex flex-col text-start md:w-1/2">
             <span className="font-medium text-sm text-blue-600 max-w-[600px]">
               {item.category}
             </span>
-            <span className="font-bold text-2xl max-w-[600px]">
+            <span className="font-bold md:text-xl max-w-[600px]">
               {item.title}
             </span>
-            <span className="text-slate-700 max-w-[600px]">{item.excerpt}</span>
-
-            <Button
-              text="zum Artikel"
-              variant="black"
-              link={`news/${item.slug}`}
-            ></Button>
+            <span className="text-slate-700 md:text-base text-sm max-w-[600px]">
+              {item.excerpt}
+            </span>
+            <div className="mt-2">
+              <Button
+                text="zum Artikel"
+                variant="underline"
+                link={`news/${item.slug}`}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -74,7 +80,7 @@ export default function Home() {
   return (
     <main className="overflow-y-hidden flex flex-col items-center overflow-hidden">
       {/* HERO */}
-      <section className="max-w-[1200px] w-full h-[80vh] flex flex-col items-center justify-center text-center gap-4 p-8">
+      <section className="max-w-[1200px] w-full min-h-[80vh] flex flex-col items-center justify-center text-center gap-4 p-8">
         <AnimatedGlobe />
         <h1 className="text-center text-6xl instrument">
           {homeLocale[locale].hero.title}
