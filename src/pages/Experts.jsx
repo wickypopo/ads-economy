@@ -57,11 +57,14 @@ export default function Experts() {
         <div className="w-full flex md:grid md:grid-cols-3 flex-col gap-4">
           {founderMap}
         </div>
-        <h2 className="text-center text-4xl instrument">Experts</h2>
-
-        <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {expertsMap}
-        </div>
+        {expertData.de.experts.length === 0 ? null : (
+          <>
+            <h2 className="text-center text-4xl instrument">Experts</h2>
+            <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {expertsMap}
+            </div>
+          </>
+        )}
       </div>
     </section>
   );
