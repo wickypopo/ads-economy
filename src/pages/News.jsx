@@ -24,17 +24,30 @@ export default function News() {
     if (item.published === false) {
       return;
     }
+
     return (
       <div key={item.id} className="flex flex-col gap-2 w-full mt-4">
-        <div className="flex gap-4 w-full items-end">
-          <img src={item.image} className="size-1/2 h-80 object-cover" />
-          <div className="flex flex-col text-start w-1/2">
-            <span className="font-bold text-2xl max-w-[600px]">
+        <div className="flex flex-col md:flex-row gap-4 w-full items-center">
+          <img
+            src={item.image}
+            className="md:w-1/2 w-full h-[250px] object-cover"
+          />
+          <div className="flex flex-col text-start md:w-1/2">
+            <span className="font-medium text-sm text-blue-600 max-w-[600px]">
+              {item.category}
+            </span>
+            <span className="font-bold md:text-xl max-w-[600px]">
               {item.title}
             </span>
-            <span className="text-slate-700 max-w-[600px]">{item.excerpt}</span>
-            <div className="mt-4">
-              <Button text="zum Artikel" variant="black" link={item.slug} />
+            <span className="text-slate-700 md:text-base text-sm max-w-[600px]">
+              {item.excerpt}
+            </span>
+            <div className="mt-2">
+              <Button
+                text="zum Artikel"
+                variant="underline"
+                link={`/news/${item.slug}`}
+              />
             </div>
           </div>
         </div>

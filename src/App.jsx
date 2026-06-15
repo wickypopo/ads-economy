@@ -12,7 +12,7 @@ import Header from "./sections/Header";
 import PageLayout from "./components/PageLayout";
 import Footer from "./sections/Footer";
 import RisingContact from "./pages/RisingContact";
-import Professionals from "./pages/Professionals";
+import Experts from "./pages/Experts";
 import Article from "./pages/Article";
 
 function App() {
@@ -70,7 +70,7 @@ function App() {
           path="/experts"
           element={
             <PageLayout>
-              <Professionals />
+              <Experts />
             </PageLayout>
           }
         />

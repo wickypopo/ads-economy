@@ -14,6 +14,7 @@ export default function Button({
     "white-outline":
       "ring-2 ring-inset ring-white p-2 px-6 font-medium text-white",
     black: "bg-black p-2 px-6 text-white font-medium",
+    underline: "underline font-medium",
   };
 
   return (

@@ -54,11 +54,13 @@ export default function Article() {
             </span>
             <span className="font-bold  max-w-[600px]">{item.title}</span>
 
-            <Button
-              text="zum Artikel"
-              variant="black"
-              link={`/news/${item.slug}#top`}
-            ></Button>
+            <div className="mt-2">
+              <Button
+                text="zum Artikel"
+                variant="underline"
+                link={`/news/${item.slug}`}
+              />
+            </div>
           </div>
         </div>
       </div>

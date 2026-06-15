@@ -205,7 +205,7 @@ function Globe() {
 
 export default function WireframeGlobe() {
   return (
-    <div className="pointer-events-none z-0 h-[640px] w-[640px] opacity-90">
+    <div className="pointer-events-none z-0 w-[clamp(260px,55vw,350px)] h-[clamp(260px,55vw,350px)] opacity-90">
       <Canvas camera={{ position: [0, 0, 6], fov: 45 }}>
         <Globe />
       </Canvas>

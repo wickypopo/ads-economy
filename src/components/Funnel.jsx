@@ -169,7 +169,7 @@ function Funnel() {
 
 export default function WireframeFunnel() {
   return (
-    <div className="pointer-events-none relative z-0 h-[min(640px,80vw)] w-[min(640px,80vw)]">
+    <div className="pointer-events-none relative z-0 w-[clamp(260px,55vw,350px)] h-[clamp(260px,55vw,350px)]">
       <Canvas camera={{ position: [0, 0, 8], fov: 45 }}>
         <Funnel />
       </Canvas>
