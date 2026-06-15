@@ -7,6 +7,8 @@ import { Globe } from "lucide-react";
 import AnimatedGlobe from "../components/AnimatedGlobe";
 import { Link } from "react-router-dom";
 import AreaChart from "../components/AreaChart";
+import LearnChart from "../components/LearnChart";
+import ToolChart from "../components/ToolChart";
 
 export default function Home() {
   const { locale, setLocale, t } = useLocale();
@@ -111,26 +113,18 @@ export default function Home() {
           {homeLocale[locale].discover.subtitle}
         </span>
         <div className="flex flex-col lg:flex-row gap-2 font-medium w-full">
-          <div className="size-full bg-slate-100 flex flex-col items-start justify-start gap-2 px-4 pt-4 rounded-xl h-80">
-            <span className="text-xl font-medium">
-              {homeLocale[locale].discover.tabs.news}
-            </span>
-            <div className="bg-slate-200 h-full w-full rounded-t-lg"></div>
+          <div className="flex-1">
+            <LearnChart />
           </div>
-          <div className="size-full bg-slate-100 flex flex-col items-start justify-start gap-2 px-4 pt-4 rounded-xl  h-80">
-            <span className="text-xl font-medium">
-              {homeLocale[locale].discover.tabs.learn}
-            </span>
-            <div className="bg-slate-200 h-full w-full rounded-t-lg"></div>
-          </div>
-          <div className="size-full bg-slate-100 flex flex-col items-start justify-start gap-2 px-4 pt-4 rounded-xl  h-80">
-            <span className="text-xl font-medium">
-              {homeLocale[locale].discover.tabs.tools}
-            </span>
-            <div className="bg-slate-200 h-full w-full rounded-t-lg"></div>
+          <div className="flex-1">
+            <ToolChart />
           </div>
         </div>
-        <Button variant="primary" text={homeLocale[locale].discover.cta} />
+        <Button
+          link="/rising-brands"
+          variant="primary"
+          text={homeLocale[locale].discover.cta}
+        />
       </section>
       {/* NEWS */}
       <section className="max-w-[1200px] w-full flex flex-col items-center justify-center text-center gap-4 border-b border-slate-300 py-20 px-4">
