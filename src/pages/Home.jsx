@@ -6,6 +6,7 @@ import Button from "../components/Button";
 import { Globe } from "lucide-react";
 import AnimatedGlobe from "../components/AnimatedGlobe";
 import { Link } from "react-router-dom";
+import AreaChart from "../components/AreaChart";
 
 export default function Home() {
   const { locale, setLocale, t } = useLocale();
@@ -201,7 +202,7 @@ export default function Home() {
         <h2 className="text-center text-4xl instrument">
           {homeLocale[locale].tools.title}
         </h2>
-        <div className="w-full bg-blue-600 rounded-4xl h-140 shadow-xl"></div>
+        <AreaChart />
         <Button text={homeLocale[locale].tools.cta} variant={"black"} />
       </section>
     </main>
