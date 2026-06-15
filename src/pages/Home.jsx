@@ -98,7 +98,7 @@ export default function Home() {
           />
           <Button
             text={homeLocale[locale].hero.buttons.premiereBrands}
-            link="/premiere-brands"
+            link="/premier-brands"
             variant={"secondary"}
           />
         </div>
@@ -159,7 +159,7 @@ export default function Home() {
           />
           <Button
             text={homeLocale[locale].hero.buttons.premiereBrands}
-            link="/premiere-brands"
+            link="/premier-brands"
             variant={"white-outline"}
           />
         </div>
