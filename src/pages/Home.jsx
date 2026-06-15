@@ -36,9 +36,9 @@ export default function Home() {
         <div className="flex flex-col md:flex-row gap-4 w-full items-center">
           <img
             src={item.image}
-            className="md:w-1/2 w-full h-[250px] object-cover"
+            className="md:w-2/4 w-full h-[250px] object-cover"
           />
-          <div className="flex flex-col text-start md:w-1/2">
+          <div className="flex flex-col text-start md:w-2/4">
             <span className="font-medium text-sm text-blue-600 max-w-[600px]">
               {item.category}
             </span>
@@ -139,11 +139,13 @@ export default function Home() {
         </h2>
 
         <div className="border-b border-slate-300 border-zinc-500 w-2/5" />
-        {newsData.length === 0 ? (
-          <span className="text-slate-500">No News available</span>
-        ) : (
-          newsMap
-        )}
+        <div className="max-w-[700px] w-full">
+          {newsData.length === 0 ? (
+            <span className="text-slate-500">No News available</span>
+          ) : (
+            newsMap
+          )}
+        </div>
       </section>
       {/* CTA */}
       <section className="max-w-[1200px] w-full flex flex-col items-center justify-center text-center gap-4 border-b border-slate-300 py-20 blue text-white">
