@@ -14,7 +14,7 @@ export default function Home() {
 
   useEffect(() => {
     async function getNews() {
-      const { data, error } = await supabase.from("news").select();
+      const { data, error } = await supabase.from("news").select().limit(3);
       if (error) {
         return;
       }
@@ -27,8 +27,7 @@ export default function Home() {
 
   let length = 0;
   const newsMap = newsData.map((item) => {
-    length++;
-    if (item.published === false || length > 3) {
+    if (item.published === false) {
       return;
     }
 

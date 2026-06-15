@@ -13,6 +13,7 @@ import PageLayout from "./components/PageLayout";
 import Footer from "./sections/Footer";
 import RisingContact from "./pages/RisingContact";
 import Professionals from "./pages/Professionals";
+import Article from "./pages/Article";
 
 function App() {
   const location = useLocation();
@@ -48,6 +49,7 @@ function App() {
             </PageLayout>
           }
         />
+        <Route path="/news/:article" element={<Article />} />
         <Route
           path="/learn"
           element={

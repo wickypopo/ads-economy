@@ -34,11 +34,7 @@ export default function News() {
             </span>
             <span className="text-slate-700 max-w-[600px]">{item.excerpt}</span>
             <div className="mt-4">
-              <Button
-                text="zum Artikel"
-                variant="black"
-                link={`news/${item.slug}`}
-              />
+              <Button text="zum Artikel" variant="black" link={item.slug} />
             </div>
           </div>
         </div>
