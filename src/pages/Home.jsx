@@ -189,6 +189,7 @@ export default function Home() {
         <Button
           text={homeLocale[locale].adAccountAnalysis.cta}
           variant={"black"}
+          link="/premier-brands"
         />
       </section>
       {/* TOOLS */}
