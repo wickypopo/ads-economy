@@ -17,7 +17,8 @@ export default function Home() {
 
   useEffect(() => {
     async function getNews() {
-      const { data, error } = await supabase.from("news").select().limit(3);
+      const { data, error } = await supabase.from("news").select();
+      //.limit(3);
       if (error) {
         return;
       }
@@ -29,8 +30,15 @@ export default function Home() {
   }, []);
 
   let length = 0;
-  const newsMap = newsData.map((item) => {
+  const newsMap = newsData.map((item, index) => {
+    const isFirst = index === 0;
+    const isSecond = index === 1;
+
     if (item.published === false) {
+      return;
+    }
+
+    if (isFirst === true) {
       return;
     }
 
@@ -64,6 +72,69 @@ export default function Home() {
     );
   });
 
+  const sideArticles = newsData.filter((item) => item.published).slice(1, 3);
+
+  const sideMap = sideArticles.map((item) => (
+    <div
+      key={item.id}
+      className="flex flex-col gap-2 w-full border-b border-slate-300 pb-4 last:border-b-0 last:pt-4"
+    >
+      <div className="flex flex-col md:flex-row gap-4 w-full items-start ">
+        <div className="flex flex-col text-start md:w-2/3">
+          <span className="font-medium text-sm text-blue-600">
+            {item.category}
+          </span>
+
+          <span className="font-bold md:text-xl">{item.title}</span>
+
+          <span className="text-slate-700 md:text-base text-sm">
+            {item.excerpt}
+          </span>
+
+          <div className="mt-2">
+            <Button
+              text="zum Artikel"
+              variant="underline"
+              link={`/news/${item.slug}`}
+            />
+          </div>
+        </div>
+
+        <img
+          src={item.image}
+          className="w-full md:w-1/3 h-[140px] object-cover"
+        />
+      </div>
+    </div>
+  ));
+
+  const bottomArticles = newsData.filter((item) => item.published).slice(3, 7);
+
+  const bottomMap = bottomArticles.map((item) => (
+    <div
+      key={item.id}
+      className="flex flex-col gap-2 w-full border-r border-slate-300 px-4 first:px-0 first:pr-4  last:border-r-0 "
+    >
+      <img src={item.image} className="w-full h-[135px] object-cover" />
+
+      <div className="flex flex-col text-start">
+        <span className="font-medium text-sm text-blue-600">
+          {item.category}
+        </span>
+
+        <span className="font-bold md:text-lg leading-tight">{item.title}</span>
+
+        <div className="mt-2">
+          <Button
+            text="zum Artikel"
+            variant="underline"
+            link={`/news/${item.slug}`}
+          />
+        </div>
+      </div>
+    </div>
+  ));
+
   const adSpentMap = homeLocale[locale].adSpend.categories.map((item) => (
     <div key={item.id} className="flex flex-col items-start">
       <span className="text-sm">{item.label}</span>
@@ -84,10 +155,10 @@ export default function Home() {
       {/* HERO */}
       <section className="max-w-[1200px] w-full min-h-[80vh] flex flex-col items-center justify-center text-center gap-4 p-8">
         <AnimatedGlobe />
-        <h1 className="text-center text-6xl instrument">
+        <span className="text-center text-6xl instrument">
           {homeLocale[locale].hero.title}
-        </h1>
-        <span className="text-zinc-500 w-[300px]">
+        </span>
+        <span className="text-zinc-500">
           {homeLocale[locale].hero.subtitle}
         </span>
         <div className="flex gap-2">
@@ -113,11 +184,13 @@ export default function Home() {
           {homeLocale[locale].discover.subtitle}
         </span>
         <div className="flex flex-col lg:flex-row gap-2 font-medium w-full">
-          <div className="flex-1">
-            <LearnChart />
+          <div className="flex-1 h-80 bg-slate-100 relative overflow-hidden p-4 flex flex-col items-center justify-between rounded">
+            <span className="text-4xl instrument font-medium">Learn</span>
+            <img src="/mac.png" className="w-full" />
           </div>
-          <div className="flex-1">
-            <ToolChart />
+          <div className="flex-1 h-80 bg-slate-100 relative overflow-hidden p-4 flex flex-col items-center justify-between rounded">
+            <span className="text-4xl instrument font-medium">Tools</span>
+            <img src="/mac.png" className="w-full" />
           </div>
         </div>
         <Button
@@ -134,12 +207,49 @@ export default function Home() {
         </h2>
 
         <div className="border-b border-slate-300 border-zinc-500 w-2/5" />
-        <div className="max-w-[700px] w-full">
+        {/* <div className="w-full">
           {newsData.length === 0 ? (
             <span className="text-slate-500">No News available</span>
           ) : (
             newsMap
           )}
+        </div> */}
+        <div className="flex flex-col w-full h-full gap-2">
+          <div className="w-full flex gap-2">
+            {/* MAIN ARTICLE */}
+            <div className="w-1/2 h-full border-r border-slate-300 pr-4">
+              <div className="flex flex-col gap-2 w-full ">
+                <div className="flex flex-col gap-4 w-full items-center">
+                  <img
+                    src={newsData[0]?.image}
+                    className="w-full h-[250px] object-cover"
+                  />
+                  <div className="flex flex-col text-start ">
+                    <span className="font-medium text-sm text-blue-600">
+                      {newsData[0]?.category}
+                    </span>
+                    <span className="font-bold md:text-xl">
+                      {newsData[0]?.title}
+                    </span>
+                    <span className="text-slate-700 md:text-base text-sm">
+                      {newsData[0]?.excerpt}
+                    </span>
+                    <div className="mt-2">
+                      <Button
+                        text="zum Artikel"
+                        variant="underline"
+                        link={`news/${newsData[0]?.slug}`}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="h-full w-1/2 hidden md:flex md:flex-col">
+              {sideMap}
+            </div>
+          </div>
+          <div className="w-full flex">{bottomMap}</div>
         </div>
       </section>
       {/* CTA */}

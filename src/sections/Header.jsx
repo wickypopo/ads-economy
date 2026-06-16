@@ -74,12 +74,15 @@ export default function Header() {
                 <Link onClick={() => setMenu(false)} to="/news">
                   News
                 </Link>
+                {/*
                 <Link onClick={() => setMenu(false)} to="/learn">
                   Learn
                 </Link>
                 <Link onClick={() => setMenu(false)} to="/tools">
                   Tools
                 </Link>
+                */}
+
                 <Link onClick={() => setMenu(false)} to="/rising-brands">
                   Rising Brands
                 </Link>
@@ -103,12 +106,14 @@ export default function Header() {
             <Link onClick={() => setMenu(false)} to="/news">
               News
             </Link>
-            <Link onClick={() => setMenu(false)} to="/learn">
-              Learn
-            </Link>
-            <Link onClick={() => setMenu(false)} to="/tools">
-              Tools
-            </Link>
+            {/*
+                <Link onClick={() => setMenu(false)} to="/learn">
+                  Learn
+                </Link>
+                <Link onClick={() => setMenu(false)} to="/tools">
+                  Tools
+                </Link>
+                */}
             <Link onClick={() => setMenu(false)} to="/rising-brands">
               Rising Brands
             </Link>

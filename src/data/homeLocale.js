@@ -16,8 +16,7 @@ export const homeLocale = {
 
     hero: {
       title: "Globaler Partner für Ads",
-      subtitle:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.",
+      subtitle: "Daten verstehen. Maßnahmen ergreifen. Wirkung sehen.",
       buttons: {
         risingBrands: "Rising Brands",
         premiereBrands: "Premiere Brands",
@@ -148,8 +147,7 @@ export const homeLocale = {
 
     hero: {
       title: "Global Partner for Ads",
-      subtitle:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.",
+      subtitle: "Understand data. Take action. See the impact.",
       buttons: {
         risingBrands: "Rising Brands",
         premiereBrands: "Premier Brands",
