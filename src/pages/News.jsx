@@ -34,7 +34,7 @@ export default function News() {
       key={item.id}
       className="flex flex-col gap-2 w-full border-b border-slate-300 pb-4 last:border-b-0 last:pt-4"
     >
-      <div className="flex flex-col md:flex-row gap-4 w-full items-start">
+      <div className="flex flex-col sm:flex-col-reverse md:flex-row gap-4 w-full items-start">
         <div className="flex flex-col text-start md:w-2/3">
           <span className="font-medium text-sm text-blue-600">
             {item.category}
@@ -94,7 +94,7 @@ export default function News() {
   ));
 
   return (
-    <section className="w-full flex flex-col items-center py-20 px-4">
+    <section className="w-full flex flex-col items-center">
       <div className="max-w-[1200px] w-full flex flex-col gap-10">
         <div className="flex flex-col items-center text-center gap-4">
           <h1 className="text-center text-6xl instrument">News</h1>
