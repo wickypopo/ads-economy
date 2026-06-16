@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import AreaChart from "../components/AreaChart";
 import LearnChart from "../components/LearnChart";
 import ToolChart from "../components/ToolChart";
+import { motion, scale } from "framer-motion";
 
 export default function Home() {
   const { locale, setLocale, t } = useLocale();
@@ -150,6 +151,7 @@ export default function Home() {
     </div>
   ));
 
+  const MotionLink = motion.create(Link);
   return (
     <main className="overflow-y-hidden flex flex-col items-center overflow-hidden">
       {/* HERO */}
@@ -184,14 +186,166 @@ export default function Home() {
           {homeLocale[locale].discover.subtitle}
         </span>
         <div className="flex flex-col lg:flex-row gap-2 font-medium w-full">
-          <div className="flex-1 h-80 bg-slate-100 relative overflow-hidden p-4 flex flex-col items-center justify-between rounded">
-            <span className="text-4xl instrument font-medium">Learn</span>
-            <img src="/mac.png" className="w-full" />
+          {/* MOBILE STATIC */}
+          <div className="flex flex-1 h-80 bg-slate-100 relative overflow-hidden p-4 flex-col items-center justify-between rounded md:hidden">
+            <span className="text-4xl instrument font-medium">
+              {homeLocale[locale].discover.tabs.learn}
+            </span>
+
+            <span className="absolute text-zinc-500 w-[300px] top-15 text-center">
+              {homeLocale[locale].discover.subtitle}
+            </span>
+
+            <img
+              src="/mac.png"
+              className="w-full z-10 scale-[0.9] translate-y-[50px]"
+            />
+
+            <Link
+              to="/learn"
+              className="absolute bottom-6 z-20 bg-blue-600 p-2 px-6 text-white font-medium"
+            >
+              {homeLocale[locale].discover.tabs.learn}
+            </Link>
           </div>
-          <div className="flex-1 h-80 bg-slate-100 relative overflow-hidden p-4 flex flex-col items-center justify-between rounded">
-            <span className="text-4xl instrument font-medium">Tools</span>
-            <img src="/mac.png" className="w-full" />
+
+          {/* DESKTOP HOVER */}
+          <motion.div
+            initial="rest"
+            animate="rest"
+            whileHover="hover"
+            className="hidden md:flex flex-1 h-80 bg-slate-100 relative overflow-hidden p-4 flex-col items-center justify-between rounded"
+          >
+            <span className="text-4xl instrument font-medium">
+              {homeLocale[locale].discover.tabs.learn}
+            </span>
+
+            <span className="absolute text-zinc-500 w-[300px] top-15 text-center">
+              {homeLocale[locale].discover.subtitle}
+            </span>
+
+            <motion.img
+              src="/mac.png"
+              className="w-full z-10"
+              variants={{
+                rest: {
+                  scale: 1.01,
+                  y: 0,
+                },
+                hover: {
+                  scale: 0.9,
+                  y: 50,
+                },
+              }}
+              transition={{
+                duration: 0.3,
+                ease: "easeOut",
+              }}
+            />
+
+            <MotionLink
+              to="/learn"
+              className="absolute bottom-6 z-20 bg-blue-600 p-2 px-6 text-white font-medium"
+              variants={{
+                rest: {
+                  opacity: 0,
+                  y: 30,
+                  pointerEvents: "none",
+                },
+                hover: {
+                  opacity: 1,
+                  y: 0,
+                  pointerEvents: "auto",
+                },
+              }}
+              transition={{
+                duration: 0.3,
+                ease: "easeOut",
+              }}
+            >
+              {homeLocale[locale].discover.tabs.learn}
+            </MotionLink>
+          </motion.div>
+          {/* MOBILE STATIC */}
+          <div className="flex flex-1 h-80 bg-slate-100 relative overflow-hidden p-4 flex-col items-center justify-between rounded md:hidden">
+            <span className="text-4xl instrument font-medium">
+              {homeLocale[locale].discover.tabs.tools}
+            </span>
+
+            <span className="absolute text-zinc-500 w-[300px] top-15 text-center">
+              {homeLocale[locale].discover.subtitle}
+            </span>
+
+            <img
+              src="/mac.png"
+              className="w-full z-10 scale-[0.9] translate-y-[50px]"
+            />
+
+            <Link
+              to="/learn"
+              className="absolute bottom-6 z-20 bg-blue-600 p-2 px-6 text-white font-medium"
+            >
+              {homeLocale[locale].discover.tabs.tools}
+            </Link>
           </div>
+
+          {/* DESKTOP HOVER */}
+          <motion.div
+            initial="rest"
+            animate="rest"
+            whileHover="hover"
+            className="hidden md:flex flex-1 h-80 bg-slate-100 relative overflow-hidden p-4 flex-col items-center justify-between rounded"
+          >
+            <span className="text-4xl instrument font-medium">
+              {homeLocale[locale].discover.tabs.tools}
+            </span>
+
+            <span className="absolute text-zinc-500 w-[300px] top-15 text-center">
+              {homeLocale[locale].discover.subtitle}
+            </span>
+
+            <motion.img
+              src="/mac.png"
+              className="w-full z-10"
+              variants={{
+                rest: {
+                  scale: 1.01,
+                  y: 0,
+                },
+                hover: {
+                  scale: 0.9,
+                  y: 50,
+                },
+              }}
+              transition={{
+                duration: 0.3,
+                ease: "easeOut",
+              }}
+            />
+
+            <MotionLink
+              to="/learn"
+              className="absolute bottom-6 z-20 bg-blue-600 p-2 px-6 text-white font-medium"
+              variants={{
+                rest: {
+                  opacity: 0,
+                  y: 30,
+                  pointerEvents: "none",
+                },
+                hover: {
+                  opacity: 1,
+                  y: 0,
+                  pointerEvents: "auto",
+                },
+              }}
+              transition={{
+                duration: 0.3,
+                ease: "easeOut",
+              }}
+            >
+              {homeLocale[locale].discover.tabs.tools}
+            </MotionLink>
+          </motion.div>
         </div>
         <Button
           link="/rising-brands"
