@@ -103,7 +103,7 @@ export default function Home() {
 
         <img
           src={item.image}
-          className="w-full md:w-1/3 h-[140px] object-cover"
+          className="w-full md:w-1/3 h-[140px] object-cover rounded"
         />
       </div>
     </div>
@@ -116,7 +116,7 @@ export default function Home() {
       key={item.id}
       className="flex flex-col gap-2 w-full md:border-r py-8 border-b md:border-b-0 border-slate-300 px-0 md:px-4 md:px-4 first:px-0 md:first:pr-4 last:border-r-0 "
     >
-      <img src={item.image} className="w-full h-[135px] object-cover" />
+      <img src={item.image} className="w-full h-[135px] object-cover rounded" />
 
       <div className="flex flex-col text-start">
         <span className="font-medium text-sm text-blue-600">
@@ -140,9 +140,9 @@ export default function Home() {
     <div key={item.id} className="flex flex-col items-start">
       <span className="text-sm">{item.label}</span>
       <div className="flex w-full">
-        <div className="w-full h-10 bg-slate-200">
+        <div className="w-full h-10 bg-slate-200 rounded">
           <div
-            className={`bg-blue-500 h-full`}
+            className={`bg-blue-500 h-full rounded`}
             style={{ width: item.percentage }}
           />
         </div>
@@ -358,7 +358,7 @@ export default function Home() {
         />
       </section>
       {/* NEWS */}
-      <section className="max-w-[1200px] w-full flex flex-col items-center justify-center text-center gap-4 border-b border-slate-300 py-20 px-4">
+      <section className="max-w-[1200px] w-full flex flex-col items-center justify-center text-center gap-4 py-20 px-4">
         <h2 className="text-center text-4xl instrument">
           {" "}
           {homeLocale[locale].news.title}
@@ -380,7 +380,7 @@ export default function Home() {
                 <div className="flex flex-col gap-4 w-full items-center">
                   <img
                     src={newsData[0]?.image}
-                    className="w-full h-[250px] object-cover"
+                    className="w-full h-[250px] object-cover rounded"
                   />
                   <div className="flex flex-col text-start ">
                     <span className="font-medium text-sm text-blue-600">
@@ -411,7 +411,7 @@ export default function Home() {
         </div>
       </section>
       {/* CTA */}
-      <section className="max-w-[1200px] w-full flex flex-col items-center justify-center text-center gap-4 border-b border-slate-300 py-20 blue text-white">
+      <section className="max-w-[1200px] w-full flex flex-col items-center justify-center text-center gap-4 py-20 blue text-white rounded">
         <h2 className="text-center text-6xl instrument">
           {homeLocale[locale].risingBrands.title}
         </h2>
