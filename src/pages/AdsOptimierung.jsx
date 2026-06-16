@@ -5,15 +5,15 @@ import Button from "../components/Button";
 
 export default function AdsOptimierung() {
   const { locale, setLocale, t } = useLocale();
+  console.log(adsOptimizationLocale[locale]);
 
   const map = optimizationItems.map((item) => (
-    <div className="flex flex-col flex-shrink-0 h-full min-h-70 bg-slate-100 px-4 py-8 w-80 rounded justify-between">
-      <div className="flex flex-col h-full ">
+    <div className="flex flex-shrink-0 bg-slate-100 px-4 py-8 rounded justify-between">
+      <div className="flex flex-col h-full w-full border-r border-slate-400 gap-1">
         <span className="text-slate-600">Umgesetzte Maßnahme</span>
         <span className="text-2xl text-slate-950 ">{item.action}</span>
       </div>
-      <div className="w-full border-b border-slate-400" />
-      <div className="flex flex-col h-full justify-end">
+      <div className="flex flex-col h-full w-full pl-8 gap-1">
         <span className="text-slate-600">Erzielte Wirkung</span>
         <span className="text-2xl text-slate-950 font-medium">
           {item.effect}
@@ -37,16 +37,27 @@ export default function AdsOptimierung() {
         <Button text="Jetzt bewerben" />
       </section>
       <section className="w-full max-w-[1200px] h-100 flex flex-col items-center justify-center gap-4">
+        <span className="text-slate-950 text-xl font-medium">
+          {adsOptimizationLocale[locale].latestOptimizationSingle.title}
+        </span>
+        <div className="flex flex-col gap-2 overflow-hidden relative max-w-[1200px] w-full rounded h-30">
+          {map}
+        </div>
+      </section>
+      {/* 
+      <section className="w-full max-w-[1200px] h-100 flex flex-col items-center justify-center gap-4">
         <span className="text-slate-600">
           {adsOptimizationLocale[locale].hero.subtitle}
         </span>
         <div className="flex gap-4 overflow-hidden relative max-w-[1200px]">
           <div className="h-full w-50 absolute bg-linear-to-l from-white/0 to-white/100" />
-          {map}
+          
           {map}
           <div className="h-full w-50 absolute bg-linear-to-r from-white/0 to-white/100 right-0" />
         </div>
       </section>
+      */}
+
       <section className="w-full max-w-[1200px] h-100 bg-blue-200"></section>
       <section className="w-full max-w-[1200px] h-100 flex gap-4">
         <div className="w-full h-full bg-blue-200"></div>
