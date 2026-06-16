@@ -11,7 +11,7 @@ export default function Experts() {
           <img
             src={item.img}
             alt={item.name}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover grayscale"
           />
         </div>
         <div className="flex flex-col py-4">
@@ -35,7 +35,7 @@ export default function Experts() {
           <img
             src={item.img}
             alt={item.name}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover grayscale"
           />
         </div>
         <div className="flex flex-col py-4">

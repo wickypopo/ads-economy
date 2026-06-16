@@ -75,9 +75,9 @@ export default function PremiereBrands() {
       </section>
       <section className="flex flex-col justify-center gap-4 border-y border-slate-300 max-w-[1200px] w-full lg:text-center">
         <div className="flex flex-col lg:items-center h-full w-full px-4 py-40 gap-4">
-          <h2 className="instrument text-4xl">
+          <span className="instrument text-4xl">
             {premierBrands[locale].program.title}
-          </h2>
+          </span>
           <div className="border-b border-slate-300 border-zinc-500 w-2/5" />
           <span className="text-slate-600 max-w-[600px]">
             {premierBrands[locale].program.text}
@@ -90,9 +90,9 @@ export default function PremiereBrands() {
       </section>
       <section className="flex flex-col gap-4 border-b border-slate-300 max-w-[1200px] w-full">
         <div className="flex flex-col items-center justify-center h-full w-full px-4 py-40 gap-4">
-          <h2 className="instrument text-4xl">
+          <span className="instrument text-4xl">
             {premierBrands[locale].qualification.title}
-          </h2>
+          </span>
           <div className="border-b border-slate-300 border-zinc-500 w-2/5" />
 
           <ul className="flex flex-col gap-2 mt-1">
@@ -121,9 +121,9 @@ export default function PremiereBrands() {
       </section>
       <section className="flex flex-col items-center gap-4 blue -ml-4 -mr-4 p-4 text-white lg:max-w-[1200px] lg:w-full">
         <div className="flex flex-col h-full w-full px-4 py-40 gap-4">
-          <h2 className="instrument text-4xl">
+          <span className="instrument text-4xl">
             {premierBrands[locale].partnership.title}
-          </h2>
+          </span>
           <span className="text-slate-300">
             {premierBrands[locale].partnership.subtitle}
           </span>
@@ -207,9 +207,9 @@ export default function PremiereBrands() {
 
       <section className="flex flex-col items-center gap-4 border-b border-slate-300 max-w-[1200px] w-full">
         <div className="flex flex-col h-full w-full px-4 py-40 gap-4">
-          <h2 className="instrument text-4xl">
+          <span className="instrument text-4xl">
             {premierBrands[locale].applicationProcess.title}
-          </h2>
+          </span>
           <div className="border-b border-slate-300 border-zinc-500 w-2/5" />
 
           <ul className="flex flex-col gap-2 mt-1">
@@ -229,9 +229,9 @@ export default function PremiereBrands() {
 
       <section className="flex flex-col items-center gap-4 blue p-4 text-white lg:max-w-[1200px] md:w-full">
         <div className="flex flex-col items-center h-full w-screen md:w-full px-4 py-40 gap-4">
-          <h2 className="text-center text-6xl instrument">
+          <span className="text-center text-6xl instrument">
             {premierBrands[locale].footerCta.title}
-          </h2>
+          </span>
           <div className="border-b border-slate-300 border-zinc-300 w-2/5" />
           <span className="w-[300px]">
             {premierBrands[locale].footerCta.text}

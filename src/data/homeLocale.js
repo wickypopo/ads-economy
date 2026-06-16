@@ -15,8 +15,8 @@ export const homeLocale = {
     },
 
     hero: {
-      title: "Globaler Partner für Ads",
-      subtitle: "Daten verstehen. Maßnahmen ergreifen. Wirkung sehen.",
+      title: "Daten verstehen. Maßnahmen ergreifen.<br />Wirkung sehen.",
+      subtitle: "Globaler Partner für Ads",
       buttons: {
         risingBrands: "Rising Brands",
         premiereBrands: "Premiere Brands",
@@ -146,8 +146,8 @@ export const homeLocale = {
     },
 
     hero: {
-      title: "Global Partner for Ads",
-      subtitle: "Understand data. Take action. See the impact.",
+      title: "Understand data. Take action.<br />See the impact.",
+      subtitle: "Global Partner for Ads",
       buttons: {
         risingBrands: "Rising Brands",
         premiereBrands: "Premier Brands",

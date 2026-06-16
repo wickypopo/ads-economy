@@ -157,9 +157,13 @@ export default function Home() {
       {/* HERO */}
       <section className="max-w-[1200px] w-full min-h-[80vh] flex flex-col items-center justify-center text-center gap-4 p-8">
         <AnimatedGlobe />
-        <span className="text-center text-6xl instrument">
-          {homeLocale[locale].hero.title}
-        </span>
+
+        <span
+          className="text-center text-4xl md:text-5xl lg:text-6xl instrument"
+          dangerouslySetInnerHTML={{
+            __html: homeLocale[locale].hero.title,
+          }}
+        />
         <span className="text-zinc-500">
           {homeLocale[locale].hero.subtitle}
         </span>
