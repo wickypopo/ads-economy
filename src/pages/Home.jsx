@@ -229,7 +229,7 @@ export default function Home() {
             </span>
 
             <motion.img
-              src="/mac.png"
+              src="/mac-learn.png"
               className="w-full z-10"
               variants={{
                 rest: {
@@ -281,7 +281,7 @@ export default function Home() {
             </span>
 
             <img
-              src="/mac.png"
+              src="/mac-learn.png"
               className="w-full z-10 scale-[0.9] translate-y-[50px]"
             />
 

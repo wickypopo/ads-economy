@@ -27,6 +27,27 @@ export const expertData = {
     ],
     experts: [
       {
+        name: "Nels Bonifer",
+        position: "Founder & Performance Lead",
+        img: "/experts/nels.jpg",
+        description:
+          "Verantwortet Performance-Strategie, Kampagnenführung und die Skalierung profitabler Ad Accounts.",
+      },
+      {
+        name: "Felix Meise",
+        position: "Co-Founder & Creative Strategy",
+        img: "/experts/felix-meise.jpg",
+        description:
+          "Entwickelt Creative-Konzepte, Messaging-Systeme und Ad-Strukturen, die Marken sichtbar und skalierbar machen.",
+      },
+      {
+        name: "Ludwig Birke",
+        position: "Co-Founder & Operations",
+        img: "/experts/ludwig-birke.jpeg",
+        description:
+          "Sorgt für klare Prozesse, saubere Abläufe und operative Strukturen, damit Kampagnen effizient umgesetzt werden.",
+      },
+      {
         name: "Nils Weyerhäuser",
         position: "Freelance Web Dev",
         img: "/experts/nils-weyerhaeuser.jpeg",

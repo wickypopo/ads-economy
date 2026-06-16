@@ -12,7 +12,7 @@ export default function Button({
       "ring-2 ring-inset ring-blue-600 p-2 px-6 font-medium text-black rounded",
     white: "bg-white p-2 px-6 text-black font-medium rounded",
     "white-outline":
-      "ring-2 ring-inset ring-white p-2 px-6 font-medium text-white",
+      "ring-2 ring-inset ring-white p-2 px-6 font-medium text-white rounded",
     black: "bg-black p-2 px-6 text-white font-medium rounded",
     underline: "underline font-medium",
   };

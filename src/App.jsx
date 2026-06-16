@@ -14,6 +14,7 @@ import Footer from "./sections/Footer";
 import RisingContact from "./pages/RisingContact";
 import Experts from "./pages/Experts";
 import Article from "./pages/Article";
+import AdsOptimierung from "./pages/AdsOptimierung";
 
 function App() {
   const location = useLocation();
@@ -25,6 +26,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/ads-optimierung" element={<AdsOptimierung />} />
         <Route
           path="/rising-brands"
           element={
@@ -33,6 +35,7 @@ function App() {
             </PageLayout>
           }
         />
+
         <Route
           path="/premier-brands"
           element={
