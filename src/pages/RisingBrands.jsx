@@ -15,9 +15,9 @@ export default function RisingBrands() {
     <>
       <section className="max-w-[1200px] w-full min-h-[80vh] flex flex-col items-center justify-center text-center gap-4 p-8">
         <Funnel />
-        <h2 className="instrument text-6xl">
+        <span className="instrument text-6xl">
           {risingBrands[locale].hero.title}
-        </h2>
+        </span>
         <span className="text-slate-600">
           <p
             className="max-w-[400px]"
