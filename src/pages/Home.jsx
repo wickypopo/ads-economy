@@ -113,7 +113,7 @@ export default function Home() {
   const bottomMap = bottomArticles.map((item) => (
     <div
       key={item.id}
-      className="flex flex-col gap-2 w-full border-r border-slate-300 px-4 first:px-0 first:pr-4  last:border-r-0 "
+      className="flex flex-col gap-2 w-full md:border-r py-8 border-b md:border-b-0 border-slate-300 px-0 md:px-4 md:px-4 first:px-0 md:first:pr-4 last:border-r-0 "
     >
       <img src={item.image} className="w-full h-[135px] object-cover" />
 
@@ -217,7 +217,7 @@ export default function Home() {
         <div className="flex flex-col w-full h-full gap-2">
           <div className="w-full flex gap-2">
             {/* MAIN ARTICLE */}
-            <div className="w-1/2 h-full border-r border-slate-300 pr-4">
+            <div className="md:w-1/2 w-full h-full border-r border-slate-300 pr-4">
               <div className="flex flex-col gap-2 w-full ">
                 <div className="flex flex-col gap-4 w-full items-center">
                   <img
@@ -249,7 +249,7 @@ export default function Home() {
               {sideMap}
             </div>
           </div>
-          <div className="w-full flex">{bottomMap}</div>
+          <div className="w-full flex flex-col md:flex-row">{bottomMap}</div>
         </div>
       </section>
       {/* CTA */}
