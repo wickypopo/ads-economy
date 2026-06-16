@@ -207,7 +207,7 @@ export default function Home() {
 
             <Link
               to="/learn"
-              className="absolute bottom-6 z-20 bg-blue-600 p-2 px-6 text-white font-medium"
+              className="absolute bottom-6 z-20 bg-blue-600 p-2 px-6 text-white font-medium rounded"
             >
               {homeLocale[locale].discover.tabs.learn}
             </Link>
@@ -249,7 +249,7 @@ export default function Home() {
 
             <MotionLink
               to="/learn"
-              className="absolute bottom-6 z-20 bg-blue-600 p-2 px-6 text-white font-medium"
+              className="absolute bottom-6 z-20 bg-blue-600 p-2 px-6 text-white font-medium rounded"
               variants={{
                 rest: {
                   opacity: 0,
@@ -287,7 +287,7 @@ export default function Home() {
 
             <Link
               to="/learn"
-              className="absolute bottom-6 z-20 bg-blue-600 p-2 px-6 text-white font-medium"
+              className="absolute bottom-6 z-20 bg-blue-600 p-2 px-6 text-white font-medium rounded"
             >
               {homeLocale[locale].discover.tabs.tools}
             </Link>
@@ -329,7 +329,7 @@ export default function Home() {
 
             <MotionLink
               to="/learn"
-              className="absolute bottom-6 z-20 bg-blue-600 p-2 px-6 text-white font-medium"
+              className="absolute bottom-6 z-20 bg-blue-600 p-2 px-6 text-white font-medium rounded"
               variants={{
                 rest: {
                   opacity: 0,

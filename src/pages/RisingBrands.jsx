@@ -80,7 +80,7 @@ export default function RisingBrands() {
           <Button link="/contact" text={risingBrands[locale].hero.cta} />
         </div>
       </section>
-      <section className="flex flex-col items-center gap-4 border-b border-slate-300 max-w-[1200px] w-full">
+      <section className="flex flex-col items-center gap-4 max-w-[1200px] w-full">
         <div className="flex flex-col lg:items-center h-full w-full px-4 py-40 gap-4">
           <span className="instrument text-4xl">
             {risingBrands[locale].qualification.title}
@@ -108,7 +108,7 @@ export default function RisingBrands() {
           </div>
         </div>
       </section>
-      <section className="flex flex-col items-center gap-4 blue -ml-4 -mr-4 p-4 text-white lg:max-w-[1200px] lg:w-full">
+      <section className="flex flex-col items-center gap-4 blue rounded -ml-4 -mr-4 p-4 text-white lg:max-w-[1200px] lg:w-full">
         <div className="flex flex-col h-full w-full px-4 py-40 gap-4">
           <span className="instrument text-4xl">
             {risingBrands[locale].partnership.title}
@@ -193,7 +193,7 @@ export default function RisingBrands() {
           />
         </div>
       </section>
-      <section className="flex flex-col items-center gap-4 border-b border-slate-300 max-w-[1200px] w-full">
+      <section className="flex flex-col items-center gap-4 max-w-[1200px] w-full">
         <div className="flex flex-col h-full w-full px-4 py-40 gap-4">
           <span className="instrument text-4xl">
             {risingBrands[locale].applicationProcess.title}
@@ -211,7 +211,7 @@ export default function RisingBrands() {
           <Button link="/contact" text={risingBrands[locale].hero.cta} />
         </div>
       </section>
-      <section className="flex flex-col items-center gap-4 blue p-4 text-white lg:max-w-[1200px] md:w-full">
+      <section className="flex flex-col items-center gap-4 blue rounded-t p-4 text-white lg:max-w-[1200px] md:w-full">
         <div className="flex flex-col items-center h-full w-screen md:w-full px-4 py-40 gap-4">
           <span className="text-center text-6xl instrument">
             {risingBrands[locale].footerCta.title}

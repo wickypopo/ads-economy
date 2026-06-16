@@ -88,7 +88,7 @@ export default function PremiereBrands() {
           />
         </div>
       </section>
-      <section className="flex flex-col gap-4 border-b border-slate-300 max-w-[1200px] w-full">
+      <section className="flex flex-col gap-4 max-w-[1200px] w-full">
         <div className="flex flex-col items-center justify-center h-full w-full px-4 py-40 gap-4">
           <span className="instrument text-4xl">
             {premierBrands[locale].qualification.title}
@@ -119,7 +119,7 @@ export default function PremiereBrands() {
           </div>
         </div>
       </section>
-      <section className="flex flex-col items-center gap-4 blue -ml-4 -mr-4 p-4 text-white lg:max-w-[1200px] lg:w-full">
+      <section className="flex flex-col  rounded items-center gap-4 blue -ml-4 -mr-4 p-4 text-white lg:max-w-[1200px] lg:w-full">
         <div className="flex flex-col h-full w-full px-4 py-40 gap-4">
           <span className="instrument text-4xl">
             {premierBrands[locale].partnership.title}
@@ -185,14 +185,12 @@ export default function PremiereBrands() {
               ))}
             </ul>
           </div>
-          <span className="line-through text-slate-200">
+          <span className="text-slate-200">
             {premierBrands[locale].partnership.minimumFee}
           </span>
-          <span className="text-xl leading-none">
-            {premierBrands[locale].partnership.premierBrandsFeeLabel}
-          </span>
+
           <span className="text-4xl font-semibold leading-none">
-            {premierBrands[locale].partnership.premierBrandsFee}
+            {premierBrands[locale].partnership.risingBrandsFee}
           </span>
           <span className="text-sm text-slate-200 leading-none">
             {premierBrands[locale].partnership.feeTaxInfo}
@@ -205,7 +203,7 @@ export default function PremiereBrands() {
         </div>
       </section>
 
-      <section className="flex flex-col items-center gap-4 border-b border-slate-300 max-w-[1200px] w-full">
+      <section className="flex flex-col items-center gap-4 max-w-[1200px] w-full">
         <div className="flex flex-col h-full w-full px-4 py-40 gap-4">
           <span className="instrument text-4xl">
             {premierBrands[locale].applicationProcess.title}
@@ -227,7 +225,7 @@ export default function PremiereBrands() {
         </div>
       </section>
 
-      <section className="flex flex-col items-center gap-4 blue p-4 text-white lg:max-w-[1200px] md:w-full">
+      <section className="flex flex-col rounded-t items-center gap-4 blue p-4 text-white lg:max-w-[1200px] md:w-full">
         <div className="flex flex-col items-center h-full w-screen md:w-full px-4 py-40 gap-4">
           <span className="text-center text-6xl instrument">
             {premierBrands[locale].footerCta.title}

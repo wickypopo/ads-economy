@@ -58,7 +58,7 @@ export default function News() {
         <img
           src={item.image}
           alt={item.title}
-          className="w-full md:w-1/3 h-[140px] object-cover"
+          className="w-full md:w-1/3 h-[140px] object-cover rounded"
         />
       </div>
     </div>
@@ -72,7 +72,7 @@ export default function News() {
       <img
         src={item.image}
         alt={item.title}
-        className="w-full h-[170px] object-cover"
+        className="w-full h-[170px] object-cover rounded"
       />
 
       <div className="flex flex-col text-start">
@@ -114,7 +114,7 @@ export default function News() {
                   <img
                     src={featuredArticle?.image}
                     alt={featuredArticle?.title}
-                    className="w-full h-[320px] object-cover"
+                    className="w-full h-[320px] object-cover rounded"
                   />
 
                   <div className="flex flex-col text-start">
