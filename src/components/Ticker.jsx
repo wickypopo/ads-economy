@@ -8,7 +8,7 @@ export default function Ticker() {
   useEffect(() => {
     const interval = setInterval(() => {
       setNum((prev) => prev - 120);
-    }, 4000);
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
   useEffect(() => {
@@ -19,12 +19,13 @@ export default function Ticker() {
 
   const map = optimizationItems.map((item) => (
     <div className="flex flex-shrink-0 h-[120px] py-4 justify-between">
-      <div className="flex flex-col h-full w-full p-4 border-r border-slate-300 gap-1 lg:justify-center">
+      <div className="flex flex-col h-full w-full p-4 gap-1 lg:justify-center">
         <span className="text-slate-500 text-xs">Maßnahme</span>
         <span className="text-lg mg:text-xl leading-5 text-slate-600 ">
           {item.action}
         </span>
       </div>
+      <div className="h-full border-r border-slate-300 " />
       <div className="flex flex-col h-full w-full gap-1 p-4 lg:justify-center">
         <span className="text-slate-500 text-xs">Wirkung</span>
         <span className="text-lg mg:text-xl leading-5 text-blue-600 font-medium">

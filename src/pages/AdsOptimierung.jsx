@@ -43,8 +43,28 @@ export default function AdsOptimierung() {
         <Ticker />
       </section>
       <section className="w-full max-w-[1200px] h-100 px-4 xl:px-0 flex flex-col gap-2 items-center">
+        <span className="text-slate-950 text-xl font-medium ">
+          {adsOptimizationLocale[locale].latestOptimizationSingle.title}
+        </span>
         <Slider />
       </section>
+      <section className="w-full max-w-[1200px] h-200 blue rounded-2xl relative shadow-xl flex items-center justify-center text-center">
+        <div className="flex flex-col z-30 gap-2">
+          <span className="text-slate-600">
+            {adsOptimizationLocale[locale].hero.subtitle}
+          </span>
+          <span className="instrument text-4xl md:text-6xl md:leading-15">
+            {adsOptimizationLocale[locale].hero.title1}
+          </span>
+          <span className="instrument-italic text-4xl md:text-6xl md:leading-15">
+            {adsOptimizationLocale[locale].hero.title2}
+          </span>
+          <Button text="Jetzt bewerben" />
+        </div>
+
+        <div className="bg-linear-to-t from-white/0 to-90% to-white/100 h-full absolute -left-20 -right-20" />
+      </section>
+
       {/* 
         <section className="w-full max-w-[1200px] h-100 flex flex-col items-center justify-center gap-4">
         <span className="text-slate-950 text-xl font-medium">

@@ -6,18 +6,27 @@ export const premierBrands = {
       cta: "Jetzt anfragen",
       items: [
         {
-          title: "Clothing Brand",
-          text: "Increases ROAS to 20x",
+          text: "Clothing Brand Increases ROAS to 20x",
           img: "/clothing.jpeg",
         },
         {
-          title: "Solar Company",
-          text: "500k Revenue in a month",
+          text: "Solar Company 500k Revenue in a month",
           img: "/solar.jpg",
         },
         {
-          title: "Music Label",
           text: "10x ROAS in B2B Ads on Meta",
+          img: "/music.jpg",
+        },
+        {
+          text: "5,500+ B2C leads, at €7.50 per lead",
+          img: "/clothing.jpeg",
+        },
+        {
+          text: "0 to €20k+ profitable ad spend within 12 weeks",
+          img: "/solar.jpg",
+        },
+        {
+          text: "€5,000 ad spend turned into €100k B2B revenue",
           img: "/music.jpg",
         },
       ],
@@ -134,23 +143,32 @@ export const premierBrands = {
       title: "Premier Brands",
       text: "Maximum ads efficiency based on our <b>‘Leading instead of catching up’ philosophy.</b> The ultimate Premier Partnership for established brands.",
       cta: "Request Now",
-      items: {
-        item1: {
-          title: "Clothing Brand",
-          text: "Increases ROAS to 20x",
+      items: [
+        {
+          text: "Clothing Brand Increases ROAS to 20x",
           img: "/clothing.jpeg",
         },
-        item2: {
-          title: "Solar Company",
-          text: "500k Revenue in a month",
+        {
+          text: "Solar Company 500k Revenue in a month",
           img: "/solar.jpg",
         },
-        item3: {
-          title: "Music Label",
+        {
           text: "10x ROAS in B2B Ads on Meta",
           img: "/music.jpg",
         },
-      },
+        {
+          text: "5,500+ B2C high-quality leads, averaging just €7.50 per lead",
+          img: "/clothing.jpeg",
+        },
+        {
+          text: "Scaled a business from 0 to €20k+ profitable monthly ad spend within 12 weeks",
+          img: "/solar.jpg",
+        },
+        {
+          text: "20x ROAS: Turned €5,000 ad spend into €100,000+ of high-ticket B2B revenue",
+          img: "/music.jpg",
+        },
+      ],
     },
 
     program: {
