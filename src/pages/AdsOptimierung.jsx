@@ -1,4 +1,9 @@
-import { adsOptimizationLocale, optimizationItems, kunden } from "../data/Ads";
+import {
+  adsOptimizationLocale,
+  optimizationItems,
+  kunden,
+  reviews,
+} from "../data/Ads";
 import { useLocale } from "../utils/useLocale";
 import {
   Square,
@@ -7,16 +12,17 @@ import {
   Cone,
   HeartHandshake,
   ArrowDown,
+  Star,
 } from "lucide-react";
 
 import Funnel from "../components/Funnel";
 import Button from "../components/Button";
 import Ticker from "../components/Ticker";
 import Slider from "../components/Slider";
+import Reviews from "../components/Reviews";
 
 export default function AdsOptimierung() {
   const { locale, setLocale, t } = useLocale();
-  console.log(adsOptimizationLocale[locale]);
 
   const map = optimizationItems.map((item) => (
     <div className="flex flex-shrink-0 bg-slate-100 px-4 py-8 rounded justify-between">
@@ -142,7 +148,7 @@ export default function AdsOptimierung() {
           <span className="text-slate-700 max-w-[600px]">
             {adsOptimizationLocale[locale].collaboration.text}
           </span>
-          <ul className="flex flex-col gap-2">
+          <ul className="flex flex-col gap-2 mb-4">
             {adsOptimizationLocale[locale].collaboration.items.map(
               (item, index) => (
                 <li
@@ -155,10 +161,10 @@ export default function AdsOptimierung() {
               ),
             )}
           </ul>
-          <span className="line-through text-slate-600">
+          <span className="text-xl leading-none">
             {adsOptimizationLocale[locale].collaboration.price}
           </span>
-          <span className="text-2xl font-semibold leading-none">
+          <span className="text-xl font-semibold leading-none">
             {adsOptimizationLocale[locale].collaboration.risingBrandsCta}
           </span>
           <div className="flex flex-col-reverse gap-2 mt-2">
@@ -189,6 +195,9 @@ export default function AdsOptimierung() {
           </div>
         </div>
         */}
+      </section>
+      <section className="w-full max-w-[1200px] flex gap-4">
+        <Reviews />
       </section>
 
       <section className="p-4 gap-4 w-full max-w-[1200px] p-30 bg-linear-to-tr from-blue-950 via-blue-600 to-blue-300 rounded-2xl relative shadow-xl flex flex-col items-center justify-center text-center">
@@ -243,12 +252,7 @@ export default function AdsOptimierung() {
           </div>{" "}
         </div>
       </section>
-      <section className="w-full max-w-[1200px] px-4 xl:px-0 flex flex-col gap-2 items-center">
-        <span className="text-slate-950 text-xl font-medium ">
-          {adsOptimizationLocale[locale].ticker.title}
-        </span>
-        <Ticker />
-      </section>
+
       {/* 
         <section className="w-full max-w-[1200px] h-100 bg-blue-200"></section>
       <section className="w-full max-w-[1200px] h-100 flex gap-4">
