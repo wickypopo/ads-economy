@@ -215,8 +215,6 @@ export default function Reviews() {
             </div>
           </div>
         </div>
-
-        <span className="text-slate-700">33 Rezensionen</span>
       </div>
     </section>
   );

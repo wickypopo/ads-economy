@@ -27,7 +27,7 @@ export const adsOptimizationLocale = {
     },
 
     growth: {
-      image: "/ads-economy-image.png",
+      image: "/growth.png",
       title: "Unternehmen wachsen durch datenbasierte Optimierungen",
       text: "Wir lesen die Daten - erkennen die Potentiale - planen die Maßnahmen und sehen die Wirkung.",
       subtitle: "So werden Ads erfolgreich und so wachsen Unternehmen.",
