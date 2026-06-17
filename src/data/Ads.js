@@ -38,7 +38,7 @@ export const adsOptimizationLocale = {
       title: "Die Zusammenarbeit",
       text: "Tägliche Analyse - Wöchentliche Maßnahmen Kataloge - Stetiger Wachstum",
       price: "Preis ab 10.000,-€ zzgl. MwSt.",
-      risingBrandsCta: "FÜR RISING BRANDS NUR 1.000€ ->",
+      risingBrandsCta: "Für Rising Brands nur 1.000€",
       items: [
         "Wir optimieren Ads für qualitativen Traffic",
         "Wir analysieren jeden Schritt des digitalen Vertriebsprozesses",

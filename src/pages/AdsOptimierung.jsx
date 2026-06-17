@@ -140,24 +140,33 @@ export default function AdsOptimierung() {
             {adsOptimizationLocale[locale].collaboration.title}
           </span>
           <span className="text-slate-700 max-w-[600px]">
-            {adsOptimizationLocale[locale].collaboration.process}
+            {adsOptimizationLocale[locale].collaboration.text}
           </span>
-          <span className="instrument text-2xl ">
+          <ul className="flex flex-col gap-2">
+            {adsOptimizationLocale[locale].collaboration.items.map(
+              (item, index) => (
+                <li
+                  key={index}
+                  className="bg-slate-100 p-4 flex gap-2 rounded "
+                >
+                  <span className="font-bold">{index + 1}</span>
+                  <span>{item}</span>
+                </li>
+              ),
+            )}
+          </ul>
+          <span className="line-through text-slate-600">
             {adsOptimizationLocale[locale].collaboration.price}
           </span>
+          <span className="text-2xl font-semibold leading-none">
+            {adsOptimizationLocale[locale].collaboration.risingBrandsCta}
+          </span>
           <div className="flex flex-col-reverse gap-2 mt-2">
-            <Button
-              text={adsOptimizationLocale[locale].pageCta}
-              link="/bewerben"
-              icon={true}
-            />
-            <Button
-              text={adsOptimizationLocale[locale].secondaryCta}
-              variant="underline"
-            />
+            <Button text="Jetzt Bewerben" link="/bewerben" icon={true} />
           </div>{" "}
         </div>
-        <div className="w-full h-full grid grid-cols-2 grid-rows-2 gap-2">
+        {/* 
+         <div className="w-full h-full grid grid-cols-2 grid-rows-2 gap-2">
           <div className="h-full w-full bg-slate-100 p-4 flex flex-col gap-2 rounded">
             {" "}
             <ChartColumnBig className="size-15 stroke-1 text-blue-600" />{" "}
@@ -179,6 +188,7 @@ export default function AdsOptimierung() {
             {adsOptimizationLocale[locale].collaboration.items[3]}
           </div>
         </div>
+        */}
       </section>
 
       <section className="p-4 gap-4 w-full max-w-[1200px] p-30 bg-linear-to-tr from-blue-950 via-blue-600 to-blue-300 rounded-2xl relative shadow-xl flex flex-col items-center justify-center text-center">
