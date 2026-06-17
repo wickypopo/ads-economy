@@ -94,8 +94,40 @@ export default function AdsOptimierung() {
         </span>
         <Ticker />
       </section>
-      <section className="w-full max-w-[1200px] h-100 bg-blue-200">
-        Zusammenarbeit
+      <section className="w-full max-w-[1200px] h-100 flex gap-8">
+        <div className="w-full h-full flex flex-col gap-2 justify-center">
+          <span className="text-slate-700">
+            {adsOptimizationLocale[locale].collaboration.subtitle}
+          </span>
+          <span className="instrument text-2xl md:text-6xl md:leading-15 ">
+            {adsOptimizationLocale[locale].collaboration.title}
+          </span>
+          <span className="text-slate-700 max-w-[600px]">
+            {adsOptimizationLocale[locale].collaboration.process}
+          </span>
+          <span className="instrument text-2xl ">
+            {adsOptimizationLocale[locale].collaboration.price}
+          </span>
+          <Button text="Jetzt bewerben" />
+        </div>
+        <div className="w-full h-full grid grid-cols-2 grid-rows-2 gap-2">
+          <div className="h-full w-full bg-slate-100">
+            {" "}
+            {adsOptimizationLocale[locale].collaboration.items[0]}
+          </div>
+          <div className="h-full w-full bg-slate-100">
+            {" "}
+            {adsOptimizationLocale[locale].collaboration.items[1]}
+          </div>
+          <div className="h-full w-full bg-slate-100">
+            {" "}
+            {adsOptimizationLocale[locale].collaboration.items[2]}
+          </div>
+          <div className="h-full w-full bg-slate-100">
+            {" "}
+            {adsOptimizationLocale[locale].collaboration.items[3]}
+          </div>
+        </div>
       </section>
 
       <section className="p-4 gap-4 w-full max-w-[1200px] p-30 bg-linear-to-tr from-blue-950 via-blue-600 to-blue-300 rounded-2xl relative shadow-xl flex flex-col items-center justify-center text-center">
@@ -117,8 +149,23 @@ export default function AdsOptimierung() {
         </span>
         <div className="h-full absolute -left-20 -right-20" />
       </section>
-      <section className="w-full max-w-[1200px] h-100 bg-blue-200">
-        Wachstums Philosophie
+      <section className="w-full max-w-[1200px] h-100 flex gap-8">
+        <img
+          src={adsOptimizationLocale[locale].dataBasedGrowth.image}
+          className="w-full h-full rounded"
+        ></img>
+        <div className="w-full h-full flex flex-col gap-2 justify-center">
+          <span className="text-slate-700">
+            {adsOptimizationLocale[locale].growthPhilosophy.subtitle}
+          </span>
+          <span className="instrument text-2xl md:text-6xl md:leading-15 ">
+            {adsOptimizationLocale[locale].growthPhilosophy.title}
+          </span>
+          <span className="text-slate-700 max-w-[600px]">
+            {adsOptimizationLocale[locale].growthPhilosophy.text}
+          </span>
+          <Button text="Jetzt bewerben" />
+        </div>
       </section>
       {/* 
         <section className="w-full max-w-[1200px] h-100 bg-blue-200"></section>
