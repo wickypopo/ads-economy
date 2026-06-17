@@ -1,6 +1,12 @@
 import { adsOptimizationLocale, optimizationItems } from "../data/Ads";
 import { useLocale } from "../utils/useLocale";
-import { Square } from "lucide-react";
+import {
+  Square,
+  ChartColumnBig,
+  PackageSearch,
+  Cone,
+  HeartHandshake,
+} from "lucide-react";
 
 import Funnel from "../components/Funnel";
 import Button from "../components/Button";
@@ -69,7 +75,6 @@ export default function AdsOptimierung() {
         </span>
         <Slider />
       </section>
-
       <section className="w-full max-w-[1200px] h-100 flex gap-8">
         <img
           src={adsOptimizationLocale[locale].growth.image}
@@ -111,20 +116,24 @@ export default function AdsOptimierung() {
           <Button text={adsOptimizationLocale[locale].pageCta} />
         </div>
         <div className="w-full h-full grid grid-cols-2 grid-rows-2 gap-2">
-          <div className="h-full w-full bg-slate-100">
+          <div className="h-full w-full bg-slate-100 p-4 flex flex-col gap-2">
             {" "}
+            <ChartColumnBig className="size-15 stroke-1 text-blue-600" />{" "}
             {adsOptimizationLocale[locale].collaboration.items[0]}
           </div>
-          <div className="h-full w-full bg-slate-100">
+          <div className="h-full w-full bg-slate-100 p-4 flex flex-col gap-2">
             {" "}
+            <PackageSearch className="size-15 stroke-1 text-blue-600" />{" "}
             {adsOptimizationLocale[locale].collaboration.items[1]}
-          </div>
-          <div className="h-full w-full bg-slate-100">
+          </div>{" "}
+          <div className="h-full w-full bg-slate-100 p-4 flex flex-col gap-2">
             {" "}
+            <Cone className="size-15 stroke-1 text-blue-600 rotate-180" />{" "}
             {adsOptimizationLocale[locale].collaboration.items[2]}
-          </div>
-          <div className="h-full w-full bg-slate-100">
+          </div>{" "}
+          <div className="h-full w-full bg-slate-100 p-4 flex flex-col gap-2">
             {" "}
+            <HeartHandshake className="size-15 stroke-1 text-blue-600" />{" "}
             {adsOptimizationLocale[locale].collaboration.items[3]}
           </div>
         </div>
