@@ -6,6 +6,7 @@ import {
   PackageSearch,
   Cone,
   HeartHandshake,
+  ArrowDown,
 } from "lucide-react";
 
 import Funnel from "../components/Funnel";
@@ -33,6 +34,7 @@ export default function AdsOptimierung() {
     <main className="flex flex-col items-center gap-40 pb-20">
       <section className="w-full flex flex-col items-center py-15 gap-2 text-center p-4 lg:p-0">
         <Funnel />
+
         <span className="text-slate-600">
           {adsOptimizationLocale[locale].hero.subtitle}
         </span>
@@ -43,19 +45,31 @@ export default function AdsOptimierung() {
           {adsOptimizationLocale[locale].hero.title2}
         </span>
         <div className="flex flex-col-reverse gap-2 items-center mt-2">
-          <Button text={adsOptimizationLocale[locale].pageCta} />
+          {/* <a
+            href="#bewerben"
+            className="p-2 px-6 text-white font-medium blue rounded flex items-center gap-2"
+          >
+            {adsOptimizationLocale[locale].pageCta}
+            <ArrowDown className="size-5" />
+          </a> */}
+          <Button
+            text={adsOptimizationLocale[locale].pageCta}
+            link="/bewerben"
+            icon={true}
+          />
         </div>
       </section>
       <section className="w-full max-w-[1200px] px-4 xl:px-0 flex flex-col gap-2 items-center">
         <span className="text-slate-950 text-xl font-medium ">
           {adsOptimizationLocale[locale].slider.title}
         </span>
-        <div className="flex gap-12 mt-4">
+        <div className="grid grid-cols-8 gap-12 mt-4 place-items-center">
           {kunden.map((item) => (
-            <div className="flex flex-col items-center gap-1">
-              <img src={item.image} className="h-12 object-cover invert" />
-              <span className="text-sm text-slate-600">{item.title}</span>
-            </div>
+            <img
+              key={item.image}
+              src={item.image}
+              className="h-12 object-contain invert"
+            />
           ))}
         </div>
       </section>
@@ -72,7 +86,12 @@ export default function AdsOptimierung() {
           </span>
         </div>
 
-        <Button text={adsOptimizationLocale[locale].pageCta} variant="white" />
+        <Button
+          text={adsOptimizationLocale[locale].pageCta}
+          link="/bewerben"
+          icon={true}
+          variant="white"
+        />
         <span className="text-slate-200 text-xs -mt-2">
           {adsOptimizationLocale[locale].risingBrands.info}
         </span>
@@ -100,7 +119,11 @@ export default function AdsOptimierung() {
             {adsOptimizationLocale[locale].growth.text}
           </span>
           <div className="flex flex-col-reverse gap-2 mt-2">
-            <Button text={adsOptimizationLocale[locale].pageCta} />
+            <Button
+              text={adsOptimizationLocale[locale].pageCta}
+              link="/bewerben"
+              icon={true}
+            />
             <Button
               text={adsOptimizationLocale[locale].secondaryCta}
               variant="underline"
@@ -114,7 +137,7 @@ export default function AdsOptimierung() {
         </span>
         <Ticker />
       </section>
-      <section className="w-full max-w-[1200px] h-100 flex gap-8">
+      <section className="w-full max-w-[1200px] h-100 flex gap-8" id="bewerben">
         <div className="w-full h-full flex flex-col gap-2 justify-center">
           <span className="text-slate-700">
             {adsOptimizationLocale[locale].collaboration.subtitle}
@@ -129,7 +152,11 @@ export default function AdsOptimierung() {
             {adsOptimizationLocale[locale].collaboration.price}
           </span>
           <div className="flex flex-col-reverse gap-2 mt-2">
-            <Button text={adsOptimizationLocale[locale].pageCta} />
+            <Button
+              text={adsOptimizationLocale[locale].pageCta}
+              link="/bewerben"
+              icon={true}
+            />
             <Button
               text={adsOptimizationLocale[locale].secondaryCta}
               variant="underline"
@@ -173,7 +200,12 @@ export default function AdsOptimierung() {
           </span>
         </div>
 
-        <Button text={adsOptimizationLocale[locale].pageCta} variant="white" />
+        <Button
+          text={adsOptimizationLocale[locale].pageCta}
+          link="/bewerben"
+          icon={true}
+          variant="white"
+        />
         <span className="text-slate-200 text-xs -mt-2">
           {adsOptimizationLocale[locale].risingBrands.info}
         </span>
@@ -195,7 +227,11 @@ export default function AdsOptimierung() {
             {adsOptimizationLocale[locale].philosophy.text}
           </span>
           <div className="flex flex-col-reverse gap-2 mt-2">
-            <Button text={adsOptimizationLocale[locale].pageCta} />
+            <Button
+              text={adsOptimizationLocale[locale].pageCta}
+              link="/bewerben"
+              icon={true}
+            />
             <Button
               text={adsOptimizationLocale[locale].secondaryCta}
               variant="underline"

@@ -77,7 +77,7 @@ function App() {
             </PageLayout>
           }
         />
-        <Route path="/contact" element={<RisingContact />} />
+        <Route path="/bewerben" element={<RisingContact />} />
       </Routes>
       {location.pathname === "/contact" ? null : <Footer />}
     </>
