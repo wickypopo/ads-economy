@@ -1,5 +1,7 @@
 import { adsOptimizationLocale, optimizationItems } from "../data/Ads";
 import { useLocale } from "../utils/useLocale";
+import { Square } from "lucide-react";
+
 import Funnel from "../components/Funnel";
 import Button from "../components/Button";
 import Ticker from "../components/Ticker";
@@ -34,7 +36,7 @@ export default function AdsOptimierung() {
         <span className="instrument-italic text-4xl md:text-6xl md:leading-15">
           {adsOptimizationLocale[locale].hero.title2}
         </span>
-        <Button text="Jetzt bewerben" />
+        <Button text="Werde 1 von 15 Rising Brands ->" />
       </section>
       <section className="w-full max-w-[1200px] px-4 xl:px-0 flex flex-col gap-2 items-center">
         <span className="text-slate-950 text-xl font-medium ">
@@ -48,21 +50,49 @@ export default function AdsOptimierung() {
         </span>
         <Slider />
       </section>
-      <section className="w-full max-w-[1200px] h-200 blue rounded-2xl relative shadow-xl flex items-center justify-center text-center">
+      <section className="p-4 w-full max-w-[1200px] p-30 bg-linear-to-tr from-blue-950 via-blue-600 to-blue-950 rounded-2xl relative shadow-xl flex flex-col items-center justify-center text-center">
         <div className="flex flex-col z-30 gap-2">
-          <span className="text-slate-600">
-            {adsOptimizationLocale[locale].hero.subtitle}
+          <span className="text-slate-100">
+            {adsOptimizationLocale[locale].risingBrandsChanceBottom.question}
           </span>
-          <span className="instrument text-4xl md:text-6xl md:leading-15">
-            {adsOptimizationLocale[locale].hero.title1}
+          <span className="instrument text-4xl md:text-6xl md:leading-15 text-white">
+            {adsOptimizationLocale[locale].risingBrandsChanceBottom.title}
           </span>
-          <span className="instrument-italic text-4xl md:text-6xl md:leading-15">
-            {adsOptimizationLocale[locale].hero.title2}
+          <span className="text-slate-100 max-w-[600px]">
+            {adsOptimizationLocale[locale].risingBrandsChanceBottom.text}
           </span>
-          <Button text="Jetzt bewerben" />
         </div>
-
-        <div className="bg-linear-to-t from-white/0 to-90% to-white/100 h-full absolute -left-20 -right-20" />
+        <div className="w-full h-60 flex gap-2 my-4">
+          <div className="w-full h-full bg-white rounded shadow-xl text-start p-4">
+            <span className="font-semibold">Enthalten</span>
+            <ul>
+              <li className="flex items-center gap-1 font-medium">
+                <Square className="size-2 fill-blue-500 stroke-none" />
+                Lorem Ipsum
+              </li>
+              <li className="flex items-center gap-1 font-medium">
+                <Square className="size-2 fill-blue-500 stroke-none" />
+                Lorem Ipsum
+              </li>
+              <li className="flex items-center gap-1 font-medium">
+                <Square className="size-2 fill-blue-500 stroke-none" />
+                Lorem Ipsum
+              </li>
+              <li className="flex items-center gap-1 font-medium">
+                <Square className="size-2 fill-blue-500 stroke-none" />
+                Lorem Ipsum
+              </li>
+            </ul>
+          </div>
+          <div className="w-full h-full bg-white rounded shadow-xl"></div>
+          <div className="w-full h-full bg-white rounded shadow-xl"></div>
+          <div className="w-full h-full bg-white rounded shadow-xl"></div>
+        </div>
+        <Button text="Jetzt bewerben" variant="white" />
+        <span className="text-slate-200 text-xs mt-2">
+          {adsOptimizationLocale[locale].risingBrandsChanceBottom.info}
+        </span>
+        <div className="h-full absolute -left-20 -right-20" />
       </section>
 
       {/* 
