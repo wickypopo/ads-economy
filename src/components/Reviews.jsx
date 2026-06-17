@@ -149,7 +149,7 @@ export default function Reviews() {
                   className="h-5 w-auto"
                 >
                   <polygon
-                    fill="rgb(248, 175, 13)"
+                    fill="#fdd663"
                     points="
           6 0 4.31 3.98 0 4.34 3.28 7.18 2.29 11.4 6 9.16 9.71 11.4 8.72 7.18 12 4.34 7.69 3.98 6 0
           20 0 18.31 3.98 14 4.34 17.28 7.18 16.29 11.4 20 9.16 23.71 11.4 22.72 7.18 26 4.34 21.69 3.98 20 0
@@ -169,6 +169,55 @@ export default function Reviews() {
           );
         })}
       </motion.div>
+      <div className="flex items-center gap-2 mt-2 text-slate-700">
+        <span className="font-semibold text-slate-900">4,4</span>
+
+        <div
+          className="flex items-center gap-0.5"
+          aria-label="Bewertung: 4,4 von 5, (11) Nutzerrezensionen"
+          role="img"
+        >
+          {/* 4 volle Sterne */}
+          {Array.from({ length: 4 }).map((_, index) => (
+            <svg
+              key={index}
+              viewBox="0 0 24 24"
+              className="size-4"
+              fill="#fdd663"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M12 2L14.9 8.62L22 9.24L16.64 13.97L18.24 21L12 17.27L5.76 21L7.36 13.97L2 9.24L9.1 8.62L12 2Z" />
+            </svg>
+          ))}
+
+          {/* halber Stern */}
+          <div className="relative size-4">
+            {/* grauer Stern */}
+            <svg
+              viewBox="0 0 24 24"
+              className="absolute inset-0 size-4"
+              fill="#80868b"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M12 2L14.9 8.62L22 9.24L16.64 13.97L18.24 21L12 17.27L5.76 21L7.36 13.97L2 9.24L9.1 8.62L12 2Z" />
+            </svg>
+
+            {/* gelbe Hälfte */}
+            <div className="absolute inset-0 w-1/2 overflow-hidden">
+              <svg
+                viewBox="0 0 24 24"
+                className="size-4"
+                fill="#fdd663"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M12 2L14.9 8.62L22 9.24L16.64 13.97L18.24 21L12 17.27L5.76 21L7.36 13.97L2 9.24L9.1 8.62L12 2Z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <span className="text-slate-700">33 Rezensionen</span>
+      </div>
     </section>
   );
 }
