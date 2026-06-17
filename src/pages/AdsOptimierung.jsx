@@ -31,10 +31,9 @@ export default function AdsOptimierung() {
     </div>
   ));
   return (
-    <main className="flex flex-col items-center gap-40 pb-20">
+    <main className="flex flex-col items-center gap-40 pb-20 overflow-hidden">
       <section className="w-full flex flex-col items-center py-15 gap-2 text-center p-4 lg:p-0">
         <Funnel />
-
         <span className="text-slate-600">
           {adsOptimizationLocale[locale].hero.subtitle}
         </span>
@@ -98,12 +97,16 @@ export default function AdsOptimierung() {
         </span>
         <div className="h-full absolute -left-20 -right-20" />
       </section>
-      <section className="w-full max-w-[1200px] h-100 flex gap-8">
-        <img
-          src={adsOptimizationLocale[locale].growth.image}
-          className="w-full h-full rounded object-cover"
-        ></img>
+      <section className="w-full max-w-[1200px] flex gap-8">
+        <div className="size-full">
+          <img
+            src={adsOptimizationLocale[locale].growth.image}
+            className="h-full rounded object-contain"
+          ></img>
+        </div>
+
         <div className="w-full h-full flex flex-col gap-2 justify-center">
+          <Ticker />
           <span className="text-slate-700">
             {adsOptimizationLocale[locale].growth.subtitle}
           </span>
