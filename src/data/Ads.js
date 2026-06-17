@@ -1,111 +1,56 @@
 export const adsOptimizationLocale = {
   de: {
     hero: {
+      subtitle: "Daten verstehen. Maßnahmen ergreifen. Wirkung sehen.",
       title1: "Datengetriebene Ads Optimierung",
       title2: "für etablierte Brands",
-      subtitle: "Daten verstehen. Maßnahmen ergreifen. Wirkung sehen.",
     },
 
-    latestOptimizationSingle: {
+    ticker: {
       title: "Letzte Optimierungen",
-      rotationType: "single",
-      note: "Hier immer nur eine optimerung ansehen nach unten durch rotieren",
-      items: [
-        "Die Checkout Conversion von 0,2% auf 0,3% zu erhöhen, erhöht den Umsatz um 50%.",
-        "…..",
-      ],
     },
 
-    imageTiles: {
-      type: "imageGrid",
-      note: "DARUNTER DIE 3 BILDER KACHELN",
-      images: [
-        {
-          id: 1,
-          image: "",
-          alt: "",
-        },
-        {
-          id: 2,
-          image: "",
-          alt: "",
-        },
-        {
-          id: 3,
-          image: "",
-          alt: "",
-        },
-      ],
+    slider: {
+      title: "Unsere Kunden",
     },
 
-    risingBrandsChanceTop: {
+    risingBrands: {
+      subtitle: "Wachstums Philosophie",
       title: "CHANCE FÜR RISING BRANDS",
       question: "Gehört dir ein neues, wachsendes Unternehmen?",
       text: "15 ausgewählte Rising Brands erhalten dieselbe datengetriebene Wachstumschance wie führende Unternehmen.",
-      cta: "JETZT BEWERBEN",
       info: "Bis maximal 100k Monatsumsatz",
     },
 
-    photoOne: {
-      type: "photo",
-      image: "",
-      alt: "",
-    },
-
-    dataBasedGrowth: {
+    growth: {
       image: "/bg-blue.png",
       title: "Unternehmen wachsen durch datenbasierte Entscheidungen",
       text: "Wir lesen die Daten - erkennen die Potentiale - planen die Maßnahmen und sehen die Wirkung.",
       subtitle: "So werden Ads erfolgreich und so wachsen Unternehmen.",
     },
 
-    latestOptimizationTriple: {
-      title: "Letzte Optimierungen",
-      rotationType: "triple",
-      note: "Hier immer drei optimerung ansehen nach unten durch rotieren",
-      items: [
-        "Die Checkout Conversion von 0,2% auf 0,3% zu erhöhen, erhöht den Umsatz um 50%.",
-        "Leads innerhalb von 5 Minuten zu qualifizieren erhöht den Umsatz im Schnitt um 166%.",
-        "…..",
-      ],
-    },
-
     collaboration: {
+      image: "/bg-blue.png",
+      subtitle: "Wachstums Philosophie",
       title: "Die Zusammenarbeit",
+      text: "Tägliche Analyse - Wöchentliche Maßnahmen Kataloge - Stetiger Wachstum",
+      price: "Preis ab 10.000,-€ zzgl. MwSt.",
+      risingBrandsCta: "FÜR RISING BRANDS NUR 1.000€ ->",
       items: [
         "Wir optimieren Ads für qualitativen Traffic",
         "Wir analysieren jeden Schritt des digitalen Vertriebsprozesses",
         "Wir planen Maßnahmen zur Verbesserung der Conversion innerhalb des digitalen Vertriebsprozesses",
         "Wir betreuen den entstehenden Wachstum",
       ],
-      process:
-        "Tägliche Analyse - Wöchentliche Maßnahmen Kataloge - Stetiger Wachstum",
-      price: "Preis ab 10.000,-€ zzgl. MwSt.",
-      risingBrandsCta: "FÜR RISING BRANDS NUR 1.000€ ->",
     },
 
-    risingBrandsChanceBottom: {
-      photo: {
-        type: "photo",
-        image: "",
-        alt: "",
-      },
-      title: "CHANCE FÜR RISING BRANDS",
-      question: "Gehört dir ein neues, wachsendes Unternehmen?",
-      text: "15 ausgewählte Rising Brands erhalten dieselbe datengetriebene Wachstumschance wie führende Unternehmen.",
-      cta: "JETZT BEWERBEN",
-      info: "Bis maximal 100k Monatsumsatz",
-    },
-
-    growthPhilosophy: {
+    philosophy: {
+      image: "/bg-blue.png",
+      subtitle: "Wachstums Philosophie",
       title: "Wachstums Philosophie",
       text: "Maximale Ads-Effizienz basierend auf unserer „Leading instead of catching up“-Philosophie. Die ultimative Partnerschaft für etablierte Brands. Wir skalieren Brands in kompromisslosen High-Level Partnerschaften. Wir maximieren den ROAS für marktführende Ads Economy Brands.",
-      photo: {
-        type: "photo",
-        image: "",
-        alt: "",
-      },
     },
+    pageCta: "Werde 1 von 15 Rising Brands ->",
   },
 };
 

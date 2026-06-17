@@ -24,7 +24,7 @@ export default function AdsOptimierung() {
     </div>
   ));
   return (
-    <main className="flex flex-col items-center gap-40">
+    <main className="flex flex-col items-center gap-40 pb-20">
       <section className="w-full flex flex-col items-center py-15 gap-2 text-center p-4 lg:p-0">
         <Funnel />
         <span className="text-slate-600">
@@ -40,57 +40,57 @@ export default function AdsOptimierung() {
       </section>
       <section className="w-full max-w-[1200px] px-4 xl:px-0 flex flex-col gap-2 items-center">
         <span className="text-slate-950 text-xl font-medium ">
-          {adsOptimizationLocale[locale].latestOptimizationSingle.title}
+          {adsOptimizationLocale[locale].ticker.title}
         </span>
         <Ticker />
       </section>
       <section className="p-4 gap-4 w-full max-w-[1200px] p-30 bg-linear-to-tr from-blue-950 via-blue-600 to-blue-300 rounded-2xl relative shadow-xl flex flex-col items-center justify-center text-center">
         <div className="flex flex-col z-30 gap-2">
           <span className="text-slate-100">
-            {adsOptimizationLocale[locale].risingBrandsChanceBottom.question}
+            {adsOptimizationLocale[locale].risingBrands.question}
           </span>
           <span className="instrument text-4xl md:text-6xl md:leading-15 text-white">
-            {adsOptimizationLocale[locale].risingBrandsChanceBottom.title}
+            {adsOptimizationLocale[locale].risingBrands.title}
           </span>
           <span className="text-slate-100 max-w-[600px]">
-            {adsOptimizationLocale[locale].risingBrandsChanceBottom.text}
+            {adsOptimizationLocale[locale].risingBrands.text}
           </span>
         </div>
 
-        <Button text="Jetzt bewerben" variant="white" />
+        <Button text={adsOptimizationLocale[locale].pageCta} variant="white" />
         <span className="text-slate-200 text-xs -mt-2">
-          {adsOptimizationLocale[locale].risingBrandsChanceBottom.info}
+          {adsOptimizationLocale[locale].risingBrands.info}
         </span>
         <div className="h-full absolute -left-20 -right-20" />
       </section>
       <section className="w-full max-w-[1200px] h-100 px-4 xl:px-0 flex flex-col gap-2 items-center">
         <span className="text-slate-950 text-xl font-medium ">
-          {adsOptimizationLocale[locale].latestOptimizationSingle.title}
+          {adsOptimizationLocale[locale].slider.title}
         </span>
         <Slider />
       </section>
 
       <section className="w-full max-w-[1200px] h-100 flex gap-8">
         <img
-          src={adsOptimizationLocale[locale].dataBasedGrowth.image}
+          src={adsOptimizationLocale[locale].growth.image}
           className="w-full h-full rounded"
         ></img>
         <div className="w-full h-full flex flex-col gap-2 justify-center">
           <span className="text-slate-700">
-            {adsOptimizationLocale[locale].dataBasedGrowth.subtitle}
+            {adsOptimizationLocale[locale].growth.subtitle}
           </span>
           <span className="instrument text-2xl md:text-6xl md:leading-15 ">
-            {adsOptimizationLocale[locale].dataBasedGrowth.title}
+            {adsOptimizationLocale[locale].growth.title}
           </span>
           <span className="text-slate-700 max-w-[600px]">
-            {adsOptimizationLocale[locale].dataBasedGrowth.text}
+            {adsOptimizationLocale[locale].growth.text}
           </span>
-          <Button text="Jetzt bewerben" />
+          <Button text={adsOptimizationLocale[locale].pageCta} />
         </div>
       </section>
       <section className="w-full max-w-[1200px] px-4 xl:px-0 flex flex-col gap-2 items-center">
         <span className="text-slate-950 text-xl font-medium ">
-          {adsOptimizationLocale[locale].latestOptimizationSingle.title}
+          {adsOptimizationLocale[locale].ticker.title}
         </span>
         <Ticker />
       </section>
@@ -108,7 +108,7 @@ export default function AdsOptimierung() {
           <span className="instrument text-2xl ">
             {adsOptimizationLocale[locale].collaboration.price}
           </span>
-          <Button text="Jetzt bewerben" />
+          <Button text={adsOptimizationLocale[locale].pageCta} />
         </div>
         <div className="w-full h-full grid grid-cols-2 grid-rows-2 gap-2">
           <div className="h-full w-full bg-slate-100">
@@ -133,39 +133,45 @@ export default function AdsOptimierung() {
       <section className="p-4 gap-4 w-full max-w-[1200px] p-30 bg-linear-to-tr from-blue-950 via-blue-600 to-blue-300 rounded-2xl relative shadow-xl flex flex-col items-center justify-center text-center">
         <div className="flex flex-col z-30 gap-2">
           <span className="text-slate-100">
-            {adsOptimizationLocale[locale].risingBrandsChanceBottom.question}
+            {adsOptimizationLocale[locale].risingBrands.question}
           </span>
           <span className="instrument text-4xl md:text-6xl md:leading-15 text-white">
-            {adsOptimizationLocale[locale].risingBrandsChanceBottom.title}
+            {adsOptimizationLocale[locale].risingBrands.title}
           </span>
           <span className="text-slate-100 max-w-[600px]">
-            {adsOptimizationLocale[locale].risingBrandsChanceBottom.text}
+            {adsOptimizationLocale[locale].risingBrands.text}
           </span>
         </div>
 
-        <Button text="Jetzt bewerben" variant="white" />
+        <Button text={adsOptimizationLocale[locale].pageCta} variant="white" />
         <span className="text-slate-200 text-xs -mt-2">
-          {adsOptimizationLocale[locale].risingBrandsChanceBottom.info}
+          {adsOptimizationLocale[locale].risingBrands.info}
         </span>
         <div className="h-full absolute -left-20 -right-20" />
       </section>
       <section className="w-full max-w-[1200px] h-100 flex gap-8">
         <img
-          src={adsOptimizationLocale[locale].dataBasedGrowth.image}
+          src={adsOptimizationLocale[locale].philosophy.image}
           className="w-full h-full rounded"
         ></img>
         <div className="w-full h-full flex flex-col gap-2 justify-center">
           <span className="text-slate-700">
-            {adsOptimizationLocale[locale].growthPhilosophy.subtitle}
+            {adsOptimizationLocale[locale].philosophy.subtitle}
           </span>
           <span className="instrument text-2xl md:text-6xl md:leading-15 ">
-            {adsOptimizationLocale[locale].growthPhilosophy.title}
+            {adsOptimizationLocale[locale].philosophy.title}
           </span>
           <span className="text-slate-700 max-w-[600px]">
-            {adsOptimizationLocale[locale].growthPhilosophy.text}
+            {adsOptimizationLocale[locale].philosophy.text}
           </span>
-          <Button text="Jetzt bewerben" />
+          <Button text={adsOptimizationLocale[locale].pageCta} />
         </div>
+      </section>
+      <section className="w-full max-w-[1200px] px-4 xl:px-0 flex flex-col gap-2 items-center">
+        <span className="text-slate-950 text-xl font-medium ">
+          {adsOptimizationLocale[locale].ticker.title}
+        </span>
+        <Ticker />
       </section>
       {/* 
         <section className="w-full max-w-[1200px] h-100 bg-blue-200"></section>
@@ -182,7 +188,7 @@ export default function AdsOptimierung() {
       ==========================
         <section className="w-full max-w-[1200px] h-100 flex flex-col items-center justify-center gap-4">
         <span className="text-slate-950 text-xl font-medium">
-          {adsOptimizationLocale[locale].latestOptimizationSingle.title}
+          {adsOptimizationLocale[locale].slider.title}
         </span>
         <div className="flex flex-col gap-2 overflow-hidden relative max-w-[1200px] w-full rounded">
           {map}
