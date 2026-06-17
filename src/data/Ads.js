@@ -11,6 +11,10 @@ export const adsOptimizationLocale = {
     },
 
     slider: {
+      title: "Unsere Ergebnisse",
+    },
+
+    clients: {
       title: "Unsere Kunden",
     },
 

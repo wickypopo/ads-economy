@@ -59,20 +59,7 @@ export default function AdsOptimierung() {
           />
         </div>
       </section>
-      <section className="w-full max-w-[1200px] px-4 xl:px-0 flex flex-col gap-2 items-center">
-        <span className="text-slate-950 text-xl font-medium ">
-          {adsOptimizationLocale[locale].slider.title}
-        </span>
-        <div className="grid grid-cols-8 gap-12 mt-4 place-items-center">
-          {kunden.map((item) => (
-            <img
-              key={item.image}
-              src={item.image}
-              className="h-12 object-contain invert"
-            />
-          ))}
-        </div>
-      </section>
+
       <section className="p-4 gap-4 w-full max-w-[1200px] p-30 bg-linear-to-tr from-blue-950 via-blue-600 to-blue-300 rounded-2xl relative shadow-xl flex flex-col items-center justify-center text-center">
         <div className="flex flex-col z-30 gap-2">
           <span className="text-slate-100">
@@ -96,6 +83,20 @@ export default function AdsOptimierung() {
           {adsOptimizationLocale[locale].risingBrands.info}
         </span>
         <div className="h-full absolute -left-20 -right-20" />
+      </section>
+      <section className="w-full max-w-[1200px] px-4 xl:px-0 flex flex-col gap-2 items-center">
+        <span className="text-slate-950 text-xl font-medium ">
+          {adsOptimizationLocale[locale].clients.title}
+        </span>
+        <div className="grid grid-cols-8 gap-12 mt-4 place-items-center">
+          {kunden.map((item) => (
+            <img
+              key={item.image}
+              src={item.image}
+              className="h-12 object-contain invert"
+            />
+          ))}
+        </div>
       </section>
       <section className="w-full max-w-[1200px] h-100 px-4 xl:px-0 flex flex-col gap-2 items-center">
         <span className="text-slate-950 text-xl font-medium ">
