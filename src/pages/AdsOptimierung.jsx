@@ -108,7 +108,7 @@ export default function AdsOptimierung() {
           src={adsOptimizationLocale[locale].growth.image}
           className="w-1/2 h-full rounded object-cover"
         ></img>
-        <div className="w-full h-full flex flex-col gap-2 justify-center">
+        <div className="w-full h-full flex flex-col gap-2 justify-center pt-10">
           <span className="text-slate-700">
             {adsOptimizationLocale[locale].growth.subtitle}
           </span>
