@@ -23,14 +23,13 @@ export const adsOptimizationLocale = {
     },
 
     growth: {
-      image: "/bg-blue.png",
+      image: "/growth.jpg",
       title: "Unternehmen wachsen durch datenbasierte Entscheidungen",
       text: "Wir lesen die Daten - erkennen die Potentiale - planen die Maßnahmen und sehen die Wirkung.",
       subtitle: "So werden Ads erfolgreich und so wachsen Unternehmen.",
     },
 
     collaboration: {
-      image: "/bg-blue.png",
       subtitle: "Wachstums Philosophie",
       title: "Die Zusammenarbeit",
       text: "Tägliche Analyse - Wöchentliche Maßnahmen Kataloge - Stetiger Wachstum",
@@ -45,7 +44,7 @@ export const adsOptimizationLocale = {
     },
 
     philosophy: {
-      image: "/bg-blue.png",
+      image: "/philosophy.jpg",
       subtitle: "Wachstums Philosophie",
       title: "Wachstums Philosophie",
       text: "Maximale Ads-Effizienz basierend auf unserer „Leading instead of catching up“-Philosophie. Die ultimative Partnerschaft für etablierte Brands. Wir skalieren Brands in kompromisslosen High-Level Partnerschaften. Wir maximieren den ROAS für marktführende Ads Economy Brands.",

@@ -73,7 +73,7 @@ export default function AdsOptimierung() {
       <section className="w-full max-w-[1200px] h-100 flex gap-8">
         <img
           src={adsOptimizationLocale[locale].growth.image}
-          className="w-full h-full rounded"
+          className="w-full h-full rounded object-cover"
         ></img>
         <div className="w-full h-full flex flex-col gap-2 justify-center">
           <span className="text-slate-700">
@@ -152,7 +152,7 @@ export default function AdsOptimierung() {
       <section className="w-full max-w-[1200px] h-100 flex gap-8">
         <img
           src={adsOptimizationLocale[locale].philosophy.image}
-          className="w-full h-full rounded"
+          className="w-full h-full rounded object-cover"
         ></img>
         <div className="w-full h-full flex flex-col gap-2 justify-center">
           <span className="text-slate-700">
