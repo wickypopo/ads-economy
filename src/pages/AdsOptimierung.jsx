@@ -2,6 +2,8 @@ import { adsOptimizationLocale, optimizationItems } from "../data/Ads";
 import { useLocale } from "../utils/useLocale";
 import Funnel from "../components/Funnel";
 import Button from "../components/Button";
+import Ticker from "../components/Ticker";
+import Slider from "../components/Slider";
 
 export default function AdsOptimierung() {
   const { locale, setLocale, t } = useLocale();
@@ -10,41 +12,48 @@ export default function AdsOptimierung() {
   const map = optimizationItems.map((item) => (
     <div className="flex flex-shrink-0 bg-slate-100 px-4 py-8 rounded justify-between">
       <div className="flex flex-col h-full w-full border-r border-slate-400 gap-1">
-        <span className="text-slate-600">Umgesetzte Maßnahme</span>
-        <span className="text-2xl text-slate-950 ">{item.action}</span>
+        <span className="text-slate-500 text-sm">Umgesetzte Maßnahme</span>
+        <span className="text-xl text-slate-600 ">{item.action}</span>
       </div>
       <div className="flex flex-col h-full w-full pl-8 gap-1">
-        <span className="text-slate-600">Erzielte Wirkung</span>
-        <span className="text-2xl text-slate-950 font-medium">
-          {item.effect}
-        </span>
+        <span className="text-slate-500 text-sm">Erzielte Wirkung</span>
+        <span className="text-xl text-blue-600 font-medium">{item.effect}</span>
       </div>
     </div>
   ));
   return (
-    <main className="flex flex-col items-center gap-4">
-      <section className="w-full flex flex-col items-center py-15 gap-2">
+    <main className="flex flex-col items-center gap-40">
+      <section className="w-full flex flex-col items-center py-15 gap-2 text-center p-4 lg:p-0">
         <Funnel />
         <span className="text-slate-600">
           {adsOptimizationLocale[locale].hero.subtitle}
         </span>
-        <span className="instrument text-6xl leading-15">
+        <span className="instrument text-4xl md:text-6xl md:leading-15">
           {adsOptimizationLocale[locale].hero.title1}
         </span>
-        <span className="instrument-italic text-6xl leading-15">
+        <span className="instrument-italic text-4xl md:text-6xl md:leading-15">
           {adsOptimizationLocale[locale].hero.title2}
         </span>
         <Button text="Jetzt bewerben" />
       </section>
-      <section className="w-full max-w-[1200px] h-100 flex flex-col items-center justify-center gap-4">
+      <section className="w-full max-w-[1200px] px-4 xl:px-0 flex flex-col gap-2 items-center">
+        <span className="text-slate-950 text-xl font-medium ">
+          {adsOptimizationLocale[locale].latestOptimizationSingle.title}
+        </span>
+        <Ticker />
+      </section>
+      <section className="w-full max-w-[1200px] h-100 px-4 xl:px-0 flex flex-col gap-2 items-center">
+        <Slider />
+      </section>
+      {/* 
+        <section className="w-full max-w-[1200px] h-100 flex flex-col items-center justify-center gap-4">
         <span className="text-slate-950 text-xl font-medium">
           {adsOptimizationLocale[locale].latestOptimizationSingle.title}
         </span>
-        <div className="flex flex-col gap-2 overflow-hidden relative max-w-[1200px] w-full rounded h-30">
+        <div className="flex flex-col gap-2 overflow-hidden relative max-w-[1200px] w-full rounded">
           {map}
         </div>
       </section>
-      {/* 
       <section className="w-full max-w-[1200px] h-100 flex flex-col items-center justify-center gap-4">
         <span className="text-slate-600">
           {adsOptimizationLocale[locale].hero.subtitle}

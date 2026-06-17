@@ -113,7 +113,7 @@ export const optimizationItems = [
     id: 1,
     category: "Checkout",
     action: "Checkout-Abbruch halbieren",
-    effect: "2x soviel Umsatz",
+    effect: "100% mehr Umsatz",
   },
   {
     id: 2,

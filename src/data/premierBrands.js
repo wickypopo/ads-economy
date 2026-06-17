@@ -4,23 +4,23 @@ export const premierBrands = {
       title: "Ads für Premier Brands",
       text: "Maximale Ads-Effizienz basierend auf unserer <b>„Leading instead of catching up“-Philosophie.</b> Die ultimative Premier Partnerschaft für etablierte Brands.",
       cta: "Jetzt anfragen",
-      items: {
-        item1: {
+      items: [
+        {
           title: "Clothing Brand",
           text: "Increases ROAS to 20x",
           img: "/clothing.jpeg",
         },
-        item2: {
+        {
           title: "Solar Company",
           text: "500k Revenue in a month",
           img: "/solar.jpg",
         },
-        item3: {
+        {
           title: "Music Label",
           text: "10x ROAS in B2B Ads on Meta",
           img: "/music.jpg",
         },
-      },
+      ],
     },
 
     program: {
