@@ -63,7 +63,7 @@ export default function AdsOptimierung() {
         <span className="text-slate-950 text-xl font-medium ">
           {adsOptimizationLocale[locale].clients.title}
         </span>
-        <div className="grid grid-cols-8 gap-12 mt-4 place-items-center">
+        <div className="grid grid-cols-8 gap-12 mt-4 place-items-center mb-4">
           {kunden.map((item) => (
             <img
               key={item.image}
@@ -72,11 +72,6 @@ export default function AdsOptimierung() {
             />
           ))}
         </div>
-      </section>
-      <section className="w-full max-w-[1200px] h-100 px-4 xl:px-0 flex flex-col gap-2 items-center">
-        <span className="text-slate-950 text-xl font-medium ">
-          {adsOptimizationLocale[locale].slider.title}
-        </span>
         <Slider />
       </section>
       <section className="p-4 gap-4 w-full max-w-[1200px] p-30 bg-linear-to-tr from-blue-950 via-blue-600 to-blue-300 rounded-2xl relative shadow-xl flex flex-col items-center justify-center text-center">
