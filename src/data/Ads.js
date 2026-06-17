@@ -50,6 +50,7 @@ export const adsOptimizationLocale = {
       text: "Maximale Ads-Effizienz basierend auf unserer „Leading instead of catching up“-Philosophie. Die ultimative Partnerschaft für etablierte Brands. Wir skalieren Brands in kompromisslosen High-Level Partnerschaften. Wir maximieren den ROAS für marktführende Ads Economy Brands.",
     },
     pageCta: "Werde 1 von 15 Rising Brands ->",
+    secondaryCta: "Jetzt anfragen",
   },
 };
 
@@ -149,5 +150,28 @@ export const optimizationItems = [
     category: "Lead-Gen",
     action: "Ein klares Angebot statt 5 Services werben",
     effect: "Höhere Eintragungsrate",
+  },
+];
+
+export const kunden = [
+  {
+    image: "/kunden/hiphop.png",
+    title: "hiphop.de",
+  },
+  {
+    image: "/kunden/bek-records.png",
+    title: "bek-records",
+  },
+  {
+    image: "/kunden/chosen-talents.png",
+    title: "chosen talents",
+  },
+  {
+    image: "/kunden/next-level.png",
+    title: "next level studios",
+  },
+  {
+    image: "/kunden/twlv.png",
+    title: "twelve x twelve",
   },
 ];

@@ -1,4 +1,4 @@
-import { adsOptimizationLocale, optimizationItems } from "../data/Ads";
+import { adsOptimizationLocale, optimizationItems, kunden } from "../data/Ads";
 import { useLocale } from "../utils/useLocale";
 import {
   Square,
@@ -42,13 +42,22 @@ export default function AdsOptimierung() {
         <span className="instrument-italic text-4xl md:text-6xl md:leading-15">
           {adsOptimizationLocale[locale].hero.title2}
         </span>
-        <Button text="Werde 1 von 15 Rising Brands ->" />
+        <div className="flex flex-col-reverse gap-2 items-center mt-2">
+          <Button text={adsOptimizationLocale[locale].pageCta} />
+        </div>
       </section>
       <section className="w-full max-w-[1200px] px-4 xl:px-0 flex flex-col gap-2 items-center">
         <span className="text-slate-950 text-xl font-medium ">
-          {adsOptimizationLocale[locale].ticker.title}
+          {adsOptimizationLocale[locale].slider.title}
         </span>
-        <Ticker />
+        <div className="flex gap-12 mt-4">
+          {kunden.map((item) => (
+            <div className="flex flex-col items-center gap-1">
+              <img src={item.image} className="h-12 object-cover invert" />
+              <span className="text-sm text-slate-600">{item.title}</span>
+            </div>
+          ))}
+        </div>
       </section>
       <section className="p-4 gap-4 w-full max-w-[1200px] p-30 bg-linear-to-tr from-blue-950 via-blue-600 to-blue-300 rounded-2xl relative shadow-xl flex flex-col items-center justify-center text-center">
         <div className="flex flex-col z-30 gap-2">
@@ -90,7 +99,13 @@ export default function AdsOptimierung() {
           <span className="text-slate-700 max-w-[600px]">
             {adsOptimizationLocale[locale].growth.text}
           </span>
-          <Button text={adsOptimizationLocale[locale].pageCta} />
+          <div className="flex flex-col-reverse gap-2 mt-2">
+            <Button text={adsOptimizationLocale[locale].pageCta} />
+            <Button
+              text={adsOptimizationLocale[locale].secondaryCta}
+              variant="underline"
+            />
+          </div>
         </div>
       </section>
       <section className="w-full max-w-[1200px] px-4 xl:px-0 flex flex-col gap-2 items-center">
@@ -113,7 +128,13 @@ export default function AdsOptimierung() {
           <span className="instrument text-2xl ">
             {adsOptimizationLocale[locale].collaboration.price}
           </span>
-          <Button text={adsOptimizationLocale[locale].pageCta} />
+          <div className="flex flex-col-reverse gap-2 mt-2">
+            <Button text={adsOptimizationLocale[locale].pageCta} />
+            <Button
+              text={adsOptimizationLocale[locale].secondaryCta}
+              variant="underline"
+            />
+          </div>{" "}
         </div>
         <div className="w-full h-full grid grid-cols-2 grid-rows-2 gap-2">
           <div className="h-full w-full bg-slate-100 p-4 flex flex-col gap-2 rounded">
@@ -173,7 +194,13 @@ export default function AdsOptimierung() {
           <span className="text-slate-700 max-w-[600px]">
             {adsOptimizationLocale[locale].philosophy.text}
           </span>
-          <Button text={adsOptimizationLocale[locale].pageCta} />
+          <div className="flex flex-col-reverse gap-2 mt-2">
+            <Button text={adsOptimizationLocale[locale].pageCta} />
+            <Button
+              text={adsOptimizationLocale[locale].secondaryCta}
+              variant="underline"
+            />
+          </div>{" "}
         </div>
       </section>
       <section className="w-full max-w-[1200px] px-4 xl:px-0 flex flex-col gap-2 items-center">
