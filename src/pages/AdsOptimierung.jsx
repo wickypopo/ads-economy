@@ -98,15 +98,11 @@ export default function AdsOptimierung() {
         <div className="h-full absolute -left-20 -right-20" />
       </section>
       <section className="w-full max-w-[1200px] flex gap-8">
-        <div className="size-full">
-          <img
-            src={adsOptimizationLocale[locale].growth.image}
-            className="h-full rounded object-contain"
-          ></img>
-        </div>
-
+        <img
+          src={adsOptimizationLocale[locale].growth.image}
+          className="w-1/2 h-full rounded object-cover"
+        ></img>
         <div className="w-full h-full flex flex-col gap-2 justify-center">
-          <Ticker />
           <span className="text-slate-700">
             {adsOptimizationLocale[locale].growth.subtitle}
           </span>
