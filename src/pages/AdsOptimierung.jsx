@@ -69,8 +69,70 @@ export default function AdsOptimierung() {
         </span>
         <div className="h-full absolute -left-20 -right-20" />
       </section>
+      <section className="w-full max-w-[1200px] h-100 flex gap-8">
+        <img
+          src={adsOptimizationLocale[locale].dataBasedGrowth.image}
+          className="w-full h-full rounded"
+        ></img>
+        <div className="w-full h-full flex flex-col gap-2 justify-center">
+          <span className="text-slate-700">
+            {adsOptimizationLocale[locale].dataBasedGrowth.subtitle}
+          </span>
+          <span className="instrument text-2xl md:text-6xl md:leading-15 ">
+            {adsOptimizationLocale[locale].dataBasedGrowth.title}
+          </span>
+          <span className="text-slate-700 max-w-[600px]">
+            {adsOptimizationLocale[locale].dataBasedGrowth.text}
+          </span>
+          <Button text="Jetzt bewerben" />
+        </div>
+      </section>
+      <section className="w-full max-w-[1200px] px-4 xl:px-0 flex flex-col gap-2 items-center">
+        <span className="text-slate-950 text-xl font-medium ">
+          {adsOptimizationLocale[locale].latestOptimizationSingle.title}
+        </span>
+        <Ticker />
+        <Ticker />
+        <Ticker />
+      </section>
+      <section className="w-full max-w-[1200px] h-100 bg-blue-200">
+        Zusammenarbeit
+      </section>
+      <section className="p-4 gap-4 w-full max-w-[1200px] p-30 bg-linear-to-tr from-blue-950 via-blue-600 to-blue-300 rounded-2xl relative shadow-xl flex flex-col items-center justify-center text-center">
+        <div className="flex flex-col z-30 gap-2">
+          <span className="text-slate-100">
+            {adsOptimizationLocale[locale].risingBrandsChanceBottom.question}
+          </span>
+          <span className="instrument text-4xl md:text-6xl md:leading-15 text-white">
+            {adsOptimizationLocale[locale].risingBrandsChanceBottom.title}
+          </span>
+          <span className="text-slate-100 max-w-[600px]">
+            {adsOptimizationLocale[locale].risingBrandsChanceBottom.text}
+          </span>
+        </div>
 
+        <Button text="Jetzt bewerben" variant="white" />
+        <span className="text-slate-200 text-xs -mt-2">
+          {adsOptimizationLocale[locale].risingBrandsChanceBottom.info}
+        </span>
+        <div className="h-full absolute -left-20 -right-20" />
+      </section>
+      <section className="w-full max-w-[1200px] h-100 bg-blue-200">
+        Wachstums Philosophie
+      </section>
       {/* 
+        <section className="w-full max-w-[1200px] h-100 bg-blue-200"></section>
+      <section className="w-full max-w-[1200px] h-100 flex gap-4">
+        <div className="w-full h-full bg-blue-200"></div>
+        <div className="w-full h-full bg-blue-200"></div>
+      </section>
+      <section className="w-full max-w-[1200px] h-100 flex gap-4">
+        <div className="w-full h-full bg-blue-200"></div>
+        <div className="w-full h-full bg-blue-200"></div>
+        <div className="w-full h-full bg-blue-200"></div>
+      </section>
+
+      ==========================
         <section className="w-full max-w-[1200px] h-100 flex flex-col items-center justify-center gap-4">
         <span className="text-slate-950 text-xl font-medium">
           {adsOptimizationLocale[locale].latestOptimizationSingle.title}
@@ -90,18 +152,8 @@ export default function AdsOptimierung() {
           <div className="h-full w-50 absolute bg-linear-to-r from-white/0 to-white/100 right-0" />
         </div>
       </section>
-      */}
 
-      <section className="w-full max-w-[1200px] h-100 bg-blue-200"></section>
-      <section className="w-full max-w-[1200px] h-100 flex gap-4">
-        <div className="w-full h-full bg-blue-200"></div>
-        <div className="w-full h-full bg-blue-200"></div>
-      </section>
-      <section className="w-full max-w-[1200px] h-100 flex gap-4">
-        <div className="w-full h-full bg-blue-200"></div>
-        <div className="w-full h-full bg-blue-200"></div>
-        <div className="w-full h-full bg-blue-200"></div>
-      </section>
+      */}
     </main>
   );
 }

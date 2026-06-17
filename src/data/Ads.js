@@ -53,6 +53,7 @@ export const adsOptimizationLocale = {
     },
 
     dataBasedGrowth: {
+      image: "/bg-blue.png",
       title: "Unternehmen wachsen durch datenbasierte Entscheidungen",
       text: "Wir lesen die Daten - erkennen die Potentiale - planen die Maßnahmen und sehen die Wirkung.",
       subtitle: "So werden Ads erfolgreich und so wachsen Unternehmen.",
