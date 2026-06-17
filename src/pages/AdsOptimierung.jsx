@@ -116,22 +116,22 @@ export default function AdsOptimierung() {
           <Button text={adsOptimizationLocale[locale].pageCta} />
         </div>
         <div className="w-full h-full grid grid-cols-2 grid-rows-2 gap-2">
-          <div className="h-full w-full bg-slate-100 p-4 flex flex-col gap-2">
+          <div className="h-full w-full bg-slate-100 p-4 flex flex-col gap-2 rounded">
             {" "}
             <ChartColumnBig className="size-15 stroke-1 text-blue-600" />{" "}
             {adsOptimizationLocale[locale].collaboration.items[0]}
           </div>
-          <div className="h-full w-full bg-slate-100 p-4 flex flex-col gap-2">
+          <div className="h-full w-full bg-slate-100 p-4 flex flex-col gap-2 rounded">
             {" "}
             <PackageSearch className="size-15 stroke-1 text-blue-600" />{" "}
             {adsOptimizationLocale[locale].collaboration.items[1]}
           </div>{" "}
-          <div className="h-full w-full bg-slate-100 p-4 flex flex-col gap-2">
+          <div className="h-full w-full bg-slate-100 p-4 flex flex-col gap-2 rounded">
             {" "}
             <Cone className="size-15 stroke-1 text-blue-600 rotate-180" />{" "}
             {adsOptimizationLocale[locale].collaboration.items[2]}
           </div>{" "}
-          <div className="h-full w-full bg-slate-100 p-4 flex flex-col gap-2">
+          <div className="h-full w-full bg-slate-100 p-4 flex flex-col gap-2 rounded">
             {" "}
             <HeartHandshake className="size-15 stroke-1 text-blue-600" />{" "}
             {adsOptimizationLocale[locale].collaboration.items[3]}
