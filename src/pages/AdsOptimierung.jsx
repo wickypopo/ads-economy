@@ -44,12 +44,6 @@ export default function AdsOptimierung() {
         </span>
         <Ticker />
       </section>
-      <section className="w-full max-w-[1200px] h-100 px-4 xl:px-0 flex flex-col gap-2 items-center">
-        <span className="text-slate-950 text-xl font-medium ">
-          {adsOptimizationLocale[locale].latestOptimizationSingle.title}
-        </span>
-        <Slider />
-      </section>
       <section className="p-4 gap-4 w-full max-w-[1200px] p-30 bg-linear-to-tr from-blue-950 via-blue-600 to-blue-300 rounded-2xl relative shadow-xl flex flex-col items-center justify-center text-center">
         <div className="flex flex-col z-30 gap-2">
           <span className="text-slate-100">
@@ -69,6 +63,13 @@ export default function AdsOptimierung() {
         </span>
         <div className="h-full absolute -left-20 -right-20" />
       </section>
+      <section className="w-full max-w-[1200px] h-100 px-4 xl:px-0 flex flex-col gap-2 items-center">
+        <span className="text-slate-950 text-xl font-medium ">
+          {adsOptimizationLocale[locale].latestOptimizationSingle.title}
+        </span>
+        <Slider />
+      </section>
+
       <section className="w-full max-w-[1200px] h-100 flex gap-8">
         <img
           src={adsOptimizationLocale[locale].dataBasedGrowth.image}
@@ -92,12 +93,11 @@ export default function AdsOptimierung() {
           {adsOptimizationLocale[locale].latestOptimizationSingle.title}
         </span>
         <Ticker />
-        <Ticker />
-        <Ticker />
       </section>
       <section className="w-full max-w-[1200px] h-100 bg-blue-200">
         Zusammenarbeit
       </section>
+
       <section className="p-4 gap-4 w-full max-w-[1200px] p-30 bg-linear-to-tr from-blue-950 via-blue-600 to-blue-300 rounded-2xl relative shadow-xl flex flex-col items-center justify-center text-center">
         <div className="flex flex-col z-30 gap-2">
           <span className="text-slate-100">
