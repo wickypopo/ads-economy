@@ -15,6 +15,8 @@ import RisingContact from "./pages/RisingContact";
 import Experts from "./pages/Experts";
 import Article from "./pages/Article";
 import AdsOptimierung from "./pages/AdsOptimierung";
+import Impressum from "./pages/Impressum";
+import Datenschutz from "./pages/Datenschutz";
 
 function App() {
   const location = useLocation();
@@ -74,6 +76,22 @@ function App() {
           element={
             <PageLayout>
               <Experts />
+            </PageLayout>
+          }
+        />
+        <Route
+          path="/impressum"
+          element={
+            <PageLayout>
+              <Impressum />
+            </PageLayout>
+          }
+        />
+        <Route
+          path="/datenschutz"
+          element={
+            <PageLayout>
+              <Datenschutz />
             </PageLayout>
           }
         />
