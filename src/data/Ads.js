@@ -251,41 +251,6 @@ export const optimizationItems = [
   },
 ];
 
-export const kunden = [
-  {
-    image: "/kunden/hiphop.png",
-    title: "hiphop.de",
-  },
-  {
-    image: "/kunden/bek-records.png",
-    title: "bek-records",
-  },
-  {
-    image: "/kunden/chosen-talents.png",
-    title: "chosen talents",
-  },
-  {
-    image: "/kunden/next-level.png",
-    title: "next level studios",
-  },
-  {
-    image: "/kunden/twlv.png",
-    title: "twelve x twelve",
-  },
-  {
-    image: "/kunden/weltberg.png",
-    title: "weltberg",
-  },
-  {
-    image: "/kunden/mfc.png",
-    title: "next level studios",
-  },
-  {
-    image: "/kunden/white-big.png",
-    title: "elephant marketing",
-  },
-];
-
 export const reviews = [
   {
     id: 1,
@@ -419,5 +384,40 @@ export const reviews = [
     rating: 5,
     date: "vor 6 Monaten",
     text: "Bin beeindruckt 🤙",
+  },
+];
+
+export const kunden = [
+  {
+    image: "/kunden/hiphop.png",
+    title: "hiphop.de",
+  },
+  {
+    image: "/kunden/bek-records.png",
+    title: "bek-records",
+  },
+  {
+    image: "/kunden/chosen-talents.png",
+    title: "chosen talents",
+  },
+  {
+    image: "/kunden/next-level.png",
+    title: "next level studios",
+  },
+  {
+    image: "/kunden/twlv.png",
+    title: "twelve x twelve",
+  },
+  {
+    image: "/kunden/weltberg.png",
+    title: "weltberg",
+  },
+  {
+    image: "/kunden/mfc.png",
+    title: "next level studios",
+  },
+  {
+    image: "/kunden/white-big.png",
+    title: "elephant marketing",
   },
 ];

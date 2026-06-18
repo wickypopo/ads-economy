@@ -1,7 +1,7 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 
-import Home from "./pages/Home";
+import Home from "./pages/home/Home";
 import RisingBrands from "./pages/RisingBrands";
 import PremiereBrands from "./pages/PremiereBrands";
 import News from "./pages/News";
@@ -30,23 +30,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/ads-optimierung" element={<AdsOptimierung />} />
-        <Route
-          path="/rising-brands"
-          element={
-            <PageLayout>
-              <RisingBrands />
-            </PageLayout>
-          }
-        />
 
-        <Route
-          path="/premier-brands"
-          element={
-            <PageLayout>
-              <PremiereBrands />
-            </PageLayout>
-          }
-        />
         <Route
           path="/news"
           element={
@@ -98,7 +82,7 @@ function App() {
         />
         <Route path="/bewerben" element={<RisingContact />} />
       </Routes>
-      {location.pathname === "/contact" ? null : <Footer />}
+      {location.pathname === "/bewerben" ? null : <Footer />}
     </>
   );
 }
