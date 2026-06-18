@@ -47,7 +47,7 @@ export default function AdsOptimierung() {
     </div>
   ));
   return (
-    <main className="flex flex-col items-center gap-40 pb-20 overflow-hidden">
+    <main className="flex flex-col items-center gap-30 pb-30 overflow-hidden">
       <Hero locale={locale} />
       <Clients locale={locale} />
       <CTA locale={locale} />
