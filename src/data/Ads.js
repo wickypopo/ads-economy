@@ -74,6 +74,82 @@ export const adsOptimizationLocale = {
     pageCta: "Werde 1 von 15 Rising Brands",
     secondaryCta: "Jetzt anfragen",
   },
+  en: {
+    hero: {
+      subtitle: "Understand data. Take action. See impact.",
+      title1: "Data-driven ads optimization",
+      title2: "for established brands",
+    },
+
+    ticker: {
+      title: "Latest optimizations",
+    },
+
+    slider: {
+      title: "Our results",
+    },
+
+    clients: {
+      title: "Our clients",
+    },
+
+    risingBrands: {
+      subtitle: "Growth philosophy",
+      title: "OPPORTUNITY FOR RISING BRANDS",
+      question: "Do you own a new, growing company?",
+      text: "15 selected Rising Brands receive the same data-driven growth opportunity as leading companies.",
+      info: "Up to 100k monthly revenue",
+    },
+
+    growth: {
+      image: "/growth.png",
+      title: "Companies grow through data-based optimization",
+      text: "We read the data - identify the potential - plan the actions and see the impact.",
+      subtitle:
+        "This is how ads become successful and this is how companies grow.",
+    },
+
+    collaboration: {
+      subtitle: "Growth philosophy",
+      title: "The collaboration",
+      text: "Daily analysis - Weekly action catalogs - Continuous growth",
+      price: "Price from €10,000 plus VAT",
+      risingBrandsCta: "For Rising Brands only €1,000",
+      items: [
+        {
+          title: "We optimize ads for high-quality traffic",
+          content:
+            "Instead of buying random clicks, we direct purchase-ready audiences to your brand. Through our Agentic Ads and data-driven ads management, we run campaigns where they create maximum impact. Supported by our Creative Engine and a precise Competition Tracker, we ensure your ads stay visually and strategically one step ahead of the competition.",
+        },
+        {
+          title: "We analyze every step of the digital sales process",
+          content:
+            "Success in e-commerce is not a coincidence, but the result of complete data visibility. We examine your entire funnel through daily monitoring and in-depth analysis. With customized reports — from the Weekly Ads Study to the comprehensive Competition Study and Monthly Growth Study — we make inefficiencies visible and uncover unused revenue potential.",
+        },
+        {
+          title:
+            "We plan actions to improve conversion within the digital sales process",
+          content:
+            "Analysis is the foundation, optimization is the lever. We develop concrete adjustments to turn visitors into customers: this includes a strategic social media concept, targeted newsletter optimization and daily fine-tuning through Daily Optimization. In our Monthly Goal Workshops, we turn these insights into clear, measurable action steps.",
+        },
+        {
+          title: "We manage the resulting growth",
+          content:
+            "Scaling requires stability and excellent communication. We do not leave you alone with your success and keep your operations supported. Through Daily Reporting and Daily Updates, you always know exactly where we stand. You benefit from maximum transparency and extremely short communication paths: through our direct contact call or chat anytime, we are always by your side as a strategic partner.",
+        },
+      ],
+    },
+
+    philosophy: {
+      image: "/philosophy.jpg",
+      subtitle: "Growth philosophy",
+      title: "Growth philosophy",
+      text: "Maximum ads efficiency based on our “Leading instead of catching up” philosophy. The ultimate partnership for established brands. We scale brands through uncompromising high-level partnerships. We maximize ROAS for market-leading Ads Economy Brands.",
+    },
+
+    pageCta: "Become 1 of 15 Rising Brands",
+    secondaryCta: "Request now",
+  },
 };
 
 export const optimizationItems = [
