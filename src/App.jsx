@@ -17,6 +17,7 @@ import Article from "./pages/Article";
 import AdsOptimierung from "./pages/AdsOptimierung";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
+import ScrollToTop from "./utils/ScrolltoTop";
 
 function App() {
   const location = useLocation();
@@ -25,7 +26,7 @@ function App() {
     <>
       <Toaster />
       {location.pathname === "/contact" ? null : <Header />}
-
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/ads-optimierung" element={<AdsOptimierung />} />

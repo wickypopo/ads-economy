@@ -40,10 +40,28 @@ export const adsOptimizationLocale = {
       price: "Preis ab 10.000,-€ zzgl. MwSt.",
       risingBrandsCta: "Für Rising Brands nur 1.000€",
       items: [
-        "Wir optimieren Ads für qualitativen Traffic",
-        "Wir analysieren jeden Schritt des digitalen Vertriebsprozesses",
-        "Wir planen Maßnahmen zur Verbesserung der Conversion innerhalb des digitalen Vertriebsprozesses",
-        "Wir betreuen den entstehenden Wachstum",
+        {
+          title: "Wir optimieren Ads für qualitativen Traffic",
+          content:
+            "Statt wahllos Klicks einzukaufen, lenken wir gezielt kaufbereite Zielgruppen auf deine Brand. Durch unsere Agentic Ads und ein datengestütztes Ads Management schalten wir Kampagnen da, wo sie maximale Wirkung zeigen. Flankiert von unserer Creative Engine und einem präzisen Competition Tracker sorgen wir dafür, dass deine Anzeigen visuell und strategisch immer einen Schritt vor der Konkurrenz sind.",
+        },
+        {
+          title:
+            "Wir analysieren jeden Schritt des digitalen Vertriebsprozesses",
+          content:
+            "Erfolg im E-Commerce ist kein Zufall, sondern das Ergebnis lückenloser Daten. Wir durchleuchten deinen gesamten Funnel durch Daily Monitoring und tiefgehende Analysen. Mit maßgeschneiderten Reports – von der Weekly ads study über die umfassende Competition study bis hin zum Monthly growth study – machen wir Ineffizienzen sichtbar und decken ungenutzte Umsatzpotenziale auf.",
+        },
+        {
+          title:
+            "Wir planen Maßnahmen zur Verbesserung der Conversion innerhalb des digitalen Vertriebsprozesses",
+          content:
+            "Die Analyse ist das Fundament, die Optimierung der Hebel. Wir entwickeln konkrete Stellschrauben, um aus Besuchern Kunden zu machen: Dazu gehören ein strategisches Social Media concept, gezielte Newsletter optimization und das tägliche Finetuning durch Daily Optimization. In unseren Monthly Goal Workshops gießen wir diese Erkenntnisse in glasklare, messbare Action-Steps.",
+        },
+        {
+          title: "Wir betreuen den entstehenden Wachstum",
+          content:
+            "Skalierung braucht Stabilität und exzellente Kommunikation. Wir lassen dich mit dem Erfolg nicht allein und halten dir operativ den Rücken frei. Durch Daily Reporting und Daily Updates weißt du jederzeit genau, wo wir stehen. Du profitierst von maximaler Transparenz und extrem kurzen Wegen: Über unseren direkten Draht (Direct contact call or chat anytime) sind wir jederzeit als strategischer Partner an deiner Seite.",
+        },
       ],
     },
 

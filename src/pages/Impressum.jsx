@@ -27,7 +27,7 @@ https://ec.europa.eu/consumers/odr/
 
 Zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle sind wir nicht verpflichtet und nicht bereit.`;
   return (
-    <section className="w-full max-w-[1200px] min-h-screen flex flex-col gap-4">
+    <section className="w-full max-w-[1200px] min-h-screen flex flex-col gap-4 pb-10">
       <Markdown>{content}</Markdown>
     </section>
   );

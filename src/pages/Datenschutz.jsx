@@ -322,7 +322,7 @@ Deutschland
 
 Stand dieser Datenschutzerklärung: Juni 2026`;
   return (
-    <section className="w-full max-w-[1200px] min-h-screen flex flex-col gap-4">
+    <section className="w-full max-w-[1200px] min-h-screen flex flex-col gap-4 pb-10">
       <Markdown>{content}</Markdown>
     </section>
   );

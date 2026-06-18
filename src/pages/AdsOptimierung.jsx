@@ -13,7 +13,10 @@ import {
   HeartHandshake,
   ArrowDown,
   Star,
+  ChevronDown,
 } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 import Funnel from "../components/Funnel";
 import Button from "../components/Button";
@@ -23,6 +26,7 @@ import Reviews from "../components/Reviews";
 
 export default function AdsOptimierung() {
   const { locale, setLocale, t } = useLocale();
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const map = optimizationItems.map((item) => (
     <div className="flex flex-shrink-0 bg-slate-100 px-4 py-8 rounded justify-between">
@@ -50,13 +54,6 @@ export default function AdsOptimierung() {
           {adsOptimizationLocale[locale].hero.title2}
         </span>
         <div className="flex flex-col-reverse gap-2 items-center mt-2">
-          {/* <a
-            href="#bewerben"
-            className="p-2 px-6 text-white font-medium blue rounded flex items-center gap-2"
-          >
-            {adsOptimizationLocale[locale].pageCta}
-            <ArrowDown className="size-5" />
-          </a> */}
           <Button
             text={adsOptimizationLocale[locale].pageCta}
             link="/bewerben"
@@ -137,8 +134,11 @@ export default function AdsOptimierung() {
         </span>
         <Ticker />
       </section>
-      <section className="w-full max-w-[1200px] h-100 flex gap-8" id="bewerben">
-        <div className="w-full h-full flex flex-col gap-2 justify-center">
+      <section
+        className="w-full max-w-[800px] min-h-screen flex gap-8 mx-auto px-4 py-24"
+        id="bewerben"
+      >
+        <div className="w-full h-full flex flex-col gap-2 justify-center items-center text-center">
           <span className="text-slate-700">
             {adsOptimizationLocale[locale].collaboration.subtitle}
           </span>
@@ -148,17 +148,80 @@ export default function AdsOptimierung() {
           <span className="text-slate-700 max-w-[600px]">
             {adsOptimizationLocale[locale].collaboration.text}
           </span>
-          <ul className="flex flex-col gap-2 mb-4">
+          <ul className="w-full flex flex-col gap-2 mb-4">
             {adsOptimizationLocale[locale].collaboration.items.map(
-              (item, index) => (
-                <li
-                  key={index}
-                  className="bg-slate-100 p-4 flex gap-2 rounded "
-                >
-                  <span className="font-bold">{index + 1}</span>
-                  <span>{item}</span>
-                </li>
-              ),
+              (item, index) => {
+                const isActive = activeIndex === index;
+
+                return (
+                  <motion.li
+                    layout="position"
+                    key={index}
+                    className={`w-full rounded overflow-hidden text-left transition-colors ${
+                      isActive
+                        ? "bg-slate-100 border-slate-300"
+                        : "bg-slate-50 border-transparent hover:bg-slate-100"
+                    }`}
+                  >
+                    <button
+                      type="button"
+                      onClick={() => setActiveIndex(isActive ? null : index)}
+                      className="w-full p-4 flex items-start gap-3 text-left group"
+                      aria-expanded={isActive}
+                    >
+                      <span
+                        className={`font-bold shrink-0 transition-colors ${
+                          isActive ? "text-blue-600" : "text-slate-500"
+                        }`}
+                      >
+                        {index + 1}
+                      </span>
+
+                      <div className="flex-1 min-w-0">
+                        <span
+                          className={`block font-medium transition-colors ${
+                            isActive ? "text-slate-950" : "text-slate-700"
+                          }`}
+                        >
+                          {item.title}
+                        </span>
+                      </div>
+
+                      <motion.span
+                        animate={{ rotate: isActive ? 180 : 0 }}
+                        transition={{ duration: 0.25, ease: "easeOut" }}
+                        className="shrink-0 mt-1 text-slate-400 group-hover:text-slate-700"
+                      >
+                        <ChevronDown size={18} />
+                      </motion.span>
+                    </button>
+
+                    <AnimatePresence initial={false}>
+                      {isActive && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{
+                            height: {
+                              duration: 0.35,
+                              ease: [0.22, 1, 0.36, 1],
+                            },
+                            opacity: {
+                              duration: 0.2,
+                            },
+                          }}
+                          className="overflow-hidden"
+                        >
+                          <div className="px-4 pb-4 pl-11 text-sm leading-relaxed text-slate-600">
+                            {item.content}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </motion.li>
+                );
+              },
             )}
           </ul>
           <span className="text-xl leading-none">

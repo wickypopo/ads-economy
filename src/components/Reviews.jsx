@@ -215,6 +215,7 @@ export default function Reviews() {
             </div>
           </div>
         </div>
+        <span className="text-sm text-slate-900">33 Bewertungen</span>
       </div>
     </section>
   );
