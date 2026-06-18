@@ -17,7 +17,7 @@ import Article from "./pages/Article";
 import AdsOptimierung from "./pages/AdsOptimierung";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
-import ScrollToTop from "./utils/ScrolltoTop";
+import ScrollToTop from "./utils/ScrollToTop";
 
 function App() {
   const location = useLocation();
