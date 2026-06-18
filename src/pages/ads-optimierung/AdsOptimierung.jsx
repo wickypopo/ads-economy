@@ -20,14 +20,15 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import Funnel from "../../components/Funnel";
 import Button from "../../components/Button";
-import Ticker from "../../components/Ticker";
 import Slider from "../../components/Slider";
-import Reviews from "../../components/Reviews";
 
 import Hero from "./sections/Hero";
 import Clients from "./sections/Clients";
-import CTA from "../home/sections/CTA";
+import CTA from "./sections/CTA";
 import Optimisation from "./sections/Optimisation";
+import Reviews from "./sections/Reviews";
+import Ticker from "./sections/Ticker";
+import Philosophy from "./sections/Philosophy";
 
 export default function AdsOptimierung() {
   const { locale, setLocale, t } = useLocale();
@@ -51,13 +52,7 @@ export default function AdsOptimierung() {
       <Clients locale={locale} />
       <CTA locale={locale} />
       <Optimisation locale={locale} />
-
-      <section className="w-full max-w-[1200px] px-4 xl:px-0 flex flex-col gap-2 items-center">
-        <span className="text-slate-950 text-xl font-medium ">
-          {adsOptimizationLocale[locale].ticker.title}
-        </span>
-        <Ticker />
-      </section>
+      <Ticker locale={locale} />
       <section
         className="w-full max-w-[800px] flex gap-8 mx-auto px-4 py-24"
         id="bewerben"
@@ -183,97 +178,9 @@ export default function AdsOptimierung() {
         </div>
         */}
       </section>
-      <section className="w-full max-w-[1200px] flex gap-4">
-        <Reviews />
-      </section>
-
-      <section className="p-4 gap-4 w-full max-w-[1200px] p-30 bg-linear-to-tr from-blue-950 via-blue-600 to-blue-300 rounded-2xl relative shadow-xl flex flex-col items-center justify-center text-center">
-        <div className="flex flex-col z-30 gap-2">
-          <span className="text-slate-100">
-            {adsOptimizationLocale[locale].risingBrands.question}
-          </span>
-          <span className="instrument text-4xl md:text-6xl md:leading-15 text-white">
-            {adsOptimizationLocale[locale].risingBrands.title}
-          </span>
-          <span className="text-slate-100 max-w-[600px]">
-            {adsOptimizationLocale[locale].risingBrands.text}
-          </span>
-        </div>
-
-        <Button
-          text={adsOptimizationLocale[locale].pageCta}
-          link="/bewerben"
-          icon={true}
-          variant="white"
-        />
-        <span className="text-slate-200 text-xs -mt-2">
-          {adsOptimizationLocale[locale].risingBrands.info}
-        </span>
-        <div className="h-full absolute -left-20 -right-20" />
-      </section>
-      <section className="w-full max-w-[1200px] h-100 flex gap-8">
-        <img
-          src={adsOptimizationLocale[locale].philosophy.image}
-          className="w-full h-full rounded object-cover"
-        ></img>
-        <div className="w-full h-full flex flex-col gap-2 justify-center">
-          <span className="text-slate-700">
-            {adsOptimizationLocale[locale].philosophy.subtitle}
-          </span>
-          <span className="instrument text-2xl md:text-6xl md:leading-15 ">
-            {adsOptimizationLocale[locale].philosophy.title}
-          </span>
-          <span className="text-slate-700 max-w-[600px]">
-            {adsOptimizationLocale[locale].philosophy.text}
-          </span>
-          <div className="flex flex-col-reverse gap-2 mt-2">
-            <Button
-              text={adsOptimizationLocale[locale].pageCta}
-              link="/bewerben"
-              icon={true}
-            />
-            <Button
-              text={adsOptimizationLocale[locale].secondaryCta}
-              variant="underline"
-            />
-          </div>{" "}
-        </div>
-      </section>
-
-      {/* 
-        <section className="w-full max-w-[1200px] h-100 bg-blue-200"></section>
-      <section className="w-full max-w-[1200px] h-100 flex gap-4">
-        <div className="w-full h-full bg-blue-200"></div>
-        <div className="w-full h-full bg-blue-200"></div>
-      </section>
-      <section className="w-full max-w-[1200px] h-100 flex gap-4">
-        <div className="w-full h-full bg-blue-200"></div>
-        <div className="w-full h-full bg-blue-200"></div>
-        <div className="w-full h-full bg-blue-200"></div>
-      </section>
-
-      ==========================
-        <section className="w-full max-w-[1200px] h-100 flex flex-col items-center justify-center gap-4">
-        <span className="text-slate-950 text-xl font-medium">
-          {adsOptimizationLocale[locale].slider.title}
-        </span>
-        <div className="flex flex-col gap-2 overflow-hidden relative max-w-[1200px] w-full rounded">
-          {map}
-        </div>
-      </section>
-      <section className="w-full max-w-[1200px] h-100 flex flex-col items-center justify-center gap-4">
-        <span className="text-slate-600">
-          {adsOptimizationLocale[locale].hero.subtitle}
-        </span>
-        <div className="flex gap-4 overflow-hidden relative max-w-[1200px]">
-          <div className="h-full w-50 absolute bg-linear-to-l from-white/0 to-white/100" />
-          
-          {map}
-          <div className="h-full w-50 absolute bg-linear-to-r from-white/0 to-white/100 right-0" />
-        </div>
-      </section>
-
-      */}
+      <Reviews locale={locale} />
+      <CTA locale={locale} />
+      <Philosophy locale={locale} />
     </main>
   );
 }

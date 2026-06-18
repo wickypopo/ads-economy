@@ -96,14 +96,6 @@ export default function News() {
   return (
     <section className="w-full flex flex-col items-center pb-20">
       <div className="max-w-[1200px] w-full flex flex-col gap-10">
-        <div className="flex flex-col items-center text-center gap-4">
-          <h1 className="text-center text-6xl instrument">News</h1>
-          <div className="border-b border-slate-300 w-2/5" />
-          <span className="text-slate-500 max-w-[420px]">
-            Aktuelle Entwicklungen, Analysen und Einblicke aus der Ads Economy.
-          </span>
-        </div>
-
         {newsData.length === 0 ? (
           <span className="text-center text-slate-500">No News available</span>
         ) : (

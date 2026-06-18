@@ -25,10 +25,11 @@ export default function Home() {
     <main className="flex flex-col items-center gap-30 pb-30 overflow-hidden">
       <Hero locale={locale} />
       <Clients locale={locale} />
+      <Discover locale={locale} />
       <News locale={locale} />
       <CTA locale={locale} />
       <Statistics locale={locale} />
-      <Discover locale={locale} />
+
       {/*<section className="max-w-[1200px] w-full min-h-[60vh] flex flex-col items-center justify-center text-center gap-4 border-b border-slate-300 px-4 py-20">
         <h2 className="text-center text-4xl instrument">
           {home[locale].tools.title}

@@ -23,7 +23,7 @@ export default function Hero({ locale }) {
       <div className="flex flex-col-reverse gap-2 items-center mt-2">
         <Button
           text={adsOptimizationLocale[locale].pageCta}
-          link="/bewerben"
+          link="#bewerben"
           icon={true}
         />
       </div>

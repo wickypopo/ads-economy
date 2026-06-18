@@ -102,7 +102,10 @@ export default function Header() {
       </header>
       <div className="w-full justify-center border-b border-slate-300 hidden lg:flex">
         <div className="max-w-[1200px] w-full flex justify-between py-2">
-          <nav className="flex items-center gap-6 text-center pl-4 first:pl-0">
+          <nav className="flex items-center gap-6 text-center pl-4 first:pl-0 lg:first:pl-4">
+            <Link onClick={() => setMenu(false)} to="/">
+              Home
+            </Link>
             <Link onClick={() => setMenu(false)} to="/news">
               News
             </Link>
@@ -123,7 +126,6 @@ export default function Header() {
             <Link onClick={() => setMenu(false)} to="/ads-optimierung">
               Ads Optimierung
             </Link>
-
             <Link onClick={() => setMenu(false)} to="/experts">
               Experts
             </Link>
