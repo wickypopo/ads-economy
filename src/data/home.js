@@ -1,8 +1,10 @@
 export const home = {
   de: {
     hero: {
-      title: "Daten verstehen. Maßnahmen ergreifen.<br />Wirkung sehen.",
-      subtitle: "Globaler Partner für Ads",
+      subtitle: "Datengetriebene Ads Optimierung",
+      title1: "Daten verstehen. Maßnahmen ergreifen.",
+      title2: "Wirkung sehen.",
+      text: "Globaler Partner für Ads",
       buttons: {
         risingBrands: "Rising Brands",
         premiereBrands: "Premiere Brands",
@@ -101,11 +103,13 @@ export const home = {
         },
       ],
     },
+    pageCta: "Werde 1 von 15 Rising Brands",
   },
   en: {
     hero: {
+      subtitle: "Data-driven ads optimization",
       title: "Understand data. Take action.<br />See impact.",
-      subtitle: "Global partner for ads",
+      text: "Global partner for ads",
       buttons: {
         risingBrands: "Rising Brands",
         premiereBrands: "Premiere Brands",
@@ -204,5 +208,6 @@ export const home = {
         },
       ],
     },
+    pageCta: "Become 1 of 15 Rising Brands",
   },
 };
