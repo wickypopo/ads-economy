@@ -4,7 +4,7 @@ import { home } from "../../../data/home";
 
 export default function Hero({ locale }) {
   return (
-    <section className="max-w-[1200px] w-full min-h-[80vh] flex flex-col items-center justify-center text-center gap-4 p-8">
+    <section className="max-w-[1200px] w-full min-h-[70vh] flex flex-col items-center justify-center text-center gap-4">
       <AnimatedGlobe />
       <span className="text-zinc-500">{home[locale].hero.subtitle}</span>
       <span className="instrument text-4xl md:text-6xl md:leading-15">

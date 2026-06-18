@@ -16,47 +16,26 @@ import Discover from "./sections/Discover";
 import News from "./sections/News";
 import CTA from "./sections/CTA";
 import Statistics from "./sections/Statistics";
+import Clients from "../ads-optimierung/sections/Clients";
 
 export default function Home() {
   const { locale, setLocale, t } = useLocale();
 
   return (
-    <main className="overflow-y-hidden flex flex-col items-center overflow-hidden">
-      {/* HERO */}
+    <main className="flex flex-col items-center gap-40 pb-40 overflow-hidden">
       <Hero locale={locale} />
-      {/* DISCOVER */}
-      <Discover locale={locale} />
-      {/* NEWS */}
+      <Clients locale={locale} />
       <News locale={locale} />
-      {/* CTA */}
       <CTA locale={locale} />
-      {/* STATS */}
       <Statistics locale={locale} />
-
-      {/* WERBEKONTO */}
-      <section className="max-w-[1200px] w-full min-h-[60vh] flex flex-col items-center justify-center text-center gap-4 border-b border-slate-300 px-4">
-        <h2 className="text-center text-4xl instrument">
-          {home[locale].adaccount.title}
-        </h2>
-        <div className="border-b border-slate-300 border-zinc-500 w-2/5" />
-        <span className="text-zinc-500 w-[300px]">
-          {home[locale].adaccount.text}
-        </span>
-
-        <Button
-          text={home[locale].adaccount.cta}
-          variant={"black"}
-          link="/premier-brands"
-        />
-      </section>
-      {/* TOOLS */}
-      <section className="max-w-[1200px] w-full min-h-[60vh] flex flex-col items-center justify-center text-center gap-4 border-b border-slate-300 px-4 py-20">
+      <Discover locale={locale} />
+      {/*<section className="max-w-[1200px] w-full min-h-[60vh] flex flex-col items-center justify-center text-center gap-4 border-b border-slate-300 px-4 py-20">
         <h2 className="text-center text-4xl instrument">
           {home[locale].tools.title}
         </h2>
         <AreaChart />
         <Button text={home[locale].tools.cta} variant={"black"} />
-      </section>
+      </section>*/}
     </main>
   );
 }

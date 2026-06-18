@@ -23,7 +23,7 @@ export default function Discover({ locale }) {
   };
 
   return (
-    <section className="max-w-[1200px] w-full min-h-[60vh] flex flex-col items-center justify-center text-center gap-4 border-y border-slate-300 py-8 px-4">
+    <section className="max-w-[1200px] w-full flex flex-col items-center justify-center text-center gap-4 px-4">
       <h2 className="text-center text-4xl instrument">
         {home[locale].discover.title}
       </h2>
@@ -48,7 +48,7 @@ export default function Discover({ locale }) {
                   {item.title}
                 </span>
 
-                <span className="absolute text-zinc-500 w-[300px] top-15 text-center">
+                <span className="absolute text-zinc-500 w-[300px] top-15 text-center text-sm">
                   {item.text}
                 </span>
 
@@ -77,7 +77,7 @@ export default function Discover({ locale }) {
                   {item.title}
                 </span>
 
-                <span className="absolute text-zinc-500 w-[300px] top-15 text-center">
+                <span className="absolute text-zinc-500 w-[300px] top-15 text-center text-sm">
                   {item.text}
                 </span>
 
@@ -87,8 +87,8 @@ export default function Discover({ locale }) {
                   className="w-full z-10"
                   variants={{
                     rest: {
-                      scale: 1.01,
-                      y: 0,
+                      scale: 1.15,
+                      y: 10,
                     },
                     hover: {
                       scale: 0.9,

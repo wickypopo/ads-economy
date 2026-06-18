@@ -14,7 +14,7 @@ import Footer from "./sections/Footer";
 import RisingContact from "./pages/RisingContact";
 import Experts from "./pages/Experts";
 import Article from "./pages/Article";
-import AdsOptimierung from "./pages/AdsOptimierung";
+import AdsOptimierung from "./pages/ads-optimierung/AdsOptimierung";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import ScrollToTop from "./utils/ScrollToTop";

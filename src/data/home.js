@@ -108,7 +108,8 @@ export const home = {
   en: {
     hero: {
       subtitle: "Data-driven ads optimization",
-      title: "Understand data. Take action.<br />See impact.",
+      title1: "Understand data. Take action.",
+      title2: "See the impact.",
       text: "Global partner for ads",
       buttons: {
         risingBrands: "Rising Brands",
@@ -208,6 +209,7 @@ export const home = {
         },
       ],
     },
+
     pageCta: "Become 1 of 15 Rising Brands",
   },
 };

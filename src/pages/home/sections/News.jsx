@@ -126,7 +126,7 @@ export default function News({ locale }) {
     </div>
   ));
   return (
-    <section className="max-w-[1200px] w-full flex flex-col items-center justify-center text-center gap-4 py-20 px-4">
+    <section className="max-w-[1200px] w-full flex flex-col items-center justify-center text-center gap-4 px-4">
       <h2 className="text-center text-4xl instrument">
         {" "}
         {home[locale].news.title}
