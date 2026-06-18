@@ -22,7 +22,7 @@ export default function Home() {
   const { locale, setLocale, t } = useLocale();
 
   return (
-    <main className="flex flex-col items-center gap-40 pb-40 overflow-hidden">
+    <main className="flex flex-col items-center gap-30 pb-30 overflow-hidden">
       <Hero locale={locale} />
       <Clients locale={locale} />
       <News locale={locale} />
