@@ -135,7 +135,7 @@ export default function AdsOptimierung() {
         <Ticker />
       </section>
       <section
-        className="w-full max-w-[800px] min-h-screen flex gap-8 mx-auto px-4 py-24"
+        className="w-full max-w-[800px] flex gap-8 mx-auto px-4 py-24"
         id="bewerben"
       >
         <div className="w-full h-full flex flex-col gap-2 justify-center items-center text-center">
