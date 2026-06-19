@@ -1,10 +1,19 @@
+import Hero from "./tools/sections/Hero";
+import Intelligence from "./tools/sections/Intelligence";
+import Features from "./tools/sections/Features";
+import Workflow from "./tools/sections/Workflow";
+import UseCases from "./tools/sections/UseCases";
+import CTA from "./tools/sections/CTA";
+
 export default function Tools() {
   return (
-    <section className="w-full flex flex-col items-center gap-4 py-4">
-      <div className="max-w-[1200px] flex flex-col w-full items-start gap-4">
-        <h1 className="text-center text-6xl instrument">Tools</h1>
-        <div className="w-full min-h-screen border"></div>
-      </div>
-    </section>
+    <div className="flex w-full min-w-0 flex-col items-center gap-24 overflow-hidden pb-24 md:gap-30 md:pb-30">
+      <Hero />
+      <Intelligence />
+      <Features />
+      <UseCases />
+      <Workflow />
+      <CTA />
+    </div>
   );
 }

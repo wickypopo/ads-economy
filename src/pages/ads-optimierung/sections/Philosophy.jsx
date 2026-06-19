@@ -24,7 +24,7 @@ export default function Philosophy({ locale }) {
         <div className="flex flex-col-reverse gap-2 mt-2">
           <Button
             text={adsOptimizationLocale[locale].pageCta}
-            link="/bewerben"
+            link="#bewerben"
             icon={true}
           />
 

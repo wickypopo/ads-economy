@@ -2,7 +2,6 @@ import { expertData } from "../data/expertData";
 
 export default function Experts() {
   const expertsMap = expertData.de.experts.map((item) => {
-    console.log(item);
     return (
       <div className="flex flex-col">
         <div className="aspect-square w-full overflow-hidden rounded-xl">
