@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function RisingContact() {
   const [canSubmit, setCanSubmit] = useState(false);
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
 
     const formElement = e.currentTarget;
@@ -13,26 +13,49 @@ export default function RisingContact() {
       return;
     }
 
-    const form = new FormData(e.currentTarget);
-    const name = form.get("name");
-    const email = form.get("email");
-    const website = form.get("website");
-    const tel = form.get("tel");
-    const budget = form.get("budget");
-    console.log(name, email, website, tel, budget);
+    if (submitting) return;
+
+    setSubmitting(true);
+
+    try {
+      const form = new FormData(formElement);
+
+      const payload = {
+        name: form.get("name"),
+        website: form.get("website"),
+        email: form.get("email"),
+        phone: form.get("phone"),
+        budget: form.get("budget"),
+      };
+
+      const response = await fetch("/api/lead", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        console.error(result);
+        return;
+      }
+
+      console.log("Lead sent:", result);
+      setSend(true);
+      formElement.reset();
+      setCanSubmit(false);
+    } catch (error) {
+      console.error("Submit failed:", error);
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   function handleInput(e) {
-    const formElement = e.currentTarget;
-
-    if (!formElement.checkValidity()) {
-      setCanSubmit(false);
-      console.log("Formular ist noch nicht gültig");
-      return;
-    } else {
-      setCanSubmit(true);
-      console.log("Formular ist gültig");
-    }
+    setCanSubmit(e.currentTarget.checkValidity());
   }
 
   return (
@@ -62,7 +85,7 @@ export default function RisingContact() {
           <input
             type="tel"
             placeholder="Telefon"
-            name="tel"
+            name="phone"
             className="w-full bg-slate-100 outline-slate-100 outline-2 p-4 rounded focus:outline-blue-600"
           />
           <input
@@ -100,11 +123,11 @@ export default function RisingContact() {
           </select>
           <input
             type="submit"
-            disabled={!canSubmit}
+            disabled={!canSubmit || submitting}
             className={
-              canSubmit
-                ? "bg-blue-600 rounded p-4 text-slate-100 w-full mt-2 font-medium"
-                : "bg-slate-300 rounded p-4 text-slate-400 w-full mt-2 font-medium"
+              canSubmit && !submitting
+                ? "bg-blue-600 rounded p-4 text-slate-100 w-full mt-2 font-medium cursor-pointer"
+                : "bg-slate-300 rounded p-4 text-slate-400 w-full mt-2 font-medium cursor-not-allowed"
             }
           />
         </form>
