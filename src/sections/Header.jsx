@@ -77,6 +77,9 @@ export default function Header() {
                 <Link onClick={() => setMenu(false)} to="/news">
                   News
                 </Link>
+                <Link onClick={() => setMenu(false)} to="/tools">
+                  Tools
+                </Link>
                 <Link onClick={() => setMenu(false)} to="/experts">
                   Experts
                 </Link>
@@ -91,11 +94,14 @@ export default function Header() {
             <Link onClick={() => setMenu(false)} to="/">
               Home
             </Link>
+            <Link onClick={() => setMenu(false)} to="/ads-optimierung">
+              Ads Optimierung
+            </Link>
             <Link onClick={() => setMenu(false)} to="/news">
               News
             </Link>
-            <Link onClick={() => setMenu(false)} to="/ads-optimierung">
-              Ads Optimierung
+            <Link onClick={() => setMenu(false)} to="/tools">
+              Tools
             </Link>
             <Link onClick={() => setMenu(false)} to="/experts">
               Experts

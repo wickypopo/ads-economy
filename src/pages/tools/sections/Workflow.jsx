@@ -1,34 +1,13 @@
 import { Bot, Check, Database, Rocket } from "lucide-react";
 
-const steps = [
-  {
-    icon: Database,
-    title: "Daten verbinden",
-    text: "Meta, Google, Shop und Creative Daten werden täglich synchronisiert.",
-  },
-  {
-    icon: Bot,
-    title: "AI analysiert",
-    text: "Der Agent findet Chancen, Risiken und Muster auf Kampagnenebene.",
-  },
-  {
-    icon: Check,
-    title: "Team approved",
-    text: "Empfehlungen landen als To-dos mit Impact Score und Kontext.",
-  },
-  {
-    icon: Rocket,
-    title: "Skalieren",
-    text: "Gewinner werden schneller ausgerollt, Leaks werden früher geschlossen.",
-  },
-];
+const stepIcons = [Database, Bot, Check, Rocket];
 
-export default function Workflow() {
+export default function Workflow({ content }) {
   return (
     <section className="w-full max-w-[1200px] min-w-0 px-0 sm:px-4">
       <div className="grid gap-2 md:grid-cols-2 lg:grid-cols-4">
-        {steps.map((item) => {
-          const Icon = item.icon;
+        {content.steps.map((item, index) => {
+          const Icon = stepIcons[index];
 
           return (
             <article

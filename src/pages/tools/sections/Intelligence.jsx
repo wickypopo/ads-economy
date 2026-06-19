@@ -1,46 +1,28 @@
-import { Brain, Database, ScanSearch, Target } from "lucide-react";
+import { Database, ScanSearch, Target } from "lucide-react";
 
-const signals = [
-  {
-    icon: Database,
-    title: "Daten verbinden",
-    text: "Ad Accounts, Shop Events, Creative Learnings und Ziele laufen in einem Modell zusammen.",
-  },
-  {
-    icon: ScanSearch,
-    title: "Muster erkennen",
-    text: "Die AI findet Anomalien, Saisonalität und Budget-Leaks, bevor sie im Reporting offensichtlich werden.",
-  },
-  {
-    icon: Target,
-    title: "Prioritäten setzen",
-    text: "Jede Empfehlung bekommt Impact, Aufwand und den nächsten konkreten Schritt dazu.",
-  },
-];
+const signalIcons = [Database, ScanSearch, Target];
 
-export default function Intelligence() {
+export default function Intelligence({ content }) {
   return (
     <section
-      id="intelligence"
+      id={content.id}
       className="w-full max-w-[1200px] min-w-0 px-0 sm:px-4"
     >
       <div className="grid min-w-0 items-center gap-8 lg:grid-cols-2">
         <div className="flex flex-col justify-center gap-4">
-          <span className="text-slate-600">AI Intelligence Layer</span>
+          <span className="text-slate-600">{content.eyebrow}</span>
           <span className="instrument m-0 text-3xl leading-tight sm:text-4xl md:text-4xl md:leading-[1.05]">
-            Nicht mehr suchen. Wissen, was zu tun ist.
+            {content.title}
           </span>
           <p className="max-w-[620px] leading-7 text-slate-600">
-            Das Tool fasst die wichtigsten Performance-Signale zusammen und
-            übersetzt sie in klare Entscheidungen. Dein Team sieht nicht nur,
-            was passiert ist, sondern wo der nächste Hebel liegt.
+            {content.text}
           </p>
         </div>
 
-        <div className="relative min-w-0 overflow-hidden hidden md:block">
+        <div className="relative hidden min-w-0 overflow-hidden md:block">
           <div className="mt-4 grid gap-2">
-            {signals.map((item) => {
-              const Icon = item.icon;
+            {content.signals.map((item, index) => {
+              const Icon = signalIcons[index];
 
               return (
                 <div

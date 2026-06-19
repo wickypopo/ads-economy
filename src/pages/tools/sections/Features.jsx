@@ -5,35 +5,19 @@ import {
   Workflow,
 } from "lucide-react";
 
-const features = [
-  {
-    icon: ChartNoAxesCombined,
-    title: "Performance Diagnose",
-    text: "Das Tool vergleicht Ziele, Benchmarks und aktuelle Kampagnendaten und zeigt die Abweichungen, die zählen.",
-  },
-  {
-    icon: WandSparkles,
-    title: "Creative Insights",
-    text: "Gewinner, Verlierer, Hooks und Angles werden zu sauberen Learnings statt losem Bauchgefühl.",
-  },
-  {
-    icon: Workflow,
-    title: "Next Best Actions",
-    text: "Empfehlungen kommen als klare To-dos mit Priorität, Risiko und erwarteter Wirkung.",
-  },
-  {
-    icon: Gauge,
-    title: "Impact Scoring",
-    text: "Dein Team sieht sofort, welche Aufgabe den größten Hebel hat und was warten kann.",
-  },
+const featureIcons = [
+  ChartNoAxesCombined,
+  WandSparkles,
+  Workflow,
+  Gauge,
 ];
 
-export default function Features() {
+export default function Features({ content }) {
   return (
     <section className="w-full max-w-[1200px] min-w-0 px-0 sm:px-4">
       <div className="grid gap-2 md:grid-cols-2 lg:grid-cols-4">
-        {features.map((item) => {
-          const Icon = item.icon;
+        {content.items.map((item, index) => {
+          const Icon = featureIcons[index];
 
           return (
             <article
