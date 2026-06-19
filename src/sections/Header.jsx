@@ -77,21 +77,6 @@ export default function Header() {
                 <Link onClick={() => setMenu(false)} to="/news">
                   News
                 </Link>
-                {/*
-                <Link onClick={() => setMenu(false)} to="/learn">
-                  Learn
-                </Link>
-                <Link onClick={() => setMenu(false)} to="/tools">
-                  Tools
-                </Link>
-                <Link onClick={() => setMenu(false)} to="/rising-brands">
-                  Rising Brands
-                </Link>
-                <Link onClick={() => setMenu(false)} to="/premier-brands">
-                  Premier Brands
-                </Link>
-                */}
-
                 <Link onClick={() => setMenu(false)} to="/experts">
                   Experts
                 </Link>
@@ -100,29 +85,15 @@ export default function Header() {
           ) : null}
         </div>
       </header>
-      <div className="w-full justify-center border-b border-slate-300 hidden lg:flex">
+      <div className="w-full justify-center border-b border-slate-300 hidden lg:flex px-4">
         <div className="max-w-[1200px] w-full flex justify-between py-2">
-          <nav className="flex items-center gap-6 text-center pl-4 first:pl-0 lg:first:pl-4">
+          <nav className="flex items-center gap-6 text-center pl-4 first:pl-0">
             <Link onClick={() => setMenu(false)} to="/">
               Home
             </Link>
             <Link onClick={() => setMenu(false)} to="/news">
               News
             </Link>
-            {/*
-                <Link onClick={() => setMenu(false)} to="/learn">
-                  Learn
-                </Link>
-                <Link onClick={() => setMenu(false)} to="/tools">
-                  Tools
-                </Link>
-                 <Link onClick={() => setMenu(false)} to="/rising-brands">
-              Rising Brands
-            </Link>
-            <Link onClick={() => setMenu(false)} to="/premier-brands">
-              Premier Brands
-            </Link>
-                */}
             <Link onClick={() => setMenu(false)} to="/ads-optimierung">
               Ads Optimierung
             </Link>
