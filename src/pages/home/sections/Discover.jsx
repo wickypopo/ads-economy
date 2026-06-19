@@ -9,7 +9,7 @@ export default function Discover({ locale }) {
   const items = home[locale].discover.items;
 
   const cardImages = {
-    News: "/mac.png",
+    News: "/news.png",
     Lernen: "/mac-learn.png",
     Learn: "/mac-learn.png",
     Tools: "/mac.png",
@@ -55,7 +55,7 @@ export default function Discover({ locale }) {
                 <img
                   src={image}
                   alt=""
-                  className="w-full z-10 scale-[0.9] translate-y-[50px]"
+                  className="w-full z-10 scale-[0.9] translate-y-[50px] rounded"
                 />
 
                 <Link
@@ -84,7 +84,7 @@ export default function Discover({ locale }) {
                 <motion.img
                   src={image}
                   alt=""
-                  className="w-full z-10"
+                  className="w-full z-10 rounded"
                   variants={{
                     rest: {
                       scale: 1.15,
