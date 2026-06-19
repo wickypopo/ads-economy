@@ -2,6 +2,8 @@ import { useState } from "react";
 
 export default function RisingContact() {
   const [canSubmit, setCanSubmit] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [send, setSend] = useState(false);
 
   async function handleSubmit(e) {
     e.preventDefault();
