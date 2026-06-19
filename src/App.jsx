@@ -2,8 +2,6 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 
 import Home from "./pages/home/Home";
-import RisingBrands from "./pages/RisingBrands";
-import PremiereBrands from "./pages/PremiereBrands";
 import News from "./pages/News";
 import Learn from "./pages/Learn";
 import Tools from "./pages/Tools";
@@ -11,7 +9,8 @@ import Tools from "./pages/Tools";
 import Header from "./sections/Header";
 import PageLayout from "./components/PageLayout";
 import Footer from "./sections/Footer";
-import RisingContact from "./pages/RisingContact";
+import Apply from "./pages/Apply";
+import Request from "./pages/Request";
 import Experts from "./pages/Experts";
 import Article from "./pages/Article";
 import AdsOptimierung from "./pages/ads-optimierung/AdsOptimierung";
@@ -80,7 +79,8 @@ function App() {
             </PageLayout>
           }
         />
-        <Route path="/bewerben" element={<RisingContact />} />
+        <Route path="/bewerben" element={<Apply />} />
+        <Route path="/anfragen" element={<Request />} />
       </Routes>
       {location.pathname === "/bewerben" ? null : <Footer />}
     </>

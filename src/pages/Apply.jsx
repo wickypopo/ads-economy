@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function RisingContact() {
+export default function Apply() {
   const [canSubmit, setCanSubmit] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [send, setSend] = useState(false);

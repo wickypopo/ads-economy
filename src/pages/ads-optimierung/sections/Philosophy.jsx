@@ -31,6 +31,7 @@ export default function Philosophy({ locale }) {
           <Button
             text={adsOptimizationLocale[locale].secondaryCta}
             variant="underline"
+            link="/anfragen"
           />
         </div>
       </div>

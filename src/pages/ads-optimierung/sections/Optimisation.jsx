@@ -33,6 +33,7 @@ export default function Optimisation({ locale }) {
           <Button
             text={adsOptimizationLocale[locale].secondaryCta}
             variant="underline"
+            link="/anfragen"
           />
         </div>
       </div>
