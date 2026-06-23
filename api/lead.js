@@ -25,7 +25,7 @@ export default async function handler(req, res) {
     payload.append("email", email);
     payload.append("phone", phone ?? "");
     payload.append("budget", budget);
-    payload.append("source", "Ads Matrix Website");
+    payload.append("source", "Ads Economy");
 
     const response = await fetch(process.env.ZAPIER_LEAD_WEBHOOK_URL, {
       method: "POST",
@@ -36,8 +36,6 @@ export default async function handler(req, res) {
 
     return res.status(response.ok ? 200 : response.status).json({
       success: response.ok,
-      zapierStatus: response.status,
-      zapierResponse: text,
     });
   } catch (error) {
     return res.status(500).json({
