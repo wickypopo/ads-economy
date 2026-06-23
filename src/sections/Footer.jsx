@@ -24,6 +24,7 @@ export default function Footer() {
             Datenschutz
           </Link>
         </div>
+        {/* 
         <div className="w-1/3 flex flex-col gap-2">
           {" "}
           <span className="instrument text-2xl">Links</span>
@@ -31,6 +32,7 @@ export default function Footer() {
           <Link className="text-slate-600 text-sm">Facebook</Link>
           <Link className="text-slate-600 text-sm">Youtube</Link>
         </div>
+        */}
       </section>
     </footer>
   );

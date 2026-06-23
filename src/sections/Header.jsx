@@ -80,9 +80,9 @@ export default function Header() {
                 <Link onClick={() => setMenu(false)} to="/tools">
                   Tools
                 </Link>
-                <Link onClick={() => setMenu(false)} to="/experts">
+                {/* <Link onClick={() => setMenu(false)} to="/experts">
                   Experts
-                </Link>
+                </Link>*/}
               </nav>
             </div>
           ) : null}
@@ -103,9 +103,9 @@ export default function Header() {
             <Link onClick={() => setMenu(false)} to="/tools">
               Tools
             </Link>
-            <Link onClick={() => setMenu(false)} to="/experts">
-              Experts
-            </Link>
+            {/* <Link onClick={() => setMenu(false)} to="/experts">
+                  Experts
+                </Link>*/}
           </nav>
         </div>
       </div>

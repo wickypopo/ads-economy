@@ -37,7 +37,7 @@ export const adsOptimizationLocale = {
       subtitle: "Wachstums Philosophie",
       title: "Die Zusammenarbeit",
       text: "Tägliche Analyse - Wöchentliche Maßnahmen Kataloge - Stetiger Wachstum",
-      price: "Preis ab 10.000,-€ zzgl. MwSt.",
+      price: "Preis ab 7.500,-€ zzgl. MwSt.",
       risingBrandsCta: "Für Rising Brands nur 1.000€",
       items: [
         {
@@ -113,7 +113,7 @@ export const adsOptimizationLocale = {
       subtitle: "Growth philosophy",
       title: "The collaboration",
       text: "Daily analysis - Weekly action catalogs - Continuous growth",
-      price: "Price from €10,000 plus VAT",
+      price: "Price from €7,500 plus VAT",
       risingBrandsCta: "For Rising Brands only €1,000",
       items: [
         {

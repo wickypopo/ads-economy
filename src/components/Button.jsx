@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 
 export default function Button({
@@ -7,6 +7,8 @@ export default function Button({
   link = "/",
   icon = false,
 }) {
+  const location = useLocation();
+
   const variants = {
     primary:
       "p-2 px-6 text-white font-medium blue rounded flex items-center gap-2 cursor-pointer",
@@ -23,12 +25,24 @@ export default function Button({
     underline: "underline font-medium flex items-center gap-2 cursor-pointer",
   };
 
+  function handleClick(e) {
+    if (!link.startsWith("#")) return;
+
+    e.preventDefault();
+
+    const id = link.replace("#", "");
+    const element = document.getElementById(id);
+
+    element?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+
   return (
-    <Link to={link}>
-      <button className={variants[variant]}>
-        {text}
-        {icon ? <ArrowUpRight className="size-5" /> : null}
-      </button>
+    <Link to={link} onClick={handleClick} className={variants[variant]}>
+      {text}
+      {icon ? <ArrowUpRight className="size-5" /> : null}
     </Link>
   );
 }

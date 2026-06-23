@@ -132,7 +132,6 @@ export default function Reviews({ locale }) {
 
                   <div className="flex flex-col">
                     <span className="font-semibold">{item.name}</span>
-                    <span className="text-sm text-slate-700">{item.date}</span>
                   </div>
                 </div>
 

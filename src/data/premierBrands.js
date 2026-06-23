@@ -19,15 +19,15 @@ export const premierBrands = {
         },
         {
           text: "5,500+ B2C leads, at €7.50 per lead",
-          img: "/clothing.jpeg",
+          img: "/sport.jpeg",
         },
         {
           text: "0 to €20k+ profitable ad spend within 12 weeks",
-          img: "/solar.jpg",
+          img: "/pizza.jpeg",
         },
         {
           text: "€5,000 ad spend turned into €100k B2B revenue",
-          img: "/music.jpg",
+          img: "/bag.jpeg",
         },
       ],
     },

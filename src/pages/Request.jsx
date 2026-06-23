@@ -79,15 +79,17 @@ export default function Request() {
             />
             <input
               type="text"
-              placeholder="Website"
+              placeholder="Website*"
               name="website"
+              required
               className="bg-slate-100 outline-slate-100 outline-2 p-4 rounded focus:outline-blue-600 w-1/2"
             />
           </div>
           <input
             type="tel"
-            placeholder="Telefon"
+            placeholder="Telefon*"
             name="phone"
+            required
             className="w-full bg-slate-100 outline-slate-100 outline-2 p-4 rounded focus:outline-blue-600"
           />
           <input

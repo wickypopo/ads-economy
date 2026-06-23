@@ -19,10 +19,7 @@ export const home = {
           title: "News",
           text: "Aktuelle Entwicklungen, Marktbewegungen und relevante Insights aus der Welt der digitalen Werbung.",
         },
-        {
-          title: "Lernen",
-          text: "Verständliche Grundlagen, Strategien und Frameworks für bessere Entscheidungen im Ads Management.",
-        },
+
         {
           title: "Tools",
           text: "Praktische Werkzeuge zur Analyse, Planung und Optimierung digitaler Werbekampagnen.",
@@ -125,10 +122,7 @@ export const home = {
           title: "News",
           text: "Current developments, market movements and relevant insights from the world of digital advertising.",
         },
-        {
-          title: "Learn",
-          text: "Clear fundamentals, strategies and frameworks for better decisions in ads management.",
-        },
+
         {
           title: "Tools",
           text: "Practical tools for analyzing, planning and optimizing digital advertising campaigns.",

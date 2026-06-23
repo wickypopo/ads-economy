@@ -8,7 +8,8 @@ www.adseconomy.com
 
 **Inhaber:** Nels Bonifer
 
-Ads Economy Inh. N. Bonifer  
+Ads Economy a brand by 
+Elephant Marketing Inh. N. Bonifer  
 Ballindamm 3  
 20095 Hamburg
 
