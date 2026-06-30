@@ -12,7 +12,7 @@ export default function Philosophy({ locale }) {
         className="w-full md:w-1/2 rounded object-cover aspect-square"
       />
 
-      <div className="w-full md:w-1/2 flex flex-col gap-2 justify-center">
+      <div className="w-full md:w-1/2 flex flex-col gap-2 justify-center items-start">
         <span className="text-slate-700">{philosophy.subtitle}</span>
 
         <span className="instrument text-2xl md:text-6xl md:leading-15">
