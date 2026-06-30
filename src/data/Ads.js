@@ -37,7 +37,7 @@ export const adsOptimizationLocale = {
       subtitle: "Wachstums Philosophie",
       title: "Die Zusammenarbeit",
       text: "Tägliche Analyse - Wöchentliche Maßnahmen Kataloge - Stetiger Wachstum",
-      price: "Preis ab 7.500,-€ zzgl. MwSt.",
+      price: "Preis ab 6.000,-€ zzgl. MwSt.",
       risingBrandsCta: "Für Rising Brands nur 1.000€",
       items: [
         {
